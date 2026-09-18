@@ -1,0 +1,92 @@
+# DESIGN BRIEF
+
+Dirección general del portfolio.
+
+## Decisiones confirmadas
+
+- La segunda versión de `references/visual-reference-vertical.png`, aprobada explícitamente durante la conversación, queda establecida como master visual del proyecto para la estética, densidad y composición general del mundo.
+- La dirección visual deberá parecer literalmente una captura vertical de un mundo de Terraria: pixel-art detallado, terreno construido con tiles, construcciones habitables, vegetación abundante, fondos por capas y biomas integrados.
+- No se aceptarán sustitutos geométricos, fondos esquemáticos ni reinterpretaciones minimalistas de esta estética.
+- La referencia define la estética, pero no reemplaza el recorrido ya acordado: las futuras composiciones deberán reincorporar explícitamente el menú, el nombre en el cielo, la isla de "Sobre mí", los edificios identificables de proyectos, las zonas de skills y servicios y el refugio de contacto.
+- La imagen principal podrá utilizarse como master de composición, pero los elementos que deban animarse se reconstruirán o separarán en capas y sprites; no se resolverá la experiencia como un único fondo plano.
+- El master visual se recreará como un mundo habitable por el aventurero, no como una imagen colocada detrás del personaje.
+- Terreno, plataformas, interiores, puertas, agua, props, colisiones y capas de profundidad serán entidades reales de la escena.
+- El desarrollo se dividirá en fases aprobables. No se avanzará automáticamente a cards, contenido o mundo completo antes de validar la base de interacción.
+- La experiencia principal seguirá un descenso vertical desde el cielo y la superficie hasta las cavernas.
+- La navegación será híbrida: el scroll conducirá el descenso principal, mientras un personaje, puntos interactivos y pequeños desvíos aportarán exploración.
+- Las interacciones ambientales no deberán interferir con la lectura ni con el uso del portfolio.
+- El personaje principal será un aventurero neutral que represente al visitante.
+- Al posar el cursor sobre una card, el aventurero se sentará sobre ella.
+- El cielo presentará el nombre del propietario con tratamiento visual inspirado en Terraria y contendrá la sección "sobre mí".
+- La superficie contendrá los proyectos, representados mediante edificios inspirados en las construcciones de Terraria.
+- Al seleccionar un edificio de proyecto, su puerta se abrirá, el aventurero se acercará y aparecerá un panel HTML con los detalles del proyecto sobre el mundo visual.
+- El panel de proyecto tendrá una composición editorial, un marco pixel-art y espacio amplio para capturas del trabajo.
+- En desktop, el panel de proyecto ocupará casi toda la pantalla y dejará visible el mundo alrededor de sus bordes.
+- En mobile, el panel de proyecto ocupará toda la pantalla, conservará el marco pixel-art y usará una transición que mantenga la relación con el edificio desde el cual se abrió.
+- El panel de proyecto se expandirá visualmente desde la puerta del edificio activado.
+- Al cerrar el panel, la transición se invertirá: el panel regresará hacia la puerta, el aventurero saldrá y la puerta se cerrará.
+- La superficie permitirá movimiento horizontal si la cantidad de proyectos lo requiere.
+- Después de los proyectos, el recorrido retomará el descenso vertical y entrará en las cuevas para presentar los demás datos del portfolio.
+- Las cards podrán tener distintas representaciones según su tipo, escala y zona del mundo; no habrá una única forma visual para todo el contenido.
+- El portfolio deberá poder crecer con nuevos contenidos sin perder coherencia ni obligar a replantear toda la experiencia.
+- El portfolio actual se revisará cuando sea proporcionado antes de cerrar la organización definitiva del contenido.
+- Los proyectos son el tipo de contenido con mayor probabilidad de crecer, por lo que su zona deberá ser especialmente extensible.
+- El cielo y la superficie tendrán un ciclo temporal suave de día y noche.
+- La iluminación del subsuelo dependerá de la profundidad, las antorchas y la iluminación ambiental de cada zona.
+- El cielo y la superficie tendrán un sistema ambiental vivo y lento, con nubes, estrellas y lluvia ocasional.
+- El estado ambiental podrá variar entre visitas para que el mundo no se sienta idéntico cada vez.
+- Los fondos del mundo podrán tomar directamente fondos de Terraria como base visual.
+- Siempre que sea posible, esos fondos se separarán en capas para conservar su apariencia y añadir profundidad mediante parallax.
+- El mundo no deberá percibirse como una imagen estática: la vegetación, el fuego, el clima y otros elementos ambientales tendrán movimiento propio.
+- La escena buscará sentirse tan viva como un mundo real de Terraria, manteniendo el carácter lento del sistema ambiental.
+- La fidelidad visual y sensorial a Terraria será un criterio prioritario para las decisiones de arte, composición y movimiento.
+- La experiencia seguirá siendo un portfolio claro, pero no reinterpretará innecesariamente los códigos reconocibles de Terraria.
+- Una hotbar inspirada en Terraria funcionará como navegación rápida y clara hacia las secciones principales del portfolio.
+- La hotbar será una herramienta de orientación permanente, no un elemento meramente decorativo.
+- En desktop, la hotbar se ubicará arriba a la izquierda, siguiendo la disposición reconocible de Terraria.
+- En mobile, la hotbar se ubicará abajo y centrada para facilitar el acceso con el pulgar.
+- Al seleccionar una zona lejana desde la hotbar, la navegación utilizará una transición de teletransporte en lugar de recorrer rápidamente todo el mundo.
+- El teletransporte estará inspirado específicamente en el efecto del Espejo Mágico de Terraria.
+- La experiencia tendrá música, ambiente y efectos sonoros integrados en el mundo.
+- El sonido comenzará activado a un volumen bajo.
+- Habrá un control claro para silenciarlo o ajustar su estado.
+- El audio no dependerá de un iframe ni de un reproductor externo incrustado.
+- La experiencia comenzará con un menú de inicio inspirado en Terraria.
+- La acción principal será "Entrar al mundo" y habilitará el comienzo de la experiencia y del audio.
+- El menú mostrará el nombre como gran título inspirado en Terraria.
+- Al entrar, ese mismo título se integrará en el cielo para que menú y mundo formen una transición continua.
+- Los assets existentes, incluido el título, podrán modificarse para mantener la coherencia visual del mundo.
+- El menú inicial y el cielo del portfolio serán dos estados de una misma escena continua, no pantallas visualmente separadas.
+- La sección "Sobre mí" estará situada en una isla flotante dentro del cielo.
+- El aventurero comenzará su recorrido en esa isla antes de descender hacia la superficie.
+- La isla flotante contendrá una casa-taller compacta y personal para representar la sección "Sobre mí".
+- La sección "Sobre mí" deberá ser cómoda de leer; su legibilidad tendrá prioridad sobre la complejidad escénica.
+- Queda pendiente comparar la lectura directa dentro de la escena con una entrada interactiva a la casa-taller.
+- El descenso desde la isla hacia la superficie será una caída lenta con paraguas.
+- El scroll indicará la dirección y el destino del aventurero, pero no controlará rígidamente su posición cuadro a cuadro.
+- El aventurero mantendrá su propio ritmo al bajar y al volver a subir, incluso si el visitante hace scroll rápidamente.
+- La cámara y el mundo responderán casi inmediatamente al scroll para mantener una navegación ágil.
+- El aventurero podrá retrasarse ligeramente dentro del viewport y alcanzar después la posición indicada por el recorrido.
+- El retraso del aventurero estará limitado a una franja segura para que permanezca visible incluso durante un scroll rápido.
+- Islas, cuevas, edificios, terreno y objetos ambientales existirán de forma permanente dentro del mundo.
+- El mundo no utilizará animaciones típicas de aparición al hacer scroll, como fade-in, escalado o desplazamiento de entrada.
+- El scroll descubrirá los lugares mediante el movimiento de cámara, no haciendo que aparezcan.
+- Los bloques principales de contenido HTML también estarán colocados previamente en el mundo y no usarán animaciones de aparición por scroll.
+- Las transiciones de interfaz se reservarán para acciones concretas, como abrir un proyecto desde la puerta de su edificio.
+- El subsuelo será un sistema continuo de cuevas con transiciones graduales entre biomas.
+- Las secciones subterráneas podrán tener identidades distintas sin percibirse como pantallas separadas.
+- La progresión irá desde tierra y piedra hacia cuevas húmedas, un bioma luminoso de hongos y cristales, y finalmente cavernas oscuras con ruinas y lava.
+- La distribución de contenidos entre esos biomas se definirá después de revisar el portfolio actual.
+- El portfolio actual fue revisado en `https://martohg.github.io/`.
+- Su contenido principal está compuesto por presentación inicial, "Sobre mí", formación, skills técnicas, proyectos, una pieza sobre una skill propia, servicios y contacto.
+- Actualmente contiene tres proyectos visibles y se prevé incorporar más en el futuro.
+- La pieza "De Senda a una skill" se representará como un edificio adicional.
+- Los casos de proyecto tienen extensiones muy diferentes, por lo que sus paneles deberán admitir desde fichas breves hasta estudios extensos con muchas capturas.
+- Las skills técnicas se presentarán como un inventario dentro de las primeras cuevas.
+- El inventario conservará las categorías actuales: stack principal, base sólida y tecnologías en aprendizaje.
+- La sección de servicios se representará como un taller subterráneo dentro de las cuevas húmedas.
+- Sus tres servicios actuales se asociarán con una mesa de planos, un banco de trabajo y una estación de reparación.
+- El recorrido terminará en un refugio iluminado dentro de las cavernas profundas, rodeado por ruinas y lava.
+- La sección de contacto estará dentro de ese refugio y utilizará un artefacto de comunicación para presentar email, LinkedIn y GitHub.
+- Junto al refugio habrá un Espejo Mágico interactivo con la acción opcional "Volver al cielo".
+- Este retorno cerrará el recorrido como un ciclo y devolverá al visitante a la isla inicial mediante teletransporte.
