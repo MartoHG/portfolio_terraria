@@ -96,13 +96,13 @@ PNG complementarios
 - adventurer_reference.png - HECHO
   - Pose neutral para comprobar escala.
 
-- adventurer_shadow.png
+- adventurer_shadow.png - HECHO
   - Sombra pequeña separada.
 
 
 - umbrella_closed.png
 - umbrella_open.png
-- magic_mirror_item.png
+- magic_mirror_item.png - HECHO
 
 
 Cursor y control táctil
@@ -121,14 +121,18 @@ Cursor y control táctil
 
 
 Primera isla jugable
+
 Cielo y profundidad
-- sky_base.png
+- sky_base.png - HECHO
   - Color base del cielo, preferiblemente repetible.
-- mountains_far.png
-- mountains_mid.png
-- forest_horizon.png
-- 6-8 nubes PNG independientes.
-- 3-4 nubes grandes de primer plano.
+- mountains_far.png - HECHO
+- mountains_mid.png - HECHO
+- mountain.png - HECHO
+- forest_horizon.png - HECHO
+- 6-8 nubes PNG independientes. - HECHO
+- 3-4 nubes grandes de primer plano. - HECHO
+
+
 - 4-6 islas lejanas PNG.
 - sun.png
 - moon.png
