@@ -1,0 +1,24 @@
+{
+  "source": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/door_open/door_open.gif",
+  "frameSize": [
+    32,
+    48
+  ],
+  "frameCount": 5,
+  "durationsMs": [
+    100,
+    100,
+    100,
+    100,
+    100
+  ],
+  "loop": 0,
+  "frames": [
+    "prepared-assets/phase1/animations/houseAnimation/door_open/frame-01.png",
+    "prepared-assets/phase1/animations/houseAnimation/door_open/frame-02.png",
+    "prepared-assets/phase1/animations/houseAnimation/door_open/frame-03.png",
+    "prepared-assets/phase1/animations/houseAnimation/door_open/frame-04.png",
+    "prepared-assets/phase1/animations/houseAnimation/door_open/frame-05.png"
+  ],
+  "sampling": "none"
+}

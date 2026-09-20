@@ -1,0 +1,24 @@
+{
+  "source": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/waterfall_loop/waterfall_loop.gif",
+  "frameSize": [
+    32,
+    64
+  ],
+  "frameCount": 5,
+  "durationsMs": [
+    90,
+    90,
+    90,
+    90,
+    90
+  ],
+  "loop": 0,
+  "frames": [
+    "prepared-assets/phase1/animations/water/waterfall_loop/frame-01.png",
+    "prepared-assets/phase1/animations/water/waterfall_loop/frame-02.png",
+    "prepared-assets/phase1/animations/water/waterfall_loop/frame-03.png",
+    "prepared-assets/phase1/animations/water/waterfall_loop/frame-04.png",
+    "prepared-assets/phase1/animations/water/waterfall_loop/frame-05.png"
+  ],
+  "sampling": "none"
+}

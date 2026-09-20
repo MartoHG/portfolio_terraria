@@ -1,0 +1,33 @@
+:root {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #f8f2d5;
+  background: #3a8cf2;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { width: 100%; height: 100%; margin: 0; overflow: hidden; }
+body { min-width: 280px; min-height: 480px; }
+button, canvas { -webkit-tap-highlight-color: transparent; }
+
+.app-shell, .world-shell { width: 100%; height: 100%; position: relative; }
+.world-shell { overflow: hidden; background: #3a8cf2; isolation: isolate; }
+.pixi-mount { position: absolute; inset: 0; touch-action: none; cursor: crosshair; }
+.pixi-mount canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; image-rendering: crisp-edges; }
+.pixi-error { position: absolute; inset: 0; display: grid; place-items: center; padding: 2rem; background: #17345a; text-align: center; }
+.scene-hud { position: absolute; inset: 0; pointer-events: none; display: flex; align-items: flex-start; justify-content: center; padding: max(16px, env(safe-area-inset-top)) 16px; }
+.instructions { margin: 0; padding: 8px 13px 9px; color: #fff5cc; background: rgb(22 37 43 / 72%); border: 1px solid rgb(255 231 153 / 55%); box-shadow: 0 2px 0 rgb(14 27 30 / 45%); font-size: clamp(12px, 1.2vw, 15px); letter-spacing: .02em; text-shadow: 0 1px 0 #000; backdrop-filter: blur(2px); }
+.touch-copy { display: none; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+@media (pointer: coarse), (max-width: 600px) {
+  .pixi-mount { cursor: default; }
+  .desktop-copy { display: none; }
+  .touch-copy { display: inline; }
+  .scene-hud { align-items: flex-end; padding-bottom: max(16px, env(safe-area-inset-bottom)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .instructions { backdrop-filter: none; }
+}

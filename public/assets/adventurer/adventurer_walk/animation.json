@@ -1,0 +1,30 @@
+{
+  "source": "assetss-definitivo/assets_fase1/adventurer/adventurer_walk/adventurer_walk.gif",
+  "frameSize": [
+    32,
+    48
+  ],
+  "frameCount": 8,
+  "durationsMs": [
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100
+  ],
+  "loop": 0,
+  "frames": [
+    "prepared-assets/phase1/animations/adventurer/adventurer_walk/frame-01.png",
+    "prepared-assets/phase1/animations/adventurer/adventurer_walk/frame-02.png",
+    "prepared-assets/phase1/animations/adventurer/adventurer_walk/frame-03.png",
+    "prepared-assets/phase1/animations/adventurer/adventurer_walk/frame-04.png",
+    "prepared-assets/phase1/animations/adventurer/adventurer_walk/frame-05.png",
+    "prepared-assets/phase1/animations/adventurer/adventurer_walk/frame-06.png",
+    "prepared-assets/phase1/animations/adventurer/adventurer_walk/frame-07.png",
+    "prepared-assets/phase1/animations/adventurer/adventurer_walk/frame-08.png"
+  ],
+  "sampling": "none"
+}

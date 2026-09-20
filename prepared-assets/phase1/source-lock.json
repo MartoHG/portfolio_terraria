@@ -1,0 +1,1412 @@
+{
+  "version": 1,
+  "purpose": "Immutable-input fingerprint for Phase 1 asset preparation",
+  "roots": [
+    "assetss-definitivo/assets_fase1",
+    "assetss-definitivo/tareas.md",
+    ".skills/terraria-portfolio",
+    "ejemplos"
+  ],
+  "files": [
+    {
+      "path": ".skills/terraria-portfolio/SKILL.md",
+      "sha256": "fe2fb01e5376a0aa06e86d9f00e50620c425e962aa440f45f6e82d7d982fd78a",
+      "bytes": 1447
+    },
+    {
+      "path": ".skills/terraria-portfolio/agents/openai.yaml",
+      "sha256": "ab781fb2ca4a71b9500d645243c613a380b0a2ff3f0f91475c1818cf058523cb",
+      "bytes": 117
+    },
+    {
+      "path": ".skills/terraria-portfolio/references/DESIGN-BRIEF.md",
+      "sha256": "5a940f2e5afa3e7f2ed6b377d640c635acf826e7f21cad6481e9b0045793d47e",
+      "bytes": 10456
+    },
+    {
+      "path": ".skills/terraria-portfolio/references/animation-guidelines.md",
+      "sha256": "5c8d6224e0c006d591ec1c8d1de9b6ad0e69854e4bf862b13c31215551f5a3e8",
+      "bytes": 6066
+    },
+    {
+      "path": ".skills/terraria-portfolio/references/architecture.md",
+      "sha256": "3e8162eb45e198798092040250c2e566c344a9933f8b956822f2ee6144df5cb7",
+      "bytes": 7020
+    },
+    {
+      "path": ".skills/terraria-portfolio/references/asset-map.md",
+      "sha256": "3d160c24059e657c7ea0a0d8d8e4eca2487beb3c749dbcb2ea784950e3b5bf2c",
+      "bytes": 7329
+    },
+    {
+      "path": ".skills/terraria-portfolio/references/visual-reference-vertical.png",
+      "sha256": "63f28cde6fa0a980f4526f60f8f6745494eb2821997e8736404002bd36ddf6ba",
+      "bytes": 3069723
+    },
+    {
+      "path": ".skills/terraria-portfolio/references/world-design.md",
+      "sha256": "11b3cf55a223f7653fed9efcc5a2fbedc44b9deb189fd86e913061d3ea5a892a",
+      "bytes": 7766
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_climb_rope/adventurer_rope_climb.gif",
+      "sha256": "ef48d970eff57a0d6d7726a0616172dff60269886523bf0bfe77cf75728ee48a",
+      "bytes": 3705
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_climb_rope/adventurer_rope_climb_01.png",
+      "sha256": "51ec1a240c2f011119eceba490fef8e811f107976de1bd2f822753e33a4e2eed",
+      "bytes": 1420
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_climb_rope/adventurer_rope_climb_02.png",
+      "sha256": "311a2a08ac6ffa50e4c1b73ec166092384c95530866a0bf912d21fa545fb14ae",
+      "bytes": 1382
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_climb_rope/adventurer_rope_climb_03.png",
+      "sha256": "72d94fc9535cd5318e05b00a13be51fbe1f1343111621556536c7c2c7b0996dd",
+      "bytes": 1353
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_climb_rope/adventurer_rope_climb_04.png",
+      "sha256": "9a6f82f0a9ba4835984f2dafe977845a6f8ce33be07cf2666396cf1a1b1470ee",
+      "bytes": 1377
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_climb_rope/adventurer_rope_climb_05.png",
+      "sha256": "30521f4ea682abe316a089eac7e8dec1381aa04b1af76b87c24eec3c7cccd7ff",
+      "bytes": 1435
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_climb_rope/adventurer_rope_climb_06.png",
+      "sha256": "93d88ecfa59212022c45caa163b9763eaad8363ee8ff272961ea385200c41abc",
+      "bytes": 1390
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_idle/adventurer_idle.gif",
+      "sha256": "81a354f6560e775a90a8b435a5ed37992b4d9f0209b4cfff36a6d4f4bf68d5a0",
+      "bytes": 2781
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_idle/adventurer_idle_01.png",
+      "sha256": "fdab019ed2db8235a53d0e6ca6c8637422ed781e37170c16a294288c5dc6b3dd",
+      "bytes": 771
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_idle/adventurer_idle_02.png",
+      "sha256": "7244482a1cdb36f9a3d09677ebc6025fa4fef48458a3689c08e9c38df1c606e1",
+      "bytes": 762
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_idle/adventurer_idle_03.png",
+      "sha256": "7244482a1cdb36f9a3d09677ebc6025fa4fef48458a3689c08e9c38df1c606e1",
+      "bytes": 762
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_idle/adventurer_idle_04.png",
+      "sha256": "7244482a1cdb36f9a3d09677ebc6025fa4fef48458a3689c08e9c38df1c606e1",
+      "bytes": 762
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_idle/adventurer_idle_05.png",
+      "sha256": "fdab019ed2db8235a53d0e6ca6c8637422ed781e37170c16a294288c5dc6b3dd",
+      "bytes": 771
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_idle/adventurer_idle_06.png",
+      "sha256": "fdab019ed2db8235a53d0e6ca6c8637422ed781e37170c16a294288c5dc6b3dd",
+      "bytes": 771
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_jump/adventurer_fall.gif",
+      "sha256": "0bd2c8a4d15ae34c1baf108eed9a86722b77ebab16c092aa901b7b519d16c4ba",
+      "bytes": 1877
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_jump/adventurer_fall_01.png",
+      "sha256": "bd177f11e7d60d4ec8a694386deda473656afcdd88ef5b4fd1c77388e7f82c47",
+      "bytes": 759
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_jump/adventurer_fall_02.png",
+      "sha256": "7c3af0892cebefcbf659d64bcdce7004180de3948acbb5ae6a6b8ddfe1c1892e",
+      "bytes": 759
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_jump/adventurer_fall_03.png",
+      "sha256": "0f892ea2da846912377e13299d029c169db73b5087f13027e86039b06617aa7f",
+      "bytes": 759
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_jump/adventurer_fall_04.png",
+      "sha256": "0b1c080c9ef8777c14842bb84adfea6b8b872fcca961235ab1ef8f7f71671e64",
+      "bytes": 771
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_jump/adventurer_jump.gif",
+      "sha256": "717c06313a99c9dda320e9075754e8bd07e7edf7384532d66abe1e447bb336bd",
+      "bytes": 5073
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_jump/adventurer_jump_start.gif",
+      "sha256": "ee14c8605c9db38fba143b6160c6f8726bcb3dfc04b08fb0d101ca50a1fb758a",
+      "bytes": 1513
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_jump/adventurer_jump_start_01.png",
+      "sha256": "0b1c080c9ef8777c14842bb84adfea6b8b872fcca961235ab1ef8f7f71671e64",
+      "bytes": 771
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_jump/adventurer_jump_start_02.png",
+      "sha256": "b0803d40127eefe1691123988c3be0116b57514f5d5d01def688cefd5b598ccb",
+      "bytes": 754
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_jump/adventurer_jump_start_03.png",
+      "sha256": "7c3af0892cebefcbf659d64bcdce7004180de3948acbb5ae6a6b8ddfe1c1892e",
+      "bytes": 759
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_jump/adventurer_jump_up.gif",
+      "sha256": "f65b37ca7d044d918d94113b7c6e14a7bd55cb3e481a17b481e32c8a66756650",
+      "bytes": 1884
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_jump/adventurer_jump_up_01.png",
+      "sha256": "7c3af0892cebefcbf659d64bcdce7004180de3948acbb5ae6a6b8ddfe1c1892e",
+      "bytes": 759
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_jump/adventurer_jump_up_02.png",
+      "sha256": "bd177f11e7d60d4ec8a694386deda473656afcdd88ef5b4fd1c77388e7f82c47",
+      "bytes": 759
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_jump/adventurer_jump_up_03.png",
+      "sha256": "46d342720ff9dbc85ab78c61353af296d26b383f4453469bc60228450d8756f2",
+      "bytes": 760
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_jump/adventurer_jump_up_04.png",
+      "sha256": "bd177f11e7d60d4ec8a694386deda473656afcdd88ef5b4fd1c77388e7f82c47",
+      "bytes": 759
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_jump/adventurer_land.gif",
+      "sha256": "5aea8ac9146114181e116af93c4ec4f5498cec0d6079a1b40f0c78433e022ac6",
+      "bytes": 1952
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_jump/adventurer_land_01.png",
+      "sha256": "5c136f229415e855e1830ad05e5cd9a278165f19c5a4c904905fd45e20a35b2e",
+      "bytes": 759
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_jump/adventurer_land_02.png",
+      "sha256": "54d5b50e9912e74f1e807e91e0b5a542fbb77a3d0f0f42f45c08aee048b74221",
+      "bytes": 771
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_jump/adventurer_land_03.png",
+      "sha256": "c04f4c4f102719304119ba7205a8cc6b12f95fc65c9f573356550b57d654ea6d",
+      "bytes": 754
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_jump/adventurer_land_04.png",
+      "sha256": "54d5b50e9912e74f1e807e91e0b5a542fbb77a3d0f0f42f45c08aee048b74221",
+      "bytes": 771
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_reference.png",
+      "sha256": "1fedae7746cdb8325d48e7c45a52e78a4b3c81078bf23a98b23bfc81b72754ca",
+      "bytes": 407939
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_run/adventurer_run.gif",
+      "sha256": "cdf31574dfe1cadb8d279b50302b5098782bea02b577597d161bb11cb3e1d049",
+      "bytes": 4087
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_run/adventurer_run_01.png",
+      "sha256": "e6035357a72402065f2a6ffda3e470a3428d7b740a6b6b5d3838a1ed96febd57",
+      "bytes": 781
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_run/adventurer_run_02.png",
+      "sha256": "0961c1cd4dbbf75c7ed1d35ca5c94216413e5b6ad5e20958c21b88b31c66ed7a",
+      "bytes": 770
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_run/adventurer_run_03.png",
+      "sha256": "c762362e3dd8fd47f835d00d4066bd9c246c87acdeac1f2074417811bab09ee9",
+      "bytes": 749
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_run/adventurer_run_04.png",
+      "sha256": "aab61705f4b15c53bcaf5b4fe4103e22069bb156806cd8c398952b21227a0d23",
+      "bytes": 758
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_run/adventurer_run_05.png",
+      "sha256": "e8cb50422266a4c0731bf1c4288b03b08f5c6f54760587a2b1c1e516ce307789",
+      "bytes": 781
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_run/adventurer_run_06.png",
+      "sha256": "54805a56d5a62a3d43bfe81a8c1e0422d211613fb9bb9580ec3f0d9e4b5faa15",
+      "bytes": 780
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_run/adventurer_run_07.png",
+      "sha256": "68832af86ba8a31bfbedd4ce6769b6d0b1ae373aef0316bf40bc829de9cf8f2b",
+      "bytes": 763
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_run/adventurer_run_08.png",
+      "sha256": "5c749554bfb3b1e9f3457b5a791ef5fffa11e248b4c6b7a8d796408e375c60b5",
+      "bytes": 778
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_shadow.png",
+      "sha256": "3417b353b4dba98dfd8e183b0ca30b22a7d0a539a227e40b52e4c1493be79ad0",
+      "bytes": 59714
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_sit/adventurer_sit.gif",
+      "sha256": "abf5a769e4698db330e297d78d9c18245aa8d7f147d84cbf74d7348154557194",
+      "bytes": 1957
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_sit/adventurer_sit_01.png",
+      "sha256": "8cfbc9caab524d5591b2d0cc38f5893e33317df4671aa230f10cdd089443622e",
+      "bytes": 771
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_sit/adventurer_sit_02.png",
+      "sha256": "3a9afa5e8dbd46c469e0e351e5e7028e360d5dc1bb8f3f823356ea1232b2ddaa",
+      "bytes": 765
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_sit/adventurer_sit_03.png",
+      "sha256": "c255f9d0b8ce04887d3f00e0893666d05e305701f4e09b05b0d766a0f4e24464",
+      "bytes": 716
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_sit/adventurer_sit_04.png",
+      "sha256": "f9c567f9197ae54d28d4bf70b8366c99b8069495ffc28a53dd24680673aa0c58",
+      "bytes": 695
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_turn/adventurer_turn.gif",
+      "sha256": "54c4ddd05376b4b31e22b68d692c1f27918b6d598b1c159527cd7d60f9cfb2d0",
+      "bytes": 2049
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_turn/adventurer_turn_01.png",
+      "sha256": "91fcee4976fe678880bb1ed7e8e6abd9f2880ba3a8818d24e000545a8d5a362e",
+      "bytes": 771
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_turn/adventurer_turn_02.png",
+      "sha256": "97c920fcbc8d61066961508990bdd8caff1ffacea78fd50e0460419dc7cb61dd",
+      "bytes": 726
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_turn/adventurer_turn_03.png",
+      "sha256": "3ffd02083d0b73c9f9fbefedf2eea4ee3874ab0470c170212231c30c505ea79e",
+      "bytes": 723
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_turn/adventurer_turn_04.png",
+      "sha256": "b3b86b55005f75ae5ec1a71a73632b17ebf857b9587762e84ea4c667fc9a8f2c",
+      "bytes": 780
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_walk/adventurer_walk.gif",
+      "sha256": "2ea16a9daa2b4a6bce814fb6318a78bdb4e7e54e158b96dea844a8b84c95cfa6",
+      "bytes": 4235
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_walk/adventurer_walk_01.png",
+      "sha256": "8699db0e6e274a774d0a643fad6caa4f743f1ac805f3422622c580409876525e",
+      "bytes": 772
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_walk/adventurer_walk_02.png",
+      "sha256": "fa10ad0b8ebcda136a843f6ce29447cbeb62155d49bcb3caefd1e096f905dd2d",
+      "bytes": 759
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_walk/adventurer_walk_03.png",
+      "sha256": "c7d832cdf8462d5e3110dcbc7b03464c6dfd3b04356ed36d9b534cac710f59be",
+      "bytes": 758
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_walk/adventurer_walk_04.png",
+      "sha256": "fdd285823acecdcd3a58df654de7a86d1627d23a079c07bc2a15ceec194e053b",
+      "bytes": 764
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_walk/adventurer_walk_05.png",
+      "sha256": "48ea97cd7fe5a54542eb14422c81835431003b66a74e9f31739560e78cf6da66",
+      "bytes": 771
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_walk/adventurer_walk_06.png",
+      "sha256": "fa10ad0b8ebcda136a843f6ce29447cbeb62155d49bcb3caefd1e096f905dd2d",
+      "bytes": 759
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_walk/adventurer_walk_07.png",
+      "sha256": "6f08308cdd2bc7a938e331ff1f78c863f42d575225a2091574d1c8233a8b714b",
+      "bytes": 756
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/adventurer/adventurer_walk/adventurer_walk_08.png",
+      "sha256": "fdd285823acecdcd3a58df654de7a86d1627d23a079c07bc2a15ceec194e053b",
+      "bytes": 764
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_preview.png",
+      "sha256": "7f02eafb81f2600f0d97f20cde28ead4c47d8cb951f912fc9a2ba28648b97873",
+      "bytes": 4689
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/candle/candle.gif",
+      "sha256": "7a29f2d56bd11c59a6f31e4cbbd3d82d5ea08bbf21b26741c10b24fcfef2c096",
+      "bytes": 4544
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/candle/candle_1.png",
+      "sha256": "35f0955fec005aad289786818bc53b1f34adccc15c55a0947f19b58e2115000a",
+      "bytes": 231
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/candle/candle_2.png",
+      "sha256": "cd434419680a5c74bc4240140ff6b23367113af011cad45080276bed1dc9b042",
+      "bytes": 240
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/candle/candle_3.png",
+      "sha256": "99b0169f0d8882d4fb66139a82eff5fac6a19e0597d64bddb0b97814077c7510",
+      "bytes": 236
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/candle/candle_4.png",
+      "sha256": "bcf802b9f68aaa3c698d3e6600a16c48ecc193b963cd4474eeacd043b76ac3d3",
+      "bytes": 237
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/candle/candle_5.png",
+      "sha256": "6b8f4055ae107901e11a86a29acaec3b2a673ef0a1a3bfd25a149bfe36db0655",
+      "bytes": 229
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/chimney_smoke/chimney_smoke.gif",
+      "sha256": "b5e5c3c78d99787b157afab0c2a753aa8c895634d1620a1f6818040577561ace",
+      "bytes": 7339
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/chimney_smoke/chimney_smoke_1.png",
+      "sha256": "ad033523329f987ea130a23c5f923bb61163d393bba2475c87cac1d4115d494e",
+      "bytes": 414
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/chimney_smoke/chimney_smoke_2.png",
+      "sha256": "c63e27815e45729d29c4ead20954d5dea589292be222586eedfd806f854fb9ba",
+      "bytes": 438
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/chimney_smoke/chimney_smoke_3.png",
+      "sha256": "b5f0231e6f535a57bd96c970c684455a529f83a3ea68f592251cfdac0dd988fb",
+      "bytes": 471
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/chimney_smoke/chimney_smoke_4.png",
+      "sha256": "f0be3a479c647ceffce6ee84c3f53b05d08181a3c0ee0b6c214dd7558912c75a",
+      "bytes": 496
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/chimney_smoke/chimney_smoke_5.png",
+      "sha256": "d48798ec2e18982d3fc148075aa0a34509a097391eb9e59c5dc79f8027147d4e",
+      "bytes": 519
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/chimney_smoke/chimney_smoke_6.png",
+      "sha256": "21612adc796110d7abc316daf847577818cc4afe021311fa8fd97b3a6b8a7178",
+      "bytes": 551
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/door_close/door_close.gif",
+      "sha256": "806cf847ab2cca21dee5ac373525f0301fceffcfd0579c19432f183cad9c8112",
+      "bytes": 5575
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/door_close/door_close_1.png",
+      "sha256": "35d9d2e7828b3c65c40d839ab25068356773db48a207442ed46669e57b8f2509",
+      "bytes": 234
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/door_close/door_close_2.png",
+      "sha256": "d30c49da60b812446160009dacdf4f29f21d4536469520f8ebe5610a1cc0acfa",
+      "bytes": 331
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/door_close/door_close_3.png",
+      "sha256": "d2b88b7ed835d05c71e10fc8841c92ed618e7af4a29baac102aa54d430623cb7",
+      "bytes": 353
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/door_close/door_close_4.png",
+      "sha256": "fc8e7b4c3df1ccdaea8e36d6e72aa6cf5f4eeca78623ab153fe6b150c2959ba5",
+      "bytes": 356
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/door_close/door_close_5.png",
+      "sha256": "dc320b694c534f6278b95ea509a188cb97cbaff92fb4a10e1baa36cc6ecd95ee",
+      "bytes": 351
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/door_open/door_open.gif",
+      "sha256": "6ed662feb1fa757cd2715399a21c01502c1660bbfafc4aa0f006acbec44f4858",
+      "bytes": 5575
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/door_open/door_open_1.png",
+      "sha256": "dc320b694c534f6278b95ea509a188cb97cbaff92fb4a10e1baa36cc6ecd95ee",
+      "bytes": 351
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/door_open/door_open_2.png",
+      "sha256": "fc8e7b4c3df1ccdaea8e36d6e72aa6cf5f4eeca78623ab153fe6b150c2959ba5",
+      "bytes": 356
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/door_open/door_open_3.png",
+      "sha256": "d2b88b7ed835d05c71e10fc8841c92ed618e7af4a29baac102aa54d430623cb7",
+      "bytes": 353
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/door_open/door_open_4.png",
+      "sha256": "d30c49da60b812446160009dacdf4f29f21d4536469520f8ebe5610a1cc0acfa",
+      "bytes": 331
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/door_open/door_open_5.png",
+      "sha256": "35d9d2e7828b3c65c40d839ab25068356773db48a207442ed46669e57b8f2509",
+      "bytes": 234
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/fireplace/fireplace.gif",
+      "sha256": "597055c99a278f5e82a98f7866c44c8670350dd4c816cffa90e03abf77bc8c72",
+      "bytes": 6369
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/fireplace/fireplace_1.png",
+      "sha256": "79c8bf60011bc3e91a0802a1e601351b208cf6c6deea4b177b78c4c06a487d93",
+      "bytes": 530
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/fireplace/fireplace_2.png",
+      "sha256": "a0558b854ea2197cfec1a3aa0fbd33f626a5838f767888524876c0f135491ce6",
+      "bytes": 536
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/fireplace/fireplace_3.png",
+      "sha256": "5c0a2c6131fd8b743f897dc5b0eea3061ddef256285b1b922dfce57c54eea869",
+      "bytes": 535
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/fireplace/fireplace_4.png",
+      "sha256": "d6b2fbe4cd4712ec39f11f424fbad25425f9814f3f02cf0077823f420f2a209f",
+      "bytes": 519
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/fireplace/fireplace_5.png",
+      "sha256": "983d0e3093ddeb589af8412f700c75d6e145b9ce1a180fe70a338e14a5e8b31d",
+      "bytes": 527
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/torch/torch.gif",
+      "sha256": "a6a8738b0548d3dfdb5ea82b1ea390b52c35adcc929fccbdff6d13c36c1768f4",
+      "bytes": 4582
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/torch/torch_1.png",
+      "sha256": "2fc2857df0a4417946c6eebb7226b875b0fdf206d1eb6100c0773155986b8818",
+      "bytes": 246
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/torch/torch_2.png",
+      "sha256": "0df4726bc6b19cdd99b6eaae94634b8a49d7a04cf1e9da2f1b465a7e42eebb4f",
+      "bytes": 246
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/torch/torch_3.png",
+      "sha256": "41dc05510e95db22555d0756e9abe38327dcee30d1e1d3b9d4a0339217bff9f0",
+      "bytes": 243
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/torch/torch_4.png",
+      "sha256": "01b41daf3e2b6384febd264b080c35fded47410db7127e6215cae4a302db40ec",
+      "bytes": 236
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/torch/torch_5.png",
+      "sha256": "df6d63cadddfcc83a98612b51fea58ed2d0e43dc9edea39a13e4c70ef5b9e57b",
+      "bytes": 232
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/window_light/window_light.gif",
+      "sha256": "f65f8fd0157001f832157758ffbc1b71c57ab3575606f02f3b20d597a0d389ed",
+      "bytes": 6087
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/window_light/window_light_1.png",
+      "sha256": "ab31a7f00c0ac7858bc9dafc987142478f73ca038de29c5248812a995a45efbd",
+      "bytes": 262
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/window_light/window_light_2.png",
+      "sha256": "83817dc120cde8e264b3d0a60cf12dd2bc9f630a574eaa1a89fedf79effb6522",
+      "bytes": 304
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/window_light/window_light_3.png",
+      "sha256": "4ce128731c7a5d8dba71ef3c72e20826317d2aa674be77ded419d0f0dbb8b410",
+      "bytes": 334
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/window_light/window_light_4.png",
+      "sha256": "848ac97b06cde7e3ac8ddd68a730f9518ac006cda7e6b224ef3ab519e7ece6d8",
+      "bytes": 336
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/window_light/window_light_5.png",
+      "sha256": "0613698241bbefbac252966a3046b6eb52f362c8226014951c49cd985b26dffb",
+      "bytes": 325
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/window_light/window_light_6.png",
+      "sha256": "4ce128731c7a5d8dba71ef3c72e20826317d2aa674be77ded419d0f0dbb8b410",
+      "bytes": 334
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set.zip",
+      "sha256": "3184d9e9344646432577ae236ff90ce0545846d7d449ae6388b216e616db0ffc",
+      "bytes": 36079
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_interior_objects_preview.png",
+      "sha256": "8dfdd84d5add022ab46804f0a4f071f18b60e739073619ddaba7a6c404dc649d",
+      "bytes": 5546
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_interior_objects_set/bed_wood.png",
+      "sha256": "171100c9c8877175341a94cac9cc510a8f79cb5fa92c4b913c73198bb06a0c79",
+      "bytes": 470
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_interior_objects_set/bookcase_wood.png",
+      "sha256": "6bde64017d5f4dd24f1c9d435e3e5af47d5a6f69f09e41e563a9c2ad665d9bd4",
+      "bytes": 660
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_interior_objects_set/candle_set.png",
+      "sha256": "c95d817c13d64bc5d1b97dfc161a57595460df431462d2e421e5865c99f47cb0",
+      "bytes": 274
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_interior_objects_set/chair_wood.png",
+      "sha256": "7c2ab5c01de8cd18a62b69d17266a1a616849e66df5accf7871c1f3d439bfe1f",
+      "bytes": 337
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_interior_objects_set/chest_wood.png",
+      "sha256": "245755296e9d1ca0674eff100398de6a54572cdbf6bcc356f4c0f0e9f8e3dad8",
+      "bytes": 352
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_interior_objects_set/hanging_tools.png",
+      "sha256": "ad57bbec7f112ebc12f2073abc746aef73a9d85abb89821b04110cfc443df37e",
+      "bytes": 400
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_interior_objects_set/lantern.png",
+      "sha256": "9113339953c7c1b2d6045245bbc9e38df25eb926c83309fd94a791c3a110b49a",
+      "bytes": 206
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_interior_objects_set/map_wall.png",
+      "sha256": "dd7028c9cb5f1d7cc2f5327e1c637e170ce9217bfa332eb580c4386fdafa579f",
+      "bytes": 340
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_interior_objects_set/maps_stack.png",
+      "sha256": "d6c0625b6d13b5583a8306acd05cd65c5975c13f5c5f3c12efec391ce24f2a62",
+      "bytes": 426
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_interior_objects_set/painting_landscape.png",
+      "sha256": "d48c7328eab59863a5fd0d766f95cfcf87f901b7a74688e6d8554d1ba5af8b13",
+      "bytes": 325
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_interior_objects_set/painting_night.png",
+      "sha256": "f22dfc48bd10ed01967f847d319beeea0677f15b9abc93c851a78b1dc1239b0a",
+      "bytes": 302
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_interior_objects_set/personal_items.png",
+      "sha256": "99f9e37ab804299efc58336dee25ede80e95853a266f508bb53b3927a8c6da3a",
+      "bytes": 337
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_interior_objects_set/potion_bottles.png",
+      "sha256": "e02557a8b7d9c7998f6694c29d6833c6c10441031842ac9acc9163ebfa729810",
+      "bytes": 294
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_interior_objects_set/potion_bottles_variant_01.png",
+      "sha256": "3aa96b95ee9b7ce952a8ccc19ec77f6c7d5b2e5a5d05b2b57bf4927743745d4d",
+      "bytes": 285
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_interior_objects_set/potted_plant.png",
+      "sha256": "7fe6a2a414900e80d68404dd8644adbb93c6583076d44a662e89ead63b07fb2d",
+      "bytes": 334
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_interior_objects_set/potted_plant_variant_01.png",
+      "sha256": "0294fe542fa8d911ca4a3f5917f88dd31354aab7c2170f9d4fa51e65356782cf",
+      "bytes": 370
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_interior_objects_set/table_wood.png",
+      "sha256": "1de08bc5add9ac6dda423b77fa13fbd6f91b7e166660e47487d37892df64c691",
+      "bytes": 367
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_interior_objects_set/wall_lamp.png",
+      "sha256": "7ac92c14b8fbc653af2554641fd6d86a74c6f6d980a8e8f0c01ffbbad014c0a9",
+      "bytes": 206
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_interior_objects_set/wall_shelf.png",
+      "sha256": "cb49a0b3495b0744e83cca7f21b9bfc48c02e696e46d33f01e9518c06ca6dd49",
+      "bytes": 393
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_interior_objects_set/wall_shelf_variant_01.png",
+      "sha256": "476d0828a3be96f7cebfb6b6214ba33ab6fc051914d5f11db7c275b76dddd3ba",
+      "bytes": 395
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_interior_objects_set/workbench_wood.png",
+      "sha256": "0a806b02c05f993efaf598755ad9e3a8fda2f011858816651eceea98c35c5310",
+      "bytes": 500
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_interior_objects_set.zip",
+      "sha256": "5c5a378e22cb1c2d5853c40bb8e903f3d03dfa37ce51710380a17debf4356c6d",
+      "bytes": 12567
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_structure_preview.png",
+      "sha256": "eb3a60e873e2e00a3fa44bf95fbccb32bd1694646c1ce4dc6aaee2cccf7dabfa",
+      "bytes": 4542
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_structure_set/beam_horizontal.png",
+      "sha256": "4053266f8ed92362cf24421361315419be1c8e44cff4baea54ab1931bdac9b2c",
+      "bytes": 219
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_structure_set/beam_vertical.png",
+      "sha256": "c319555a63d2ec68578d88e0e4f7d4ebb9493319a81292f0a54bc459c312f9ff",
+      "bytes": 234
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_structure_set/chimney.png",
+      "sha256": "e7d98205c9dd5c241749dc98a536bbd55d8d08fd8b45b285f3a06c8296d542c6",
+      "bytes": 341
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_structure_set/door_frame.png",
+      "sha256": "0c942819eedb0a188a34efcda15605ea6ea4963473a54bbe8b6a11c3bafb7c75",
+      "bytes": 256
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_structure_set/floor_wood.png",
+      "sha256": "3b81bdb1c4c5edf13e22e5335cd5ecef8e213e3c5697618d0b130fd4dcaeb707",
+      "bytes": 204
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_structure_set/floor_wood_variant_01.png",
+      "sha256": "ef78ac81a13fe3a20e5469ad533ddfb5f0d2917021b3ed88e80a8ae44a309c53",
+      "bytes": 204
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_structure_set/floor_wood_variant_02.png",
+      "sha256": "392b6f8c130d50a51ecf81852a99f024acbb46d802095c61c9a4705891e61a42",
+      "bytes": 206
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_structure_set/interior_dark_bg.png",
+      "sha256": "7a97f20dfaff85c47e954d4a9f9ffc94ea4afbef6a5ec5266b2920b0e5eb1adf",
+      "bytes": 310
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_structure_set/platform_exterior.png",
+      "sha256": "11940c4e0e0a329cc1395ec74e3034c202e23878c202bb017854ea879b591d03",
+      "bytes": 285
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_structure_set/railing.png",
+      "sha256": "8888076e2d620fe2271672ea09405026a22ea15b7b5f589f85e90bab3222ac48",
+      "bytes": 368
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_structure_set/roof_center.png",
+      "sha256": "e96170cef88d44aab3d7a944ba3cb59ef5c383c8328c35df647cff0b1cac4caa",
+      "bytes": 243
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_structure_set/roof_corner_left.png",
+      "sha256": "b6e7262fa1fc917f97943da8cc9605badf0e1f35453bb0fc878d53bf86dce7cc",
+      "bytes": 328
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_structure_set/roof_corner_right.png",
+      "sha256": "aec9cd00c7912e6d48becbb8f8ba57bc596ea45ce2acb8e4bdd00f8923822e2d",
+      "bytes": 329
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_structure_set/roof_edge_left.png",
+      "sha256": "5ed37fdec5f72290e1a4ad267c62cf66fa51c1b395b028215360fbde55f8228c",
+      "bytes": 216
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_structure_set/roof_edge_right.png",
+      "sha256": "58ebabd68f3daab66c73dfee26f017434ba3d67825597455e9444205e1cbcb8c",
+      "bytes": 223
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_structure_set/sign_exterior.png",
+      "sha256": "0621bd4d6232f2eeaa057170256fd2706018384e96dfef676205cedb696e6e70",
+      "bytes": 244
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_structure_set/stairs_wood.png",
+      "sha256": "29023228fdcea962fe6124a9baa5a17bbf0a6f5935349a081906c05f8e118611",
+      "bytes": 577
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_structure_set/wall_wood.png",
+      "sha256": "a604bddd552ab729debd3b6ec6ea33a52686b197b442e4675543270b6ccfb203",
+      "bytes": 422
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_structure_set/wall_wood_variant_01.png",
+      "sha256": "74343353377568bff819cbd2cb40cf0f6ea38cc58d7ebdb2fd6889e2f02c37a2",
+      "bytes": 422
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_structure_set/wall_wood_variant_02.png",
+      "sha256": "486dbc09116f3e6df21552947e35978097e30425f3fdb02d304c63c15a2c42b0",
+      "bytes": 421
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_structure_set/wall_wood_variant_03.png",
+      "sha256": "a895a6ae6da4a3c3471bd84f685810e786d7fd54f3639c633796cd2b454367c9",
+      "bytes": 427
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_structure_set/window_01.png",
+      "sha256": "56703355f42a899d47b84e01e62103f9f81d43aebc3e4962b6205fefa64c5525",
+      "bytes": 308
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_structure_set/window_02.png",
+      "sha256": "b1e3ecc61e76a222240e95c676314aeb311547928245a39c33d3a23fc9ef3913",
+      "bytes": 281
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/about_house_structure_set.zip",
+      "sha256": "b98b9af1eccb87a1c463ee6d9370786884bbb9ac754405e099a225f028067adf",
+      "bytes": 12144
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/copadearbol_tileset_1.png",
+      "sha256": "de3d4b685b26820b06affad8ee8f4164bcb1e9a22c8d5e879f348c93cca0974d",
+      "bytes": 834113
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/copadearbol_tileset_2.png",
+      "sha256": "d2c34ecf3bcae58327d6dfcefee2a7bbe3f9ca394dec877d7cedba784ab0005b",
+      "bytes": 1032060
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/copadearbol_tileset_3.png",
+      "sha256": "e642a87e5e2385099bb2e9c992b17add3df2bd0ae0f4c7f6caa2b4e1b4d2562c",
+      "bytes": 750795
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/copadearbol_tileset_4.png",
+      "sha256": "2cceaaef292717dee13df4bd5d3806fbe8717b5be9b0df96ae536bf28997c4c0",
+      "bytes": 966129
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/cursor_default.png",
+      "sha256": "1e712b504f2dff455f4c3afad41149c6573702efb94623311c67ec2b678ea633",
+      "bytes": 123084
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/cursor_door.png",
+      "sha256": "fb8af1923a4159c4d69dd9f4190cab8d738cf75204c3875683edb02cc7dfdad1",
+      "bytes": 147125
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/cursor_interact.png",
+      "sha256": "21cef70271bdba05d7642c0f3931cda8ef61eedfbcf1b6e1d76de651b05d5a4a",
+      "bytes": 91278
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/cursor_project.png",
+      "sha256": "92cc48ca724c508dabb750c255cc901dcd80df303f1baa97575bac469f98695a",
+      "bytes": 252184
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/cursor_teleport.png",
+      "sha256": "4cb5b1eb6d2f64bc69d548035156f2864f04ed1aee285dd70fc5ba080217f286",
+      "bytes": 333601
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/floating_island_far_01.png",
+      "sha256": "840f8252ce71710d6efebb5812af0b85c4a332ed789da4c647bef006c29b8035",
+      "bytes": 266867
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/floating_island_far_02.png",
+      "sha256": "80c09c5300d8321938d2170d4f758b2d08844408eedd9289e1449209c0de6709",
+      "bytes": 300685
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/floating_island_far_03.png",
+      "sha256": "f56ae4bb424845d18cb0f325c053799206261aca7b8863c1513c5d57bd292cd6",
+      "bytes": 222922
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/floating_island_far_04.png",
+      "sha256": "015c98aaac683f1c2ec67f3b3ed24c12f151ffacf766ce6adfe78feddf84b88a",
+      "bytes": 328768
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/floating_island_far_05.png",
+      "sha256": "af2c4f23d81d7cbaebd1e2545e87bdebe4b182643070e6832acec38ccb15ca52",
+      "bytes": 437177
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/floating_island_far_06.png",
+      "sha256": "0470848a62062c9d2cc8ee3e5cf8aad0473160cd95a037d83f6d67399a7c585f",
+      "bytes": 154508
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/flores_pequeñas.png",
+      "sha256": "eb4402c16a25f0c5816ffe4af7dd942a1531164f219a643cf41fb7d62615a5b5",
+      "bytes": 1530950
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/flower_01_yellow.png",
+      "sha256": "c81de2f5f174ac55f62d42cb901a3ef63af6e553be92555b4fcb3c0b03cb3ed3",
+      "bytes": 185818
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/flower_02_red_tulip.png",
+      "sha256": "7d439557d8ff0f59e01256214ad9d328e1a810db74279b924170049239e2957e",
+      "bytes": 173091
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/flower_03_blue_wildflower.png",
+      "sha256": "72eae0856bc2a6e8fcb5e0296b0a89ad75fd2a2357e9d6631e7dbc5a3baf728a",
+      "bytes": 196524
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/flower_04_purple_bellflower.png",
+      "sha256": "4d29f74ecfa4c15c692f5bf7c67423b45e2cc5f697faf49ff720ae1d2c6f1190",
+      "bytes": 277303
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/flower_05_pink_flower.png",
+      "sha256": "0a529762d5de48157ca7f34bf89fb429bf677c3d1964cf8f8c0bf3508c474227",
+      "bytes": 232846
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/flower_06_white_daisy.png",
+      "sha256": "9d31de85b3faa358ac37548b1ceddc0bd8333251763feac3917243a54f2a3d3a",
+      "bytes": 224551
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/flower_07_orange_flower.png",
+      "sha256": "d7ddeb564d6b44f72f427b3f17bc0ddd68c59d79873085ea3cafe5f0fc9ff7f4",
+      "bytes": 195388
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/flower_08_violet_cluster.png",
+      "sha256": "d876195f1d6ee6e52c582bd0f983f17dfac8cf48c338911e1d08023c1ec4c813",
+      "bytes": 422810
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/flower_09_ice_blue_flower.png",
+      "sha256": "e70bea8b8be292db7785a405e4dd70a1efbcf1e0db63f8e352d92d484e856016",
+      "bytes": 233232
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/flower_10_magenta_flower.png",
+      "sha256": "48211eaaaf130cb8af8574b499e7779247b72397776b9c91261fd7ad45df6bf3",
+      "bytes": 240739
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/flower_tileset.png",
+      "sha256": "32e6a68c970d0c36aca887b007b30697dc5216d493f02871e6a8f4f19bd83627",
+      "bytes": 1839542
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/forest_horizon.png",
+      "sha256": "928d961e153df7eafe56fcd61c78bea796e0b4b2d1a0644c9fd9585ac7a9cc26",
+      "bytes": 751312
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/hojas_set.png",
+      "sha256": "b2f980d1a40c4306d473a3c74139e33ae3faf141bbe2bb2fa22823a9092c329b",
+      "bytes": 1551762
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_preview.png",
+      "sha256": "005ff6ec34183d25da895c9f022af2133fb686fbe61403a8222c741d5fb17641",
+      "bytes": 4377
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/water_body/water_body.gif",
+      "sha256": "b6d7af246c6638fbe5f6f47fa83eb34615bc9631e794b48320422e883003c476",
+      "bytes": 5712
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/water_body/water_body_1.png",
+      "sha256": "ec4f3e2806e7608122a3e92186a6ed4c2158efb49dcb3266b1a44634f17829d6",
+      "bytes": 376
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/water_body/water_body_2.png",
+      "sha256": "07d793e0f93bbd7aee4e160ef41a952d4dcef4f4f9474bf2e4584e4f82e1a415",
+      "bytes": 386
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/water_body/water_body_3.png",
+      "sha256": "78f55c28a2c22ba9f7c0aabaa618e23ba68950702eefbfc1920afbae11e77ce8",
+      "bytes": 385
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/water_body/water_body_4.png",
+      "sha256": "9f47f57528e2f036244b70467da02399f7a33d7c2e642673bcd8275d05d8f64b",
+      "bytes": 381
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/water_body/water_body_5.png",
+      "sha256": "ac94e2c56251463ccde1cdd5004990d0673767547a9dd51e1eb052320855d45c",
+      "bytes": 379
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/water_splash/water_splash.gif",
+      "sha256": "ac16fc856f39c12faf4f13e2463f6ea9f418da392954e957091d4709ca3a1991",
+      "bytes": 5024
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/water_splash/water_splash_1.png",
+      "sha256": "249526afe749b5ddb366a26178dca70e24dcaf7e0133d06c1cd484a3f208ed33",
+      "bytes": 436
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/water_splash/water_splash_2.png",
+      "sha256": "4e291d61ef19e3cec7c80d772ea606e2c29c497e916a241cbfe0735af8f1455c",
+      "bytes": 412
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/water_splash/water_splash_3.png",
+      "sha256": "7684af98158ab787e03a7b70fbafe1b688d865b42d01a8ed26cb905f7c77dc5c",
+      "bytes": 428
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/water_splash/water_splash_4.png",
+      "sha256": "8e9dd97fa71f26a94703e35b95cac7d7f2d8e3b9c8bc90df49bf30528ae5d615",
+      "bytes": 399
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/water_splash/water_splash_5.png",
+      "sha256": "1be622d8a8202821147d386cff9dc86ea5e04d5ba81becae273136de73a7552f",
+      "bytes": 420
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/water_surface/water_surface.gif",
+      "sha256": "224fd25cf31c0dfd513cc62340aff0c85285a97e13b1e89bf80cf0b0aab98ad9",
+      "bytes": 5809
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/water_surface/water_surface_1.png",
+      "sha256": "cd3254f3fa487e976880af403324ca611756d04c4b2d0fa10548f038e88c5372",
+      "bytes": 219
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/water_surface/water_surface_2.png",
+      "sha256": "97a4eb97768ee21d6b222154c5104529777d1942178e6ceccef0e513c3313e65",
+      "bytes": 212
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/water_surface/water_surface_3.png",
+      "sha256": "9a6b99238ecb4767454096fd25327cb357e5a7aeae7a8c8966f3bd18216c9b35",
+      "bytes": 217
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/water_surface/water_surface_4.png",
+      "sha256": "726c5d7d464e6fa76ed99e343fedacced074a2d32348e2586e05222c908d3099",
+      "bytes": 219
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/water_surface/water_surface_5.png",
+      "sha256": "52a5b8a5e33fdc5f44c68fae6dfb19a0387e41da7fee63d024ca18fd646025da",
+      "bytes": 212
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/water_surface/water_surface_6.png",
+      "sha256": "a6547b67449e9b610cfe12c1b781a37eacd115d2452b98f65b27a9a41e7b698a",
+      "bytes": 218
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/waterfall_end/waterfall_end.gif",
+      "sha256": "67eeca74a72f5d5839978534d99b1f04fe399d79c923c41c6d5a26f6b5b81c8d",
+      "bytes": 5123
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/waterfall_end/waterfall_end_1.png",
+      "sha256": "ecc4232fc9c6ab70ef9ded593b9cb3ea4fca4814fcd55e7aca226e790b490149",
+      "bytes": 334
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/waterfall_end/waterfall_end_2.png",
+      "sha256": "5b93dd38cb448121d11f1f4e28602c90d7c140a15e133c54fc94e82e6784cc2e",
+      "bytes": 342
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/waterfall_end/waterfall_end_3.png",
+      "sha256": "f503eb04baccd66add5870066564c179d9a3c5c203d5b8cfd3d5bb51574364ba",
+      "bytes": 338
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/waterfall_end/waterfall_end_4.png",
+      "sha256": "cec4e61695cb5e77404f808e221ac8765ff57ad5c27217ba9f6c7d78b7c7ac29",
+      "bytes": 343
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/waterfall_end/waterfall_end_5.png",
+      "sha256": "06e70a8e63acf6f74590114824915cd7b039b67dbad42a4ae0e6e5d9da760fe0",
+      "bytes": 336
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/waterfall_loop/waterfall_loop.gif",
+      "sha256": "ba294d4e35e8c0df6f6055d543e9c3d3f7dda25888fff3a2c4241297b6626617",
+      "bytes": 5187
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/waterfall_loop/waterfall_loop_1.png",
+      "sha256": "839527f27dab182689b5d1c9d276f7dcf7212fd79b2cbdfeb292d03e542e03fc",
+      "bytes": 296
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/waterfall_loop/waterfall_loop_2.png",
+      "sha256": "207e70aa7199a468b5253ad3a7a0a33ee91527621b58955c9da52c85c68f8d66",
+      "bytes": 288
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/waterfall_loop/waterfall_loop_3.png",
+      "sha256": "d68d3a34d291af997324b24011637cfbaa64622ed858c38e5df4c3d4e7da9511",
+      "bytes": 291
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/waterfall_loop/waterfall_loop_4.png",
+      "sha256": "6a19a1d0b6c51058af05669f825df6970487f3fa795abb11d241fbe22dbff93b",
+      "bytes": 302
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/waterfall_loop/waterfall_loop_5.png",
+      "sha256": "a6c596b002a8686a7e88804dc9913ead7961db7d8f73dced19aa276721ff360d",
+      "bytes": 298
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/waterfall_start/waterfall_start.gif",
+      "sha256": "1637ab32eb072752db447bc95f5b3e47a133dc250582968df67bf5d2326d5f88",
+      "bytes": 4888
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/waterfall_start/waterfall_start_1.png",
+      "sha256": "be22d35a7ae60fbe543c932a1c66578e0daa50b39c7b7aae215703ed25a2ab61",
+      "bytes": 247
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/waterfall_start/waterfall_start_2.png",
+      "sha256": "e4fca138454b9a0e6cc5ec9d4a8870e33974209e6b4b6c5f1fb6a486707a56cc",
+      "bytes": 267
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/waterfall_start/waterfall_start_3.png",
+      "sha256": "ec4de8475fbb4627f48cf2957b4d5735a98b3896e174b21466771277b347e9eb",
+      "bytes": 245
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/waterfall_start/waterfall_start_4.png",
+      "sha256": "c15dcee6693bdc0ad7389a9cf7e5986ed02b7e1912edd6aac75a476c46c7e9b2",
+      "bytes": 254
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/waterfall_start/waterfall_start_5.png",
+      "sha256": "57d818fd7029c840d2e2ff3154905a059fa93dd2bf13a71a5b811b0afd169ccd",
+      "bytes": 278
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/wet_rock_edge/wet_rock_edge.png",
+      "sha256": "d7944310e37f17d22d37297bd1413299a9e8c90a3e968d19d11902a143e15079",
+      "bytes": 512
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set.zip",
+      "sha256": "27c6af5fcfbbe73a45c1294b7369c66c326b4df580f40beca253004fd3305e6c",
+      "bytes": 27957
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/lianas.png",
+      "sha256": "5fe7de9679d91aeffd17ead695fdd2f09b23d50bea89817a05658a61ec6bfb35",
+      "bytes": 777695
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/magic_mirror_item.png",
+      "sha256": "962a1c4cbb318cea581fb15176a05256824fddae857b629de9b299d9443b92df",
+      "bytes": 313054
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/moon.png",
+      "sha256": "b853b4633e622ddbba7c76220d7ea918be697caafb0aaa2240665f44e01baeec",
+      "bytes": 703489
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/mountain.png",
+      "sha256": "7b5755d9500a4eb0d518c48af78b7f7adfaf31e11395b68336af7c631845f387",
+      "bytes": 844402
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/mountain_far.png",
+      "sha256": "ebb0bd39bc880c45a602a9e0b5f4283c80f738a6ecfd388f96d642e94757f073",
+      "bytes": 615857
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/mountain_mid.png",
+      "sha256": "a74cfd125c8b6af912422ae87cfda580156dd114cb452bcc00d009b2a1891253",
+      "bytes": 609473
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/nube_1.png",
+      "sha256": "fb91e789c9d5ab07b991ccfee9495c070d6f4e6a34ce7d2aae3888fee8ffbd4c",
+      "bytes": 281863
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/nube_2.png",
+      "sha256": "32e0f6afbc810bf5603faec7b203284cb6c839672b851b40dcd4261b7a901138",
+      "bytes": 272704
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/nube_3.png",
+      "sha256": "d9053625238693d6d9207ff74596f9efef1dc7746b005d9d5099fe5fa3de2b50",
+      "bytes": 338108
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/nube_4.png",
+      "sha256": "52752b2720e9f43632be88bc54cef1bada345fe9e8bffc30ca3526eaa207e7c4",
+      "bytes": 297392
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/nube_5.png",
+      "sha256": "6fda1bbbcc6a0002c55ba71acf3a488d9851986452e909992f3a51c33f99aba5",
+      "bytes": 307910
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/nube_6.png",
+      "sha256": "98e44f80e154d90ded13be07ae71306d56e58e14c60fc0bbbbcb2393694d979f",
+      "bytes": 270506
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/nube_primerplano_1.png",
+      "sha256": "b6d07f413e9bc765d38f6ace7f2818fa629c00820095a42be6cbbaaac0628613",
+      "bytes": 704735
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/nube_primerplano_2.png",
+      "sha256": "24ecdd22b5f05be81c79b860ea5f014408bcb21e7e0c27d9afb34c0a956171b0",
+      "bytes": 768364
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/nube_primerplano_3.png",
+      "sha256": "faa3110ba7457826b90ba221d50b935e719989964f62708e495eb84c49f8ab61",
+      "bytes": 753818
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/nube_primerplano_4.png",
+      "sha256": "0cc075bab436e032f670824e8c923bca093c99fe3fde4654a5f08c435e4ea295",
+      "bytes": 740817
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/particulas.png",
+      "sha256": "19abb6fe5254427fddfc2a0f7c72f672a32cb5e8e634e3aff891f8ad71f826cd",
+      "bytes": 1716373
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/pasto_moviendose.png",
+      "sha256": "d3d304299370e4d18fcab61b0d83ab284f849d4f87bae47e04a381ae27e47d9e",
+      "bytes": 438850
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/pink_leaves.png",
+      "sha256": "ebced7793df4732b8c3dfefc85fbe3c831589e131a6f62f1835cf278ff461ccd",
+      "bytes": 260636
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/pinktree_tileset.png",
+      "sha256": "80ab1b3f2e491812a75b9c33af22f6c57eb3a63a50a222be274a283b3872b847",
+      "bytes": 1787288
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/plantas_de_borde.png",
+      "sha256": "4baa772d8e54e41a4ee4f2d5c9ebc0a9656c7fa25fcc09f3e2f625138f817f77",
+      "bytes": 727773
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/raices_tileset.png",
+      "sha256": "c52f22cb0e47d75d1f1af925a8591ebf80d746fb012b419ecad367ba9e0628c1",
+      "bytes": 885996
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/rock_assets/rock_01.png",
+      "sha256": "6350ff14544b0ecb1f368d45133f29a7ccfad0dea8e14d97215a4216f7fcfd39",
+      "bytes": 141493
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/rock_assets/rock_02.png",
+      "sha256": "1a95b493c59213180de8e530952d08a62b724ecedf6c59fea8221fad422ba8fc",
+      "bytes": 125965
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/rock_assets/rock_03.png",
+      "sha256": "1c2f975991b1166eb4ef57b987917c8409a758b9c61e1d6fc2bcd18c2ec5f1c7",
+      "bytes": 200854
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/rock_assets/rock_04.png",
+      "sha256": "6701f557391228c2e6e4277024a2b300886c8f9596893edf8910a4b271cd2ca8",
+      "bytes": 127699
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/rock_assets/rock_05.png",
+      "sha256": "47d1fb1c72496c9f5091f94a082d1c4e619f87f0b364d52cfb1f28d23b58e13c",
+      "bytes": 163563
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/rock_assets/rock_06.png",
+      "sha256": "598be56eb7285080d56f3755aaf4cf24b0550d3a1b912165fb9f471e6c31bde8",
+      "bytes": 155692
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/sky_base.png",
+      "sha256": "d198bb9cfed4c8d10514c71a1e4e742b0495cd3e3532aa637b82fa3ebcb52d6e",
+      "bytes": 1064308
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/stars_01.png",
+      "sha256": "050096fdd34b67fa06866dad505abfe6e5b2fc3068574d7ad81b1f7186f5aa6a",
+      "bytes": 145179
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/stars_02.png",
+      "sha256": "102b9dd624fa555403d98df69da3b4e21fb89a457681b82e8ad8512fe4add632",
+      "bytes": 140819
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/sun.png",
+      "sha256": "82d524c1f8142f912bbd2b8ec16f1ce7aeba70b372fac987aaedb9da29d77c7e",
+      "bytes": 601331
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/tileset_isla.png",
+      "sha256": "0244c80799b9384b16ba7a3c1ef30744907779f9932e7271d52e4e0a70dcd139",
+      "bytes": 1895722
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/tileset_lianas_musgo.png",
+      "sha256": "ff1fa34a8651483a617a1976ee1b3198467a474b8d1822a380d9abbd3f8f42b8",
+      "bytes": 1969774
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/tileset_troncos.png",
+      "sha256": "9f1f1861fb9b689de50d07a9985f1074307787efef21fc90ab4e7017309fad7a",
+      "bytes": 1271350
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/tocon.png",
+      "sha256": "95d2bbf780f1d865df1817068413e70c543a1909b639697299820aac97294585",
+      "bytes": 516285
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/touch_mobile.png",
+      "sha256": "d0f8c4dd65273f3f6853436b48fcb501844003f5ef477fab4d891538d61eff12",
+      "bytes": 175811
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/umbrella_closed.png",
+      "sha256": "2f378e1e8396656d82f8ff984f3b23452a8a308504fc48521fe3f04555b3b97c",
+      "bytes": 201295
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/umbrella_open.png",
+      "sha256": "600ebe21a4a0feccab3d1e9f1406e3210f4367c23688d31e39e93c4a1f730570",
+      "bytes": 494121
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/vegetation_assets/bushes.png",
+      "sha256": "8aec4d71d92aecfbc780f0e310cd68c2824d15d57a2c3b3fbd9d6735a6a89e9e",
+      "bytes": 757292
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/vegetation_assets/short_grass.png",
+      "sha256": "29abfb2a38aa2716aced04b2e6094542e0ca4a11a20e44311923e45e2373a12e",
+      "bytes": 630619
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/vegetation_assets/sunflowers.png",
+      "sha256": "fe2d1928d453b514b3683259093844174505052d4afb6f5f18122e764495f146",
+      "bytes": 758875
+    },
+    {
+      "path": "assetss-definitivo/assets_fase1/png_complementarios/vegetation_assets/tall_grass.png",
+      "sha256": "71213883543b4ff67f27115508c88566f4bd37fc1e132a149a69f58ba6b6c11f",
+      "bytes": 1078828
+    },
+    {
+      "path": "assetss-definitivo/tareas.md",
+      "sha256": "e86cee44fbf73f403401bfc600f8689075d66ef9fa22abdca5797bbd4423a5ce",
+      "bytes": 15957
+    },
+    {
+      "path": "ejemplos/02-referencias-terraria/README.md",
+      "sha256": "b4cba9babee76245931e8881c72e4eb1560e00fe99f8754ed51726f005bac73d",
+      "bytes": 3363
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "source": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/water_splash/water_splash.gif",
+  "frameSize": [
+    64,
+    32
+  ],
+  "frameCount": 5,
+  "durationsMs": [
+    100,
+    100,
+    100,
+    100,
+    100
+  ],
+  "loop": 0,
+  "frames": [
+    "prepared-assets/phase1/animations/water/water_splash/frame-01.png",
+    "prepared-assets/phase1/animations/water/water_splash/frame-02.png",
+    "prepared-assets/phase1/animations/water/water_splash/frame-03.png",
+    "prepared-assets/phase1/animations/water/water_splash/frame-04.png",
+    "prepared-assets/phase1/animations/water/water_splash/frame-05.png"
+  ],
+  "sampling": "none"
+}

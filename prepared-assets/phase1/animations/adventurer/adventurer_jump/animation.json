@@ -1,0 +1,36 @@
+{
+  "source": "assetss-definitivo/assets_fase1/adventurer/adventurer_jump/adventurer_jump.gif",
+  "frameSize": [
+    32,
+    48
+  ],
+  "frameCount": 11,
+  "durationsMs": [
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100
+  ],
+  "loop": 0,
+  "frames": [
+    "prepared-assets/phase1/animations/adventurer/adventurer_jump/frame-01.png",
+    "prepared-assets/phase1/animations/adventurer/adventurer_jump/frame-02.png",
+    "prepared-assets/phase1/animations/adventurer/adventurer_jump/frame-03.png",
+    "prepared-assets/phase1/animations/adventurer/adventurer_jump/frame-04.png",
+    "prepared-assets/phase1/animations/adventurer/adventurer_jump/frame-05.png",
+    "prepared-assets/phase1/animations/adventurer/adventurer_jump/frame-06.png",
+    "prepared-assets/phase1/animations/adventurer/adventurer_jump/frame-07.png",
+    "prepared-assets/phase1/animations/adventurer/adventurer_jump/frame-08.png",
+    "prepared-assets/phase1/animations/adventurer/adventurer_jump/frame-09.png",
+    "prepared-assets/phase1/animations/adventurer/adventurer_jump/frame-10.png",
+    "prepared-assets/phase1/animations/adventurer/adventurer_jump/frame-11.png"
+  ],
+  "sampling": "none"
+}

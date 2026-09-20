@@ -1,0 +1,26 @@
+{
+  "source": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/chimney_smoke/chimney_smoke.gif",
+  "frameSize": [
+    32,
+    96
+  ],
+  "frameCount": 6,
+  "durationsMs": [
+    140,
+    140,
+    140,
+    140,
+    140,
+    140
+  ],
+  "loop": 0,
+  "frames": [
+    "prepared-assets/phase1/animations/houseAnimation/chimney_smoke/frame-01.png",
+    "prepared-assets/phase1/animations/houseAnimation/chimney_smoke/frame-02.png",
+    "prepared-assets/phase1/animations/houseAnimation/chimney_smoke/frame-03.png",
+    "prepared-assets/phase1/animations/houseAnimation/chimney_smoke/frame-04.png",
+    "prepared-assets/phase1/animations/houseAnimation/chimney_smoke/frame-05.png",
+    "prepared-assets/phase1/animations/houseAnimation/chimney_smoke/frame-06.png"
+  ],
+  "sampling": "none"
+}

@@ -1,0 +1,30 @@
+{
+  "source": "assetss-definitivo/assets_fase1/adventurer/adventurer_run/adventurer_run.gif",
+  "frameSize": [
+    32,
+    48
+  ],
+  "frameCount": 8,
+  "durationsMs": [
+    80,
+    80,
+    80,
+    80,
+    80,
+    80,
+    80,
+    80
+  ],
+  "loop": 0,
+  "frames": [
+    "prepared-assets/phase1/animations/adventurer/adventurer_run/frame-01.png",
+    "prepared-assets/phase1/animations/adventurer/adventurer_run/frame-02.png",
+    "prepared-assets/phase1/animations/adventurer/adventurer_run/frame-03.png",
+    "prepared-assets/phase1/animations/adventurer/adventurer_run/frame-04.png",
+    "prepared-assets/phase1/animations/adventurer/adventurer_run/frame-05.png",
+    "prepared-assets/phase1/animations/adventurer/adventurer_run/frame-06.png",
+    "prepared-assets/phase1/animations/adventurer/adventurer_run/frame-07.png",
+    "prepared-assets/phase1/animations/adventurer/adventurer_run/frame-08.png"
+  ],
+  "sampling": "none"
+}

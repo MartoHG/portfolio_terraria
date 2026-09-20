@@ -1,0 +1,182 @@
+{
+  "version": 1,
+  "ok": true,
+  "summary": {
+    "sourceFiles": 270,
+    "manifestAssets": 295,
+    "runtimeMinimumAssets": 24,
+    "assetsByStatus": {
+      "manualReview": 74,
+      "optionalMissing": 1,
+      "processed": 48,
+      "ready": 172
+    },
+    "assetsByCategory": {
+      "adventurer": 64,
+      "cursorTouch": 9,
+      "houseAnimation": 46,
+      "houseInterior": 23,
+      "houseStructure": 25,
+      "islandTerrain": 8,
+      "miscPhase1": 8,
+      "skyParallax": 32,
+      "vegetation": 40,
+      "water": 40
+    },
+    "errors": 0,
+    "warnings": 14
+  },
+  "sourceIntegrity": {
+    "ok": true,
+    "missing": [],
+    "unexpected": [],
+    "changed": []
+  },
+  "errors": [],
+  "warnings": [
+    {
+      "code": "exactDuplicateSources",
+      "details": {
+        "sha256": "0b1c080c9ef8777c14842bb84adfea6b8b872fcca961235ab1ef8f7f71671e64",
+        "paths": [
+          "assetss-definitivo/assets_fase1/adventurer/adventurer_jump/adventurer_fall_04.png",
+          "assetss-definitivo/assets_fase1/adventurer/adventurer_jump/adventurer_jump_start_01.png"
+        ]
+      }
+    },
+    {
+      "code": "exactDuplicateSources",
+      "details": {
+        "sha256": "35d9d2e7828b3c65c40d839ab25068356773db48a207442ed46669e57b8f2509",
+        "paths": [
+          "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/door_close/door_close_1.png",
+          "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/door_open/door_open_5.png"
+        ]
+      }
+    },
+    {
+      "code": "exactDuplicateSources",
+      "details": {
+        "sha256": "4ce128731c7a5d8dba71ef3c72e20826317d2aa674be77ded419d0f0dbb8b410",
+        "paths": [
+          "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/window_light/window_light_3.png",
+          "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/window_light/window_light_6.png"
+        ]
+      }
+    },
+    {
+      "code": "exactDuplicateSources",
+      "details": {
+        "sha256": "54d5b50e9912e74f1e807e91e0b5a542fbb77a3d0f0f42f45c08aee048b74221",
+        "paths": [
+          "assetss-definitivo/assets_fase1/adventurer/adventurer_jump/adventurer_land_02.png",
+          "assetss-definitivo/assets_fase1/adventurer/adventurer_jump/adventurer_land_04.png"
+        ]
+      }
+    },
+    {
+      "code": "exactDuplicateSources",
+      "details": {
+        "sha256": "7244482a1cdb36f9a3d09677ebc6025fa4fef48458a3689c08e9c38df1c606e1",
+        "paths": [
+          "assetss-definitivo/assets_fase1/adventurer/adventurer_idle/adventurer_idle_02.png",
+          "assetss-definitivo/assets_fase1/adventurer/adventurer_idle/adventurer_idle_03.png",
+          "assetss-definitivo/assets_fase1/adventurer/adventurer_idle/adventurer_idle_04.png"
+        ]
+      }
+    },
+    {
+      "code": "exactDuplicateSources",
+      "details": {
+        "sha256": "7c3af0892cebefcbf659d64bcdce7004180de3948acbb5ae6a6b8ddfe1c1892e",
+        "paths": [
+          "assetss-definitivo/assets_fase1/adventurer/adventurer_jump/adventurer_fall_02.png",
+          "assetss-definitivo/assets_fase1/adventurer/adventurer_jump/adventurer_jump_start_03.png",
+          "assetss-definitivo/assets_fase1/adventurer/adventurer_jump/adventurer_jump_up_01.png"
+        ]
+      }
+    },
+    {
+      "code": "exactDuplicateSources",
+      "details": {
+        "sha256": "bd177f11e7d60d4ec8a694386deda473656afcdd88ef5b4fd1c77388e7f82c47",
+        "paths": [
+          "assetss-definitivo/assets_fase1/adventurer/adventurer_jump/adventurer_fall_01.png",
+          "assetss-definitivo/assets_fase1/adventurer/adventurer_jump/adventurer_jump_up_02.png",
+          "assetss-definitivo/assets_fase1/adventurer/adventurer_jump/adventurer_jump_up_04.png"
+        ]
+      }
+    },
+    {
+      "code": "exactDuplicateSources",
+      "details": {
+        "sha256": "d2b88b7ed835d05c71e10fc8841c92ed618e7af4a29baac102aa54d430623cb7",
+        "paths": [
+          "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/door_close/door_close_3.png",
+          "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/door_open/door_open_3.png"
+        ]
+      }
+    },
+    {
+      "code": "exactDuplicateSources",
+      "details": {
+        "sha256": "d30c49da60b812446160009dacdf4f29f21d4536469520f8ebe5610a1cc0acfa",
+        "paths": [
+          "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/door_close/door_close_2.png",
+          "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/door_open/door_open_4.png"
+        ]
+      }
+    },
+    {
+      "code": "exactDuplicateSources",
+      "details": {
+        "sha256": "dc320b694c534f6278b95ea509a188cb97cbaff92fb4a10e1baa36cc6ecd95ee",
+        "paths": [
+          "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/door_close/door_close_5.png",
+          "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/door_open/door_open_1.png"
+        ]
+      }
+    },
+    {
+      "code": "exactDuplicateSources",
+      "details": {
+        "sha256": "fa10ad0b8ebcda136a843f6ce29447cbeb62155d49bcb3caefd1e096f905dd2d",
+        "paths": [
+          "assetss-definitivo/assets_fase1/adventurer/adventurer_walk/adventurer_walk_02.png",
+          "assetss-definitivo/assets_fase1/adventurer/adventurer_walk/adventurer_walk_06.png"
+        ]
+      }
+    },
+    {
+      "code": "exactDuplicateSources",
+      "details": {
+        "sha256": "fc8e7b4c3df1ccdaea8e36d6e72aa6cf5f4eeca78623ab153fe6b150c2959ba5",
+        "paths": [
+          "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/door_close/door_close_4.png",
+          "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/door_open/door_open_2.png"
+        ]
+      }
+    },
+    {
+      "code": "exactDuplicateSources",
+      "details": {
+        "sha256": "fdab019ed2db8235a53d0e6ca6c8637422ed781e37170c16a294288c5dc6b3dd",
+        "paths": [
+          "assetss-definitivo/assets_fase1/adventurer/adventurer_idle/adventurer_idle_01.png",
+          "assetss-definitivo/assets_fase1/adventurer/adventurer_idle/adventurer_idle_05.png",
+          "assetss-definitivo/assets_fase1/adventurer/adventurer_idle/adventurer_idle_06.png"
+        ]
+      }
+    },
+    {
+      "code": "exactDuplicateSources",
+      "details": {
+        "sha256": "fdd285823acecdcd3a58df654de7a86d1627d23a079c07bc2a15ceec194e053b",
+        "paths": [
+          "assetss-definitivo/assets_fase1/adventurer/adventurer_walk/adventurer_walk_04.png",
+          "assetss-definitivo/assets_fase1/adventurer/adventurer_walk/adventurer_walk_08.png"
+        ]
+      }
+    }
+  ]
+}

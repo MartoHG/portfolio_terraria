@@ -1,0 +1,26 @@
+{
+  "source": "assetss-definitivo/assets_fase1/adventurer/adventurer_idle/adventurer_idle.gif",
+  "frameSize": [
+    32,
+    48
+  ],
+  "frameCount": 6,
+  "durationsMs": [
+    100,
+    100,
+    100,
+    100,
+    100,
+    100
+  ],
+  "loop": 0,
+  "frames": [
+    "prepared-assets/phase1/animations/adventurer/adventurer_idle/frame-01.png",
+    "prepared-assets/phase1/animations/adventurer/adventurer_idle/frame-02.png",
+    "prepared-assets/phase1/animations/adventurer/adventurer_idle/frame-03.png",
+    "prepared-assets/phase1/animations/adventurer/adventurer_idle/frame-04.png",
+    "prepared-assets/phase1/animations/adventurer/adventurer_idle/frame-05.png",
+    "prepared-assets/phase1/animations/adventurer/adventurer_idle/frame-06.png"
+  ],
+  "sampling": "none"
+}

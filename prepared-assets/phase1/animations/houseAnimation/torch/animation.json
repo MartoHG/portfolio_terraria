@@ -1,0 +1,24 @@
+{
+  "source": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/torch/torch.gif",
+  "frameSize": [
+    16,
+    32
+  ],
+  "frameCount": 5,
+  "durationsMs": [
+    90,
+    90,
+    90,
+    90,
+    90
+  ],
+  "loop": 0,
+  "frames": [
+    "prepared-assets/phase1/animations/houseAnimation/torch/frame-01.png",
+    "prepared-assets/phase1/animations/houseAnimation/torch/frame-02.png",
+    "prepared-assets/phase1/animations/houseAnimation/torch/frame-03.png",
+    "prepared-assets/phase1/animations/houseAnimation/torch/frame-04.png",
+    "prepared-assets/phase1/animations/houseAnimation/torch/frame-05.png"
+  ],
+  "sampling": "none"
+}

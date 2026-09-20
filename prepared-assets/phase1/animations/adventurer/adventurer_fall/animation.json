@@ -1,0 +1,22 @@
+{
+  "source": "assetss-definitivo/assets_fase1/adventurer/adventurer_jump/adventurer_fall.gif",
+  "frameSize": [
+    32,
+    48
+  ],
+  "frameCount": 4,
+  "durationsMs": [
+    100,
+    100,
+    100,
+    100
+  ],
+  "loop": null,
+  "frames": [
+    "prepared-assets/phase1/animations/adventurer/adventurer_fall/frame-01.png",
+    "prepared-assets/phase1/animations/adventurer/adventurer_fall/frame-02.png",
+    "prepared-assets/phase1/animations/adventurer/adventurer_fall/frame-03.png",
+    "prepared-assets/phase1/animations/adventurer/adventurer_fall/frame-04.png"
+  ],
+  "sampling": "none"
+}

@@ -1,0 +1,24 @@
+{
+  "source": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/fireplace/fireplace.gif",
+  "frameSize": [
+    48,
+    48
+  ],
+  "frameCount": 5,
+  "durationsMs": [
+    110,
+    110,
+    110,
+    110,
+    110
+  ],
+  "loop": 0,
+  "frames": [
+    "prepared-assets/phase1/animations/houseAnimation/fireplace/frame-01.png",
+    "prepared-assets/phase1/animations/houseAnimation/fireplace/frame-02.png",
+    "prepared-assets/phase1/animations/houseAnimation/fireplace/frame-03.png",
+    "prepared-assets/phase1/animations/houseAnimation/fireplace/frame-04.png",
+    "prepared-assets/phase1/animations/houseAnimation/fireplace/frame-05.png"
+  ],
+  "sampling": "none"
+}

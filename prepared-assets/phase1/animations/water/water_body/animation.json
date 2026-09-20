@@ -1,0 +1,24 @@
+{
+  "source": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/water_body/water_body.gif",
+  "frameSize": [
+    64,
+    64
+  ],
+  "frameCount": 5,
+  "durationsMs": [
+    130,
+    130,
+    130,
+    130,
+    130
+  ],
+  "loop": 0,
+  "frames": [
+    "prepared-assets/phase1/animations/water/water_body/frame-01.png",
+    "prepared-assets/phase1/animations/water/water_body/frame-02.png",
+    "prepared-assets/phase1/animations/water/water_body/frame-03.png",
+    "prepared-assets/phase1/animations/water/water_body/frame-04.png",
+    "prepared-assets/phase1/animations/water/water_body/frame-05.png"
+  ],
+  "sampling": "none"
+}

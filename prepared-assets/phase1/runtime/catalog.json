@@ -1,0 +1,2860 @@
+{
+  "version": 1,
+  "gridPx": 16,
+  "playerCalibrationPx": [
+    32,
+    48
+  ],
+  "houseModuleCalibrationPx": [
+    16,
+    32,
+    64
+  ],
+  "sampling": "nearest",
+  "alphaHandling": "preserved",
+  "runtimeReady": true,
+  "assets": [
+    {
+      "id": "runtime-terrain-grass-center",
+      "category": "islandTerrain",
+      "sourcePath": "assetss-definitivo/assets_fase1/png_complementarios/tileset_isla.png",
+      "outputPath": "prepared-assets/phase1/runtime/terrain/grass-center.png",
+      "referencePath": "assetss-definitivo/assets_fase1/png_complementarios/tileset_isla.png",
+      "dimensions": [
+        16,
+        20
+      ],
+      "frameCount": 1,
+      "frameSize": [
+        16,
+        20
+      ],
+      "fps": null,
+      "anchor": {
+        "normalized": [
+          0.0,
+          1.0
+        ],
+        "certainty": "proposed",
+        "note": "Sandbox placement proposal; art normalization does not make it a final gameplay pivot."
+      },
+      "logicalScale": {
+        "sourcePixelsPerLogicalPixel": 1,
+        "certainty": "confirmedForSandboxDerivative",
+        "gridUnitPx": 16,
+        "note": "The derivative is rendered at logical 1x; the source remains untouched."
+      },
+      "status": "processed",
+      "notes": [
+        "Minimum runtime derivative: grass/soil surface tile.",
+        "Nearest-neighbor only; source alpha values preserved."
+      ],
+      "sha256": "ae7a04f3614c87e8952348360e2c4a753c698bb4a5755b70e49cc10a6d98cfb7",
+      "bytes": 990,
+      "alpha": {
+        "hasAlphaChannel": true,
+        "transparentPixels": 29,
+        "semiTransparentPixels": 291,
+        "opaquePixels": 0,
+        "binaryAlpha": false,
+        "alphaBounds": [
+          0,
+          0,
+          16,
+          20
+        ]
+      },
+      "processing": {
+        "kind": "cropResizeNearest",
+        "crop": [
+          535,
+          52,
+          624,
+          168
+        ],
+        "sourceCropSize": [
+          89,
+          116
+        ],
+        "outputSize": [
+          16,
+          20
+        ],
+        "sampling": "nearest",
+        "alphaHandling": "preserved",
+        "componentLocatorAlphaThreshold": 64,
+        "reductionFactorXY": [
+          5.5625,
+          5.8
+        ],
+        "pixelBlockEvidence": {
+          "sampledRuns": 3256,
+          "medianRunPx": 3,
+          "dominantRunAtLeast4Px": 4,
+          "topRuns": [
+            [
+              2,
+              1450
+            ],
+            [
+              3,
+              642
+            ],
+            [
+              4,
+              378
+            ],
+            [
+              5,
+              250
+            ],
+            [
+              6,
+              147
+            ],
+            [
+              7,
+              110
+            ],
+            [
+              8,
+              63
+            ],
+            [
+              9,
+              58
+            ]
+          ],
+          "method": "RGBA quantized to RGB/32 and alpha/64; 64 sampled rows plus 64 sampled columns."
+        },
+        "calibration": "16x16 logical grid, 32x48 runtime adventurer, and existing 16/32/64px house modules"
+      },
+      "runtimeMinimum": true,
+      "collisionBoxPx": [
+        16,
+        16
+      ],
+      "renderOffsetPx": [
+        0,
+        -4
+      ]
+    },
+    {
+      "id": "runtime-terrain-dirt",
+      "category": "islandTerrain",
+      "sourcePath": "assetss-definitivo/assets_fase1/png_complementarios/tileset_isla.png",
+      "outputPath": "prepared-assets/phase1/runtime/terrain/dirt.png",
+      "referencePath": "assetss-definitivo/assets_fase1/png_complementarios/tileset_isla.png",
+      "dimensions": [
+        16,
+        16
+      ],
+      "frameCount": 1,
+      "frameSize": [
+        16,
+        16
+      ],
+      "fps": null,
+      "anchor": {
+        "normalized": [
+          0.0,
+          0.0
+        ],
+        "certainty": "proposed",
+        "note": "Sandbox placement proposal; art normalization does not make it a final gameplay pivot."
+      },
+      "logicalScale": {
+        "sourcePixelsPerLogicalPixel": 1,
+        "certainty": "confirmedForSandboxDerivative",
+        "gridUnitPx": 16,
+        "note": "The derivative is rendered at logical 1x; the source remains untouched."
+      },
+      "status": "processed",
+      "notes": [
+        "Minimum runtime derivative: dirt fill tile.",
+        "Nearest-neighbor only; source alpha values preserved."
+      ],
+      "sha256": "53b71eaedc117087d3da21e5f51fb957535809724279ab9302b75ba55668645c",
+      "bytes": 848,
+      "alpha": {
+        "hasAlphaChannel": true,
+        "transparentPixels": 20,
+        "semiTransparentPixels": 236,
+        "opaquePixels": 0,
+        "binaryAlpha": false,
+        "alphaBounds": [
+          0,
+          0,
+          16,
+          16
+        ]
+      },
+      "processing": {
+        "kind": "cropResizeNearest",
+        "crop": [
+          336,
+          300,
+          428,
+          397
+        ],
+        "sourceCropSize": [
+          92,
+          97
+        ],
+        "outputSize": [
+          16,
+          16
+        ],
+        "sampling": "nearest",
+        "alphaHandling": "preserved",
+        "componentLocatorAlphaThreshold": 64,
+        "reductionFactorXY": [
+          5.75,
+          6.0625
+        ],
+        "pixelBlockEvidence": {
+          "sampledRuns": 2730,
+          "medianRunPx": 3,
+          "dominantRunAtLeast4Px": 4,
+          "topRuns": [
+            [
+              2,
+              976
+            ],
+            [
+              3,
+              514
+            ],
+            [
+              4,
+              321
+            ],
+            [
+              5,
+              230
+            ],
+            [
+              6,
+              167
+            ],
+            [
+              8,
+              92
+            ],
+            [
+              7,
+              88
+            ],
+            [
+              9,
+              61
+            ]
+          ],
+          "method": "RGBA quantized to RGB/32 and alpha/64; 64 sampled rows plus 64 sampled columns."
+        },
+        "calibration": "16x16 logical grid, 32x48 runtime adventurer, and existing 16/32/64px house modules"
+      },
+      "runtimeMinimum": true,
+      "collisionBoxPx": [
+        16,
+        16
+      ]
+    },
+    {
+      "id": "runtime-terrain-stone",
+      "category": "islandTerrain",
+      "sourcePath": "assetss-definitivo/assets_fase1/png_complementarios/tileset_isla.png",
+      "outputPath": "prepared-assets/phase1/runtime/terrain/stone.png",
+      "referencePath": "assetss-definitivo/assets_fase1/png_complementarios/tileset_isla.png",
+      "dimensions": [
+        16,
+        16
+      ],
+      "frameCount": 1,
+      "frameSize": [
+        16,
+        16
+      ],
+      "fps": null,
+      "anchor": {
+        "normalized": [
+          0.0,
+          0.0
+        ],
+        "certainty": "proposed",
+        "note": "Sandbox placement proposal; art normalization does not make it a final gameplay pivot."
+      },
+      "logicalScale": {
+        "sourcePixelsPerLogicalPixel": 1,
+        "certainty": "confirmedForSandboxDerivative",
+        "gridUnitPx": 16,
+        "note": "The derivative is rendered at logical 1x; the source remains untouched."
+      },
+      "status": "processed",
+      "notes": [
+        "Minimum runtime derivative: stone fill tile.",
+        "Nearest-neighbor only; source alpha values preserved."
+      ],
+      "sha256": "643404f119368300d68c667871c23c0d9b80535bbb0b7e99f5fb674e132897ea",
+      "bytes": 884,
+      "alpha": {
+        "hasAlphaChannel": true,
+        "transparentPixels": 16,
+        "semiTransparentPixels": 240,
+        "opaquePixels": 0,
+        "binaryAlpha": false,
+        "alphaBounds": [
+          0,
+          0,
+          16,
+          16
+        ]
+      },
+      "processing": {
+        "kind": "cropResizeNearest",
+        "crop": [
+          39,
+          407,
+          133,
+          506
+        ],
+        "sourceCropSize": [
+          94,
+          99
+        ],
+        "outputSize": [
+          16,
+          16
+        ],
+        "sampling": "nearest",
+        "alphaHandling": "preserved",
+        "componentLocatorAlphaThreshold": 64,
+        "reductionFactorXY": [
+          5.875,
+          6.1875
+        ],
+        "pixelBlockEvidence": {
+          "sampledRuns": 2974,
+          "medianRunPx": 3,
+          "dominantRunAtLeast4Px": 4,
+          "topRuns": [
+            [
+              2,
+              1288
+            ],
+            [
+              3,
+              524
+            ],
+            [
+              4,
+              347
+            ],
+            [
+              5,
+              224
+            ],
+            [
+              6,
+              131
+            ],
+            [
+              7,
+              107
+            ],
+            [
+              8,
+              76
+            ],
+            [
+              9,
+              52
+            ]
+          ],
+          "method": "RGBA quantized to RGB/32 and alpha/64; 64 sampled rows plus 64 sampled columns."
+        },
+        "calibration": "16x16 logical grid, 32x48 runtime adventurer, and existing 16/32/64px house modules"
+      },
+      "runtimeMinimum": true,
+      "collisionBoxPx": [
+        16,
+        16
+      ]
+    },
+    {
+      "id": "runtime-terrain-dirt-stone",
+      "category": "islandTerrain",
+      "sourcePath": "assetss-definitivo/assets_fase1/png_complementarios/tileset_isla.png",
+      "outputPath": "prepared-assets/phase1/runtime/terrain/dirt-stone.png",
+      "referencePath": "assetss-definitivo/assets_fase1/png_complementarios/tileset_isla.png",
+      "dimensions": [
+        16,
+        16
+      ],
+      "frameCount": 1,
+      "frameSize": [
+        16,
+        16
+      ],
+      "fps": null,
+      "anchor": {
+        "normalized": [
+          0.0,
+          0.0
+        ],
+        "certainty": "proposed",
+        "note": "Sandbox placement proposal; art normalization does not make it a final gameplay pivot."
+      },
+      "logicalScale": {
+        "sourcePixelsPerLogicalPixel": 1,
+        "certainty": "confirmedForSandboxDerivative",
+        "gridUnitPx": 16,
+        "note": "The derivative is rendered at logical 1x; the source remains untouched."
+      },
+      "status": "processed",
+      "notes": [
+        "Minimum runtime derivative: dirt/stone transition tile.",
+        "Nearest-neighbor only; source alpha values preserved."
+      ],
+      "sha256": "698dbf4307e58afd623c43dc0c8d06c4321d7cfbcffde7c14b0e5697e8fe4dd4",
+      "bytes": 877,
+      "alpha": {
+        "hasAlphaChannel": true,
+        "transparentPixels": 16,
+        "semiTransparentPixels": 240,
+        "opaquePixels": 0,
+        "binaryAlpha": false,
+        "alphaBounds": [
+          0,
+          0,
+          16,
+          16
+        ]
+      },
+      "processing": {
+        "kind": "cropResizeNearest",
+        "crop": [
+          336,
+          407,
+          428,
+          506
+        ],
+        "sourceCropSize": [
+          92,
+          99
+        ],
+        "outputSize": [
+          16,
+          16
+        ],
+        "sampling": "nearest",
+        "alphaHandling": "preserved",
+        "componentLocatorAlphaThreshold": 64,
+        "reductionFactorXY": [
+          5.75,
+          6.1875
+        ],
+        "pixelBlockEvidence": {
+          "sampledRuns": 3045,
+          "medianRunPx": 3,
+          "dominantRunAtLeast4Px": 4,
+          "topRuns": [
+            [
+              2,
+              1303
+            ],
+            [
+              3,
+              582
+            ],
+            [
+              4,
+              332
+            ],
+            [
+              5,
+              243
+            ],
+            [
+              6,
+              147
+            ],
+            [
+              7,
+              118
+            ],
+            [
+              8,
+              80
+            ],
+            [
+              9,
+              56
+            ]
+          ],
+          "method": "RGBA quantized to RGB/32 and alpha/64; 64 sampled rows plus 64 sampled columns."
+        },
+        "calibration": "16x16 logical grid, 32x48 runtime adventurer, and existing 16/32/64px house modules"
+      },
+      "runtimeMinimum": true,
+      "collisionBoxPx": [
+        16,
+        16
+      ]
+    },
+    {
+      "id": "runtime-terrain-hanging-edge",
+      "category": "islandTerrain",
+      "sourcePath": "assetss-definitivo/assets_fase1/png_complementarios/tileset_isla.png",
+      "outputPath": "prepared-assets/phase1/runtime/terrain/hanging-edge.png",
+      "referencePath": "assetss-definitivo/assets_fase1/png_complementarios/tileset_isla.png",
+      "dimensions": [
+        16,
+        28
+      ],
+      "frameCount": 1,
+      "frameSize": [
+        16,
+        28
+      ],
+      "fps": null,
+      "anchor": {
+        "normalized": [
+          0.0,
+          0.0
+        ],
+        "certainty": "proposed",
+        "note": "Sandbox placement proposal; art normalization does not make it a final gameplay pivot."
+      },
+      "logicalScale": {
+        "sourcePixelsPerLogicalPixel": 1,
+        "certainty": "confirmedForSandboxDerivative",
+        "gridUnitPx": 16,
+        "note": "The derivative is rendered at logical 1x; the source remains untouched."
+      },
+      "status": "processed",
+      "notes": [
+        "Minimum runtime derivative: lower island edge/rock tip.",
+        "Nearest-neighbor only; source alpha values preserved."
+      ],
+      "sha256": "9517a62b8973baf20304b0a2a8e1b53e428abf153cd484036ed89d534075347e",
+      "bytes": 1098,
+      "alpha": {
+        "hasAlphaChannel": true,
+        "transparentPixels": 151,
+        "semiTransparentPixels": 297,
+        "opaquePixels": 0,
+        "binaryAlpha": false,
+        "alphaBounds": [
+          0,
+          0,
+          16,
+          26
+        ]
+      },
+      "processing": {
+        "kind": "cropResizeNearest",
+        "crop": [
+          336,
+          516,
+          428,
+          672
+        ],
+        "sourceCropSize": [
+          92,
+          156
+        ],
+        "outputSize": [
+          16,
+          28
+        ],
+        "sampling": "nearest",
+        "alphaHandling": "preserved",
+        "componentLocatorAlphaThreshold": 64,
+        "reductionFactorXY": [
+          5.75,
+          5.5714
+        ],
+        "pixelBlockEvidence": {
+          "sampledRuns": 2305,
+          "medianRunPx": 3,
+          "dominantRunAtLeast4Px": 4,
+          "topRuns": [
+            [
+              2,
+              1149
+            ],
+            [
+              3,
+              471
+            ],
+            [
+              4,
+              287
+            ],
+            [
+              5,
+              155
+            ],
+            [
+              6,
+              84
+            ],
+            [
+              7,
+              54
+            ],
+            [
+              8,
+              26
+            ],
+            [
+              9,
+              18
+            ]
+          ],
+          "method": "RGBA quantized to RGB/32 and alpha/64; 64 sampled rows plus 64 sampled columns."
+        },
+        "calibration": "16x16 logical grid, 32x48 runtime adventurer, and existing 16/32/64px house modules"
+      },
+      "runtimeMinimum": true,
+      "collisionBoxPx": [
+        16,
+        16
+      ]
+    },
+    {
+      "id": "runtime-terrain-bridge",
+      "category": "islandTerrain",
+      "sourcePath": "assetss-definitivo/assets_fase1/png_complementarios/tileset_isla.png",
+      "outputPath": "prepared-assets/phase1/runtime/terrain/bridge.png",
+      "referencePath": "assetss-definitivo/assets_fase1/png_complementarios/tileset_isla.png",
+      "dimensions": [
+        80,
+        18
+      ],
+      "frameCount": 1,
+      "frameSize": [
+        80,
+        18
+      ],
+      "fps": null,
+      "anchor": {
+        "normalized": [
+          0.0,
+          0.0
+        ],
+        "certainty": "proposed",
+        "note": "Sandbox placement proposal; art normalization does not make it a final gameplay pivot."
+      },
+      "logicalScale": {
+        "sourcePixelsPerLogicalPixel": 1,
+        "certainty": "confirmedForSandboxDerivative",
+        "gridUnitPx": 16,
+        "note": "The derivative is rendered at logical 1x; the source remains untouched."
+      },
+      "status": "processed",
+      "notes": [
+        "Minimum runtime derivative: five-tile wooden bridge.",
+        "Nearest-neighbor only; source alpha values preserved."
+      ],
+      "sha256": "57ba6173184a5fb542b4d1b00a89d5e9fd50fd4a6992db1808d0b878b27f8c89",
+      "bytes": 3488,
+      "alpha": {
+        "hasAlphaChannel": true,
+        "transparentPixels": 332,
+        "semiTransparentPixels": 1108,
+        "opaquePixels": 0,
+        "binaryAlpha": false,
+        "alphaBounds": [
+          0,
+          0,
+          80,
+          18
+        ]
+      },
+      "processing": {
+        "kind": "cropResizeNearest",
+        "crop": [
+          39,
+          840,
+          530,
+          954
+        ],
+        "sourceCropSize": [
+          491,
+          114
+        ],
+        "outputSize": [
+          80,
+          18
+        ],
+        "sampling": "nearest",
+        "alphaHandling": "preserved",
+        "componentLocatorAlphaThreshold": 64,
+        "reductionFactorXY": [
+          6.1375,
+          6.3333
+        ],
+        "pixelBlockEvidence": {
+          "sampledRuns": 6911,
+          "medianRunPx": 3,
+          "dominantRunAtLeast4Px": 4,
+          "topRuns": [
+            [
+              2,
+              3190
+            ],
+            [
+              3,
+              1338
+            ],
+            [
+              4,
+              669
+            ],
+            [
+              5,
+              432
+            ],
+            [
+              6,
+              282
+            ],
+            [
+              7,
+              188
+            ],
+            [
+              8,
+              128
+            ],
+            [
+              9,
+              93
+            ]
+          ],
+          "method": "RGBA quantized to RGB/32 and alpha/64; 64 sampled rows plus 64 sampled columns."
+        },
+        "calibration": "16x16 logical grid, 32x48 runtime adventurer, and existing 16/32/64px house modules"
+      },
+      "runtimeMinimum": true,
+      "collisionBoxPx": [
+        80,
+        16
+      ]
+    },
+    {
+      "id": "runtime-terrain-platform",
+      "category": "islandTerrain",
+      "sourcePath": "assetss-definitivo/assets_fase1/png_complementarios/tileset_isla.png",
+      "outputPath": "prepared-assets/phase1/runtime/terrain/platform.png",
+      "referencePath": "assetss-definitivo/assets_fase1/png_complementarios/tileset_isla.png",
+      "dimensions": [
+        32,
+        14
+      ],
+      "frameCount": 1,
+      "frameSize": [
+        32,
+        14
+      ],
+      "fps": null,
+      "anchor": {
+        "normalized": [
+          0.0,
+          0.0
+        ],
+        "certainty": "proposed",
+        "note": "Sandbox placement proposal; art normalization does not make it a final gameplay pivot."
+      },
+      "logicalScale": {
+        "sourcePixelsPerLogicalPixel": 1,
+        "certainty": "confirmedForSandboxDerivative",
+        "gridUnitPx": 16,
+        "note": "The derivative is rendered at logical 1x; the source remains untouched."
+      },
+      "status": "processed",
+      "notes": [
+        "Minimum runtime derivative: two-tile wooden platform.",
+        "Nearest-neighbor only; source alpha values preserved."
+      ],
+      "sha256": "00d475eb59a2f6a9801a635188db57e1151d0d5bc9d494e39c85bc883305bde8",
+      "bytes": 1299,
+      "alpha": {
+        "hasAlphaChannel": true,
+        "transparentPixels": 31,
+        "semiTransparentPixels": 417,
+        "opaquePixels": 0,
+        "binaryAlpha": false,
+        "alphaBounds": [
+          0,
+          0,
+          32,
+          14
+        ]
+      },
+      "processing": {
+        "kind": "cropResizeNearest",
+        "crop": [
+          543,
+          880,
+          691,
+          945
+        ],
+        "sourceCropSize": [
+          148,
+          65
+        ],
+        "outputSize": [
+          32,
+          14
+        ],
+        "sampling": "nearest",
+        "alphaHandling": "preserved",
+        "componentLocatorAlphaThreshold": 64,
+        "reductionFactorXY": [
+          4.625,
+          4.6429
+        ],
+        "pixelBlockEvidence": {
+          "sampledRuns": 2016,
+          "medianRunPx": 2,
+          "dominantRunAtLeast4Px": 4,
+          "topRuns": [
+            [
+              2,
+              1036
+            ],
+            [
+              3,
+              412
+            ],
+            [
+              4,
+              177
+            ],
+            [
+              5,
+              84
+            ],
+            [
+              6,
+              56
+            ],
+            [
+              7,
+              40
+            ],
+            [
+              9,
+              26
+            ],
+            [
+              8,
+              22
+            ]
+          ],
+          "method": "RGBA quantized to RGB/32 and alpha/64; 64 sampled rows plus 64 sampled columns."
+        },
+        "calibration": "16x16 logical grid, 32x48 runtime adventurer, and existing 16/32/64px house modules"
+      },
+      "runtimeMinimum": true,
+      "collisionBoxPx": [
+        32,
+        16
+      ]
+    },
+    {
+      "id": "runtime-background-sky-base",
+      "category": "skyParallax",
+      "sourcePath": "assetss-definitivo/assets_fase1/png_complementarios/sky_base.png",
+      "outputPath": "prepared-assets/phase1/runtime/backgrounds/sky-base.png",
+      "referencePath": "assetss-definitivo/assets_fase1/png_complementarios/sky_base.png",
+      "dimensions": [
+        320,
+        320
+      ],
+      "frameCount": 1,
+      "frameSize": [
+        320,
+        320
+      ],
+      "fps": null,
+      "anchor": {
+        "normalized": [
+          0.0,
+          0.0
+        ],
+        "certainty": "proposed",
+        "note": "Sandbox placement proposal; art normalization does not make it a final gameplay pivot."
+      },
+      "logicalScale": {
+        "sourcePixelsPerLogicalPixel": 1,
+        "certainty": "confirmedForSandboxDerivative",
+        "gridUnitPx": 16,
+        "note": "The derivative is rendered at logical 1x; the source remains untouched."
+      },
+      "status": "processed",
+      "notes": [
+        "Minimum runtime derivative: horizontally repeatable daytime sky base.",
+        "Nearest-neighbor only; source alpha values preserved."
+      ],
+      "sha256": "63975e21ff3f8a1b36b541c8ec27d32e15504239a570f008f88ae4dbf81d2de9",
+      "bytes": 118725,
+      "alpha": {
+        "hasAlphaChannel": true,
+        "transparentPixels": 0,
+        "semiTransparentPixels": 0,
+        "opaquePixels": 102400,
+        "binaryAlpha": true,
+        "alphaBounds": [
+          0,
+          0,
+          320,
+          320
+        ]
+      },
+      "processing": {
+        "kind": "cropResizeNearest",
+        "crop": [
+          0,
+          0,
+          1254,
+          1254
+        ],
+        "sourceCropSize": [
+          1254,
+          1254
+        ],
+        "outputSize": [
+          320,
+          320
+        ],
+        "sampling": "nearest",
+        "alphaHandling": "preserved",
+        "componentLocatorAlphaThreshold": 64,
+        "reductionFactorXY": [
+          3.9188,
+          3.9188
+        ],
+        "pixelBlockEvidence": {
+          "sampledRuns": 6936,
+          "medianRunPx": 8,
+          "dominantRunAtLeast4Px": 4,
+          "topRuns": [
+            [
+              2,
+              1237
+            ],
+            [
+              3,
+              667
+            ],
+            [
+              4,
+              501
+            ],
+            [
+              11,
+              464
+            ],
+            [
+              5,
+              392
+            ],
+            [
+              10,
+              388
+            ],
+            [
+              12,
+              337
+            ],
+            [
+              9,
+              329
+            ]
+          ],
+          "method": "RGBA quantized to RGB/32 and alpha/64; 64 sampled rows plus 64 sampled columns."
+        },
+        "calibration": "16x16 logical grid, 32x48 runtime adventurer, and existing 16/32/64px house modules",
+        "horizontalEdgeMeanAbsoluteRgbDifference": 2.4389
+      },
+      "runtimeMinimum": true,
+      "repeatX": true
+    },
+    {
+      "id": "runtime-background-mountains-far",
+      "category": "skyParallax",
+      "sourcePath": "assetss-definitivo/assets_fase1/png_complementarios/mountain_far.png",
+      "outputPath": "prepared-assets/phase1/runtime/backgrounds/mountains-far.png",
+      "referencePath": "assetss-definitivo/assets_fase1/png_complementarios/mountain_far.png",
+      "dimensions": [
+        640,
+        211
+      ],
+      "frameCount": 1,
+      "frameSize": [
+        640,
+        211
+      ],
+      "fps": null,
+      "anchor": {
+        "normalized": [
+          0.0,
+          1.0
+        ],
+        "certainty": "proposed",
+        "note": "Sandbox placement proposal; art normalization does not make it a final gameplay pivot."
+      },
+      "logicalScale": {
+        "sourcePixelsPerLogicalPixel": 1,
+        "certainty": "confirmedForSandboxDerivative",
+        "gridUnitPx": 16,
+        "note": "The derivative is rendered at logical 1x; the source remains untouched."
+      },
+      "status": "processed",
+      "notes": [
+        "Minimum runtime derivative: far mountain parallax layer.",
+        "Nearest-neighbor only; source alpha values preserved."
+      ],
+      "sha256": "954ca960333a39dc9ad82f2f1809100300fbb850a9dfb2d1a6896d2c0d06d9fb",
+      "bytes": 76645,
+      "alpha": {
+        "hasAlphaChannel": true,
+        "transparentPixels": 85101,
+        "semiTransparentPixels": 49898,
+        "opaquePixels": 41,
+        "binaryAlpha": false,
+        "alphaBounds": [
+          0,
+          22,
+          640,
+          204
+        ]
+      },
+      "processing": {
+        "kind": "cropResizeNearest",
+        "crop": [
+          0,
+          9,
+          2172,
+          724
+        ],
+        "sourceCropSize": [
+          2172,
+          715
+        ],
+        "outputSize": [
+          640,
+          211
+        ],
+        "sampling": "nearest",
+        "alphaHandling": "preserved",
+        "componentLocatorAlphaThreshold": 64,
+        "reductionFactorXY": [
+          3.3937,
+          3.3886
+        ],
+        "pixelBlockEvidence": {
+          "sampledRuns": 3186,
+          "medianRunPx": 8,
+          "dominantRunAtLeast4Px": 4,
+          "topRuns": [
+            [
+              2,
+              600
+            ],
+            [
+              3,
+              310
+            ],
+            [
+              4,
+              253
+            ],
+            [
+              5,
+              188
+            ],
+            [
+              8,
+              139
+            ],
+            [
+              7,
+              121
+            ],
+            [
+              6,
+              115
+            ],
+            [
+              12,
+              92
+            ]
+          ],
+          "method": "RGBA quantized to RGB/32 and alpha/64; 64 sampled rows plus 64 sampled columns."
+        },
+        "calibration": "16x16 logical grid, 32x48 runtime adventurer, and existing 16/32/64px house modules"
+      },
+      "runtimeMinimum": true
+    },
+    {
+      "id": "runtime-background-mountains-mid",
+      "category": "skyParallax",
+      "sourcePath": "assetss-definitivo/assets_fase1/png_complementarios/mountain_mid.png",
+      "outputPath": "prepared-assets/phase1/runtime/backgrounds/mountains-mid.png",
+      "referencePath": "assetss-definitivo/assets_fase1/png_complementarios/mountain_mid.png",
+      "dimensions": [
+        640,
+        210
+      ],
+      "frameCount": 1,
+      "frameSize": [
+        640,
+        210
+      ],
+      "fps": null,
+      "anchor": {
+        "normalized": [
+          0.0,
+          1.0
+        ],
+        "certainty": "proposed",
+        "note": "Sandbox placement proposal; art normalization does not make it a final gameplay pivot."
+      },
+      "logicalScale": {
+        "sourcePixelsPerLogicalPixel": 1,
+        "certainty": "confirmedForSandboxDerivative",
+        "gridUnitPx": 16,
+        "note": "The derivative is rendered at logical 1x; the source remains untouched."
+      },
+      "status": "processed",
+      "notes": [
+        "Minimum runtime derivative: mid mountain parallax layer.",
+        "Nearest-neighbor only; source alpha values preserved."
+      ],
+      "sha256": "1642f0c35157e83872b13bf7258502b9f97d7f0f0db07c2101af0d4b29c49710",
+      "bytes": 77670,
+      "alpha": {
+        "hasAlphaChannel": true,
+        "transparentPixels": 80389,
+        "semiTransparentPixels": 53978,
+        "opaquePixels": 33,
+        "binaryAlpha": false,
+        "alphaBounds": [
+          0,
+          25,
+          640,
+          203
+        ]
+      },
+      "processing": {
+        "kind": "cropResizeNearest",
+        "crop": [
+          0,
+          13,
+          2172,
+          724
+        ],
+        "sourceCropSize": [
+          2172,
+          711
+        ],
+        "outputSize": [
+          640,
+          210
+        ],
+        "sampling": "nearest",
+        "alphaHandling": "preserved",
+        "componentLocatorAlphaThreshold": 64,
+        "reductionFactorXY": [
+          3.3937,
+          3.3857
+        ],
+        "pixelBlockEvidence": {
+          "sampledRuns": 5276,
+          "medianRunPx": 7,
+          "dominantRunAtLeast4Px": 4,
+          "topRuns": [
+            [
+              2,
+              1031
+            ],
+            [
+              3,
+              561
+            ],
+            [
+              4,
+              425
+            ],
+            [
+              5,
+              321
+            ],
+            [
+              6,
+              274
+            ],
+            [
+              8,
+              247
+            ],
+            [
+              7,
+              232
+            ],
+            [
+              9,
+              189
+            ]
+          ],
+          "method": "RGBA quantized to RGB/32 and alpha/64; 64 sampled rows plus 64 sampled columns."
+        },
+        "calibration": "16x16 logical grid, 32x48 runtime adventurer, and existing 16/32/64px house modules"
+      },
+      "runtimeMinimum": true
+    },
+    {
+      "id": "runtime-background-forest-horizon",
+      "category": "skyParallax",
+      "sourcePath": "assetss-definitivo/assets_fase1/png_complementarios/forest_horizon.png",
+      "outputPath": "prepared-assets/phase1/runtime/backgrounds/forest-horizon.png",
+      "referencePath": "assetss-definitivo/assets_fase1/png_complementarios/forest_horizon.png",
+      "dimensions": [
+        640,
+        202
+      ],
+      "frameCount": 1,
+      "frameSize": [
+        640,
+        202
+      ],
+      "fps": null,
+      "anchor": {
+        "normalized": [
+          0.0,
+          1.0
+        ],
+        "certainty": "proposed",
+        "note": "Sandbox placement proposal; art normalization does not make it a final gameplay pivot."
+      },
+      "logicalScale": {
+        "sourcePixelsPerLogicalPixel": 1,
+        "certainty": "confirmedForSandboxDerivative",
+        "gridUnitPx": 16,
+        "note": "The derivative is rendered at logical 1x; the source remains untouched."
+      },
+      "status": "processed",
+      "notes": [
+        "Minimum runtime derivative: forest horizon parallax layer.",
+        "Nearest-neighbor only; source alpha values preserved."
+      ],
+      "sha256": "3b50f92b3e2f0f0d002cd07fc2468bdc152aaa13124145dbfe7d8d2167ee0413",
+      "bytes": 88707,
+      "alpha": {
+        "hasAlphaChannel": true,
+        "transparentPixels": 88384,
+        "semiTransparentPixels": 40829,
+        "opaquePixels": 67,
+        "binaryAlpha": false,
+        "alphaBounds": [
+          0,
+          12,
+          640,
+          198
+        ]
+      },
+      "processing": {
+        "kind": "cropResizeNearest",
+        "crop": [
+          0,
+          38,
+          2172,
+          724
+        ],
+        "sourceCropSize": [
+          2172,
+          686
+        ],
+        "outputSize": [
+          640,
+          202
+        ],
+        "sampling": "nearest",
+        "alphaHandling": "preserved",
+        "componentLocatorAlphaThreshold": 64,
+        "reductionFactorXY": [
+          3.3937,
+          3.396
+        ],
+        "pixelBlockEvidence": {
+          "sampledRuns": 6427,
+          "medianRunPx": 4,
+          "dominantRunAtLeast4Px": 4,
+          "topRuns": [
+            [
+              2,
+              1574
+            ],
+            [
+              3,
+              1037
+            ],
+            [
+              4,
+              737
+            ],
+            [
+              5,
+              484
+            ],
+            [
+              6,
+              319
+            ],
+            [
+              7,
+              286
+            ],
+            [
+              8,
+              260
+            ],
+            [
+              9,
+              219
+            ]
+          ],
+          "method": "RGBA quantized to RGB/32 and alpha/64; 64 sampled rows plus 64 sampled columns."
+        },
+        "calibration": "16x16 logical grid, 32x48 runtime adventurer, and existing 16/32/64px house modules"
+      },
+      "runtimeMinimum": true
+    },
+    {
+      "id": "runtime-background-cloud-01",
+      "category": "skyParallax",
+      "sourcePath": "assetss-definitivo/assets_fase1/png_complementarios/nube_1.png",
+      "outputPath": "prepared-assets/phase1/runtime/backgrounds/cloud-01.png",
+      "referencePath": "assetss-definitivo/assets_fase1/png_complementarios/nube_1.png",
+      "dimensions": [
+        96,
+        71
+      ],
+      "frameCount": 1,
+      "frameSize": [
+        96,
+        71
+      ],
+      "fps": null,
+      "anchor": {
+        "normalized": [
+          0.5,
+          0.5
+        ],
+        "certainty": "proposed",
+        "note": "Sandbox placement proposal; art normalization does not make it a final gameplay pivot."
+      },
+      "logicalScale": {
+        "sourcePixelsPerLogicalPixel": 1,
+        "certainty": "confirmedForSandboxDerivative",
+        "gridUnitPx": 16,
+        "note": "The derivative is rendered at logical 1x; the source remains untouched."
+      },
+      "status": "processed",
+      "notes": [
+        "Minimum runtime derivative: independent cloud.",
+        "Nearest-neighbor only; source alpha values preserved."
+      ],
+      "sha256": "d6dd9eb271da5dd2f3993ee65e2e564e33d27316a235046b2ad4ff4f3ead3a99",
+      "bytes": 4255,
+      "alpha": {
+        "hasAlphaChannel": true,
+        "transparentPixels": 4667,
+        "semiTransparentPixels": 2139,
+        "opaquePixels": 10,
+        "binaryAlpha": false,
+        "alphaBounds": [
+          3,
+          11,
+          85,
+          55
+        ]
+      },
+      "processing": {
+        "kind": "cropResizeNearest",
+        "crop": [
+          218,
+          178,
+          1331,
+          1001
+        ],
+        "sourceCropSize": [
+          1113,
+          823
+        ],
+        "outputSize": [
+          96,
+          71
+        ],
+        "sampling": "nearest",
+        "alphaHandling": "preserved",
+        "componentLocatorAlphaThreshold": 64,
+        "reductionFactorXY": [
+          11.5938,
+          11.5915
+        ],
+        "pixelBlockEvidence": {
+          "sampledRuns": 866,
+          "medianRunPx": 29,
+          "dominantRunAtLeast4Px": 58,
+          "topRuns": [
+            [
+              2,
+              82
+            ],
+            [
+              58,
+              65
+            ],
+            [
+              29,
+              64
+            ],
+            [
+              27,
+              61
+            ],
+            [
+              28,
+              59
+            ],
+            [
+              3,
+              42
+            ],
+            [
+              30,
+              38
+            ],
+            [
+              57,
+              38
+            ]
+          ],
+          "method": "RGBA quantized to RGB/32 and alpha/64; 64 sampled rows plus 64 sampled columns."
+        },
+        "calibration": "16x16 logical grid, 32x48 runtime adventurer, and existing 16/32/64px house modules"
+      },
+      "runtimeMinimum": true
+    },
+    {
+      "id": "runtime-background-cloud-02",
+      "category": "skyParallax",
+      "sourcePath": "assetss-definitivo/assets_fase1/png_complementarios/nube_2.png",
+      "outputPath": "prepared-assets/phase1/runtime/backgrounds/cloud-02.png",
+      "referencePath": "assetss-definitivo/assets_fase1/png_complementarios/nube_2.png",
+      "dimensions": [
+        96,
+        77
+      ],
+      "frameCount": 1,
+      "frameSize": [
+        96,
+        77
+      ],
+      "fps": null,
+      "anchor": {
+        "normalized": [
+          0.5,
+          0.5
+        ],
+        "certainty": "proposed",
+        "note": "Sandbox placement proposal; art normalization does not make it a final gameplay pivot."
+      },
+      "logicalScale": {
+        "sourcePixelsPerLogicalPixel": 1,
+        "certainty": "confirmedForSandboxDerivative",
+        "gridUnitPx": 16,
+        "note": "The derivative is rendered at logical 1x; the source remains untouched."
+      },
+      "status": "processed",
+      "notes": [
+        "Minimum runtime derivative: independent cloud.",
+        "Nearest-neighbor only; source alpha values preserved."
+      ],
+      "sha256": "e19f42e4cf230083f11ff576a920424867ab58a055d5ed952c0be189391bf50c",
+      "bytes": 3862,
+      "alpha": {
+        "hasAlphaChannel": true,
+        "transparentPixels": 5875,
+        "semiTransparentPixels": 1506,
+        "opaquePixels": 11,
+        "binaryAlpha": false,
+        "alphaBounds": [
+          18,
+          19,
+          88,
+          71
+        ]
+      },
+      "processing": {
+        "kind": "cropResizeNearest",
+        "crop": [
+          53,
+          48,
+          1275,
+          1033
+        ],
+        "sourceCropSize": [
+          1222,
+          985
+        ],
+        "outputSize": [
+          96,
+          77
+        ],
+        "sampling": "nearest",
+        "alphaHandling": "preserved",
+        "componentLocatorAlphaThreshold": 64,
+        "reductionFactorXY": [
+          12.7292,
+          12.7922
+        ],
+        "pixelBlockEvidence": {
+          "sampledRuns": 995,
+          "medianRunPx": 16,
+          "dominantRunAtLeast4Px": 16,
+          "topRuns": [
+            [
+              2,
+              147
+            ],
+            [
+              16,
+              69
+            ],
+            [
+              15,
+              62
+            ],
+            [
+              4,
+              42
+            ],
+            [
+              17,
+              42
+            ],
+            [
+              3,
+              39
+            ],
+            [
+              5,
+              32
+            ],
+            [
+              14,
+              31
+            ]
+          ],
+          "method": "RGBA quantized to RGB/32 and alpha/64; 64 sampled rows plus 64 sampled columns."
+        },
+        "calibration": "16x16 logical grid, 32x48 runtime adventurer, and existing 16/32/64px house modules"
+      },
+      "runtimeMinimum": true
+    },
+    {
+      "id": "runtime-background-cloud-03",
+      "category": "skyParallax",
+      "sourcePath": "assetss-definitivo/assets_fase1/png_complementarios/nube_3.png",
+      "outputPath": "prepared-assets/phase1/runtime/backgrounds/cloud-03.png",
+      "referencePath": "assetss-definitivo/assets_fase1/png_complementarios/nube_3.png",
+      "dimensions": [
+        96,
+        73
+      ],
+      "frameCount": 1,
+      "frameSize": [
+        96,
+        73
+      ],
+      "fps": null,
+      "anchor": {
+        "normalized": [
+          0.5,
+          0.5
+        ],
+        "certainty": "proposed",
+        "note": "Sandbox placement proposal; art normalization does not make it a final gameplay pivot."
+      },
+      "logicalScale": {
+        "sourcePixelsPerLogicalPixel": 1,
+        "certainty": "confirmedForSandboxDerivative",
+        "gridUnitPx": 16,
+        "note": "The derivative is rendered at logical 1x; the source remains untouched."
+      },
+      "status": "processed",
+      "notes": [
+        "Minimum runtime derivative: independent cloud.",
+        "Nearest-neighbor only; source alpha values preserved."
+      ],
+      "sha256": "2dffbe42993232132b12cd0c9ef2d7728d2c006cdcfdb84745a0b08e4c055588",
+      "bytes": 4477,
+      "alpha": {
+        "hasAlphaChannel": true,
+        "transparentPixels": 4954,
+        "semiTransparentPixels": 2052,
+        "opaquePixels": 2,
+        "binaryAlpha": false,
+        "alphaBounds": [
+          9,
+          18,
+          91,
+          71
+        ]
+      },
+      "processing": {
+        "kind": "cropResizeNearest",
+        "crop": [
+          85,
+          48,
+          1339,
+          1001
+        ],
+        "sourceCropSize": [
+          1254,
+          953
+        ],
+        "outputSize": [
+          96,
+          73
+        ],
+        "sampling": "nearest",
+        "alphaHandling": "preserved",
+        "componentLocatorAlphaThreshold": 64,
+        "reductionFactorXY": [
+          13.0625,
+          13.0548
+        ],
+        "pixelBlockEvidence": {
+          "sampledRuns": 871,
+          "medianRunPx": 20,
+          "dominantRunAtLeast4Px": 19,
+          "topRuns": [
+            [
+              2,
+              108
+            ],
+            [
+              19,
+              81
+            ],
+            [
+              20,
+              71
+            ],
+            [
+              21,
+              69
+            ],
+            [
+              3,
+              44
+            ],
+            [
+              43,
+              40
+            ],
+            [
+              4,
+              35
+            ],
+            [
+              42,
+              33
+            ]
+          ],
+          "method": "RGBA quantized to RGB/32 and alpha/64; 64 sampled rows plus 64 sampled columns."
+        },
+        "calibration": "16x16 logical grid, 32x48 runtime adventurer, and existing 16/32/64px house modules"
+      },
+      "runtimeMinimum": true
+    },
+    {
+      "id": "runtime-vegetation-trunk",
+      "category": "vegetation",
+      "sourcePath": "assetss-definitivo/assets_fase1/png_complementarios/tileset_troncos.png",
+      "outputPath": "prepared-assets/phase1/runtime/vegetation/trunk.png",
+      "referencePath": "assetss-definitivo/assets_fase1/png_complementarios/tileset_troncos.png",
+      "dimensions": [
+        16,
+        32
+      ],
+      "frameCount": 1,
+      "frameSize": [
+        16,
+        32
+      ],
+      "fps": null,
+      "anchor": {
+        "normalized": [
+          0.5,
+          1.0
+        ],
+        "certainty": "proposed",
+        "note": "Sandbox placement proposal; art normalization does not make it a final gameplay pivot."
+      },
+      "logicalScale": {
+        "sourcePixelsPerLogicalPixel": 1,
+        "certainty": "confirmedForSandboxDerivative",
+        "gridUnitPx": 16,
+        "note": "The derivative is rendered at logical 1x; the source remains untouched."
+      },
+      "status": "processed",
+      "notes": [
+        "Minimum runtime derivative: straight tree trunk.",
+        "Nearest-neighbor only; source alpha values preserved."
+      ],
+      "sha256": "9faa06ad7efd6bfd09a728145ce8e30a349249d55c901a853ad1865b3949734f",
+      "bytes": 1273,
+      "alpha": {
+        "hasAlphaChannel": true,
+        "transparentPixels": 44,
+        "semiTransparentPixels": 468,
+        "opaquePixels": 0,
+        "binaryAlpha": false,
+        "alphaBounds": [
+          0,
+          0,
+          16,
+          32
+        ]
+      },
+      "processing": {
+        "kind": "cropResizeNearest",
+        "crop": [
+          215,
+          1010,
+          338,
+          1208
+        ],
+        "sourceCropSize": [
+          123,
+          198
+        ],
+        "outputSize": [
+          16,
+          32
+        ],
+        "sampling": "nearest",
+        "alphaHandling": "preserved",
+        "componentLocatorAlphaThreshold": 64,
+        "reductionFactorXY": [
+          7.6875,
+          6.1875
+        ],
+        "pixelBlockEvidence": {
+          "sampledRuns": 3142,
+          "medianRunPx": 5,
+          "dominantRunAtLeast4Px": 5,
+          "topRuns": [
+            [
+              2,
+              602
+            ],
+            [
+              5,
+              482
+            ],
+            [
+              3,
+              379
+            ],
+            [
+              4,
+              362
+            ],
+            [
+              6,
+              323
+            ],
+            [
+              7,
+              159
+            ],
+            [
+              8,
+              86
+            ],
+            [
+              10,
+              86
+            ]
+          ],
+          "method": "RGBA quantized to RGB/32 and alpha/64; 64 sampled rows plus 64 sampled columns."
+        },
+        "calibration": "16x16 logical grid, 32x48 runtime adventurer, and existing 16/32/64px house modules"
+      },
+      "runtimeMinimum": true
+    },
+    {
+      "id": "runtime-vegetation-crown-01",
+      "category": "vegetation",
+      "sourcePath": "assetss-definitivo/assets_fase1/png_complementarios/copadearbol_tileset_1.png",
+      "outputPath": "prepared-assets/phase1/runtime/vegetation/crown-01.png",
+      "referencePath": "assetss-definitivo/assets_fase1/png_complementarios/copadearbol_tileset_1.png",
+      "dimensions": [
+        64,
+        56
+      ],
+      "frameCount": 1,
+      "frameSize": [
+        64,
+        56
+      ],
+      "fps": null,
+      "anchor": {
+        "normalized": [
+          0.5,
+          1.0
+        ],
+        "certainty": "proposed",
+        "note": "Sandbox placement proposal; art normalization does not make it a final gameplay pivot."
+      },
+      "logicalScale": {
+        "sourcePixelsPerLogicalPixel": 1,
+        "certainty": "confirmedForSandboxDerivative",
+        "gridUnitPx": 16,
+        "note": "The derivative is rendered at logical 1x; the source remains untouched."
+      },
+      "status": "processed",
+      "notes": [
+        "Minimum runtime derivative: tree crown variant.",
+        "Nearest-neighbor only; source alpha values preserved."
+      ],
+      "sha256": "7f52191e2024c8686302697fc13fcd3c4dc803e0171e3d100e27cc7b89ab8624",
+      "bytes": 7491,
+      "alpha": {
+        "hasAlphaChannel": true,
+        "transparentPixels": 1001,
+        "semiTransparentPixels": 2581,
+        "opaquePixels": 2,
+        "binaryAlpha": false,
+        "alphaBounds": [
+          0,
+          0,
+          64,
+          56
+        ]
+      },
+      "processing": {
+        "kind": "cropResizeNearest",
+        "crop": [
+          8,
+          203,
+          359,
+          509
+        ],
+        "sourceCropSize": [
+          351,
+          306
+        ],
+        "outputSize": [
+          64,
+          56
+        ],
+        "sampling": "nearest",
+        "alphaHandling": "preserved",
+        "componentLocatorAlphaThreshold": 64,
+        "reductionFactorXY": [
+          5.4844,
+          5.4643
+        ],
+        "pixelBlockEvidence": {
+          "sampledRuns": 4802,
+          "medianRunPx": 4,
+          "dominantRunAtLeast4Px": 4,
+          "topRuns": [
+            [
+              2,
+              1028
+            ],
+            [
+              4,
+              792
+            ],
+            [
+              3,
+              761
+            ],
+            [
+              5,
+              481
+            ],
+            [
+              6,
+              332
+            ],
+            [
+              8,
+              246
+            ],
+            [
+              7,
+              242
+            ],
+            [
+              9,
+              177
+            ]
+          ],
+          "method": "RGBA quantized to RGB/32 and alpha/64; 64 sampled rows plus 64 sampled columns."
+        },
+        "calibration": "16x16 logical grid, 32x48 runtime adventurer, and existing 16/32/64px house modules"
+      },
+      "runtimeMinimum": true
+    },
+    {
+      "id": "runtime-vegetation-crown-02",
+      "category": "vegetation",
+      "sourcePath": "assetss-definitivo/assets_fase1/png_complementarios/copadearbol_tileset_1.png",
+      "outputPath": "prepared-assets/phase1/runtime/vegetation/crown-02.png",
+      "referencePath": "assetss-definitivo/assets_fase1/png_complementarios/copadearbol_tileset_1.png",
+      "dimensions": [
+        64,
+        56
+      ],
+      "frameCount": 1,
+      "frameSize": [
+        64,
+        56
+      ],
+      "fps": null,
+      "anchor": {
+        "normalized": [
+          0.5,
+          1.0
+        ],
+        "certainty": "proposed",
+        "note": "Sandbox placement proposal; art normalization does not make it a final gameplay pivot."
+      },
+      "logicalScale": {
+        "sourcePixelsPerLogicalPixel": 1,
+        "certainty": "confirmedForSandboxDerivative",
+        "gridUnitPx": 16,
+        "note": "The derivative is rendered at logical 1x; the source remains untouched."
+      },
+      "status": "processed",
+      "notes": [
+        "Minimum runtime derivative: tree crown variant.",
+        "Nearest-neighbor only; source alpha values preserved."
+      ],
+      "sha256": "32a3c9f6d5b01a2b64ddb77d2fab17cf8657c44b3cc1d92fbd44ea47bddcf247",
+      "bytes": 7526,
+      "alpha": {
+        "hasAlphaChannel": true,
+        "transparentPixels": 1055,
+        "semiTransparentPixels": 2529,
+        "opaquePixels": 0,
+        "binaryAlpha": false,
+        "alphaBounds": [
+          0,
+          0,
+          64,
+          56
+        ]
+      },
+      "processing": {
+        "kind": "cropResizeNearest",
+        "crop": [
+          364,
+          203,
+          722,
+          511
+        ],
+        "sourceCropSize": [
+          358,
+          308
+        ],
+        "outputSize": [
+          64,
+          56
+        ],
+        "sampling": "nearest",
+        "alphaHandling": "preserved",
+        "componentLocatorAlphaThreshold": 64,
+        "reductionFactorXY": [
+          5.5938,
+          5.5
+        ],
+        "pixelBlockEvidence": {
+          "sampledRuns": 4878,
+          "medianRunPx": 4,
+          "dominantRunAtLeast4Px": 4,
+          "topRuns": [
+            [
+              2,
+              1039
+            ],
+            [
+              4,
+              816
+            ],
+            [
+              3,
+              814
+            ],
+            [
+              5,
+              492
+            ],
+            [
+              6,
+              288
+            ],
+            [
+              8,
+              241
+            ],
+            [
+              7,
+              233
+            ],
+            [
+              9,
+              212
+            ]
+          ],
+          "method": "RGBA quantized to RGB/32 and alpha/64; 64 sampled rows plus 64 sampled columns."
+        },
+        "calibration": "16x16 logical grid, 32x48 runtime adventurer, and existing 16/32/64px house modules"
+      },
+      "runtimeMinimum": true
+    },
+    {
+      "id": "runtime-vegetation-grass",
+      "category": "vegetation",
+      "sourcePath": "assetss-definitivo/assets_fase1/png_complementarios/vegetation_assets/short_grass.png",
+      "outputPath": "prepared-assets/phase1/runtime/vegetation/grass.png",
+      "referencePath": "assetss-definitivo/assets_fase1/png_complementarios/vegetation_assets/short_grass.png",
+      "dimensions": [
+        32,
+        24
+      ],
+      "frameCount": 1,
+      "frameSize": [
+        32,
+        24
+      ],
+      "fps": null,
+      "anchor": {
+        "normalized": [
+          0.5,
+          1.0
+        ],
+        "certainty": "proposed",
+        "note": "Sandbox placement proposal; art normalization does not make it a final gameplay pivot."
+      },
+      "logicalScale": {
+        "sourcePixelsPerLogicalPixel": 1,
+        "certainty": "confirmedForSandboxDerivative",
+        "gridUnitPx": 16,
+        "note": "The derivative is rendered at logical 1x; the source remains untouched."
+      },
+      "status": "processed",
+      "notes": [
+        "Minimum runtime derivative: short grass clump.",
+        "Nearest-neighbor only; source alpha values preserved."
+      ],
+      "sha256": "b583c0dab1a702ba997b781330704730bffeb6ac92adc506786c0aea283eb970",
+      "bytes": 2037,
+      "alpha": {
+        "hasAlphaChannel": true,
+        "transparentPixels": 236,
+        "semiTransparentPixels": 522,
+        "opaquePixels": 10,
+        "binaryAlpha": false,
+        "alphaBounds": [
+          0,
+          0,
+          32,
+          24
+        ]
+      },
+      "processing": {
+        "kind": "cropResizeNearest",
+        "crop": [
+          26,
+          477,
+          318,
+          710
+        ],
+        "sourceCropSize": [
+          292,
+          233
+        ],
+        "outputSize": [
+          32,
+          24
+        ],
+        "sampling": "nearest",
+        "alphaHandling": "preserved",
+        "componentLocatorAlphaThreshold": 64,
+        "reductionFactorXY": [
+          9.125,
+          9.7083
+        ],
+        "pixelBlockEvidence": {
+          "sampledRuns": 3179,
+          "medianRunPx": 7,
+          "dominantRunAtLeast4Px": 9,
+          "topRuns": [
+            [
+              9,
+              528
+            ],
+            [
+              2,
+              521
+            ],
+            [
+              10,
+              349
+            ],
+            [
+              8,
+              332
+            ],
+            [
+              3,
+              297
+            ],
+            [
+              4,
+              251
+            ],
+            [
+              7,
+              230
+            ],
+            [
+              5,
+              217
+            ]
+          ],
+          "method": "RGBA quantized to RGB/32 and alpha/64; 64 sampled rows plus 64 sampled columns."
+        },
+        "calibration": "16x16 logical grid, 32x48 runtime adventurer, and existing 16/32/64px house modules"
+      },
+      "runtimeMinimum": true
+    },
+    {
+      "id": "runtime-vegetation-flower",
+      "category": "vegetation",
+      "sourcePath": "assetss-definitivo/assets_fase1/png_complementarios/flower_01_yellow.png",
+      "outputPath": "prepared-assets/phase1/runtime/vegetation/flower.png",
+      "referencePath": "assetss-definitivo/assets_fase1/png_complementarios/flower_01_yellow.png",
+      "dimensions": [
+        16,
+        24
+      ],
+      "frameCount": 1,
+      "frameSize": [
+        16,
+        24
+      ],
+      "fps": null,
+      "anchor": {
+        "normalized": [
+          0.5,
+          1.0
+        ],
+        "certainty": "proposed",
+        "note": "Sandbox placement proposal; art normalization does not make it a final gameplay pivot."
+      },
+      "logicalScale": {
+        "sourcePixelsPerLogicalPixel": 1,
+        "certainty": "confirmedForSandboxDerivative",
+        "gridUnitPx": 16,
+        "note": "The derivative is rendered at logical 1x; the source remains untouched."
+      },
+      "status": "processed",
+      "notes": [
+        "Minimum runtime derivative: yellow flower.",
+        "Nearest-neighbor only; source alpha values preserved."
+      ],
+      "sha256": "6386dfff36a85269cc37bf3864a5e4e2ba11a5cffc01592fb5774e3a1ff4973b",
+      "bytes": 282,
+      "alpha": {
+        "hasAlphaChannel": true,
+        "transparentPixels": 345,
+        "semiTransparentPixels": 38,
+        "opaquePixels": 1,
+        "binaryAlpha": false,
+        "alphaBounds": [
+          5,
+          7,
+          10,
+          20
+        ]
+      },
+      "processing": {
+        "kind": "cropResizeNearest",
+        "crop": [
+          93,
+          49,
+          1214,
+          1186
+        ],
+        "sourceCropSize": [
+          1121,
+          1137
+        ],
+        "outputSize": [
+          16,
+          24
+        ],
+        "sampling": "nearest",
+        "alphaHandling": "preserved",
+        "componentLocatorAlphaThreshold": 64,
+        "reductionFactorXY": [
+          70.0625,
+          47.375
+        ],
+        "pixelBlockEvidence": {
+          "sampledRuns": 806,
+          "medianRunPx": 17,
+          "dominantRunAtLeast4Px": 21,
+          "topRuns": [
+            [
+              2,
+              105
+            ],
+            [
+              21,
+              51
+            ],
+            [
+              19,
+              49
+            ],
+            [
+              20,
+              47
+            ],
+            [
+              22,
+              41
+            ],
+            [
+              3,
+              40
+            ],
+            [
+              23,
+              36
+            ],
+            [
+              4,
+              35
+            ]
+          ],
+          "method": "RGBA quantized to RGB/32 and alpha/64; 64 sampled rows plus 64 sampled columns."
+        },
+        "calibration": "16x16 logical grid, 32x48 runtime adventurer, and existing 16/32/64px house modules"
+      },
+      "runtimeMinimum": true
+    },
+    {
+      "id": "runtime-vegetation-rock",
+      "category": "vegetation",
+      "sourcePath": "assetss-definitivo/assets_fase1/png_complementarios/rock_assets/rock_01.png",
+      "outputPath": "prepared-assets/phase1/runtime/vegetation/rock.png",
+      "referencePath": "assetss-definitivo/assets_fase1/png_complementarios/rock_assets/rock_01.png",
+      "dimensions": [
+        16,
+        16
+      ],
+      "frameCount": 1,
+      "frameSize": [
+        16,
+        16
+      ],
+      "fps": null,
+      "anchor": {
+        "normalized": [
+          0.5,
+          1.0
+        ],
+        "certainty": "proposed",
+        "note": "Sandbox placement proposal; art normalization does not make it a final gameplay pivot."
+      },
+      "logicalScale": {
+        "sourcePixelsPerLogicalPixel": 1,
+        "certainty": "confirmedForSandboxDerivative",
+        "gridUnitPx": 16,
+        "note": "The derivative is rendered at logical 1x; the source remains untouched."
+      },
+      "status": "processed",
+      "notes": [
+        "Minimum runtime derivative: small rock.",
+        "Nearest-neighbor only; source alpha values preserved."
+      ],
+      "sha256": "7cc669f0dec51512202fdd8c9a0f255f67ab44613d3b76a0cf370477e4ddee09",
+      "bytes": 314,
+      "alpha": {
+        "hasAlphaChannel": true,
+        "transparentPixels": 197,
+        "semiTransparentPixels": 59,
+        "opaquePixels": 0,
+        "binaryAlpha": false,
+        "alphaBounds": [
+          4,
+          9,
+          16,
+          16
+        ]
+      },
+      "processing": {
+        "kind": "cropResizeNearest",
+        "crop": [
+          206,
+          49,
+          881,
+          840
+        ],
+        "sourceCropSize": [
+          675,
+          791
+        ],
+        "outputSize": [
+          16,
+          16
+        ],
+        "sampling": "nearest",
+        "alphaHandling": "preserved",
+        "componentLocatorAlphaThreshold": 64,
+        "reductionFactorXY": [
+          42.1875,
+          49.4375
+        ],
+        "pixelBlockEvidence": {
+          "sampledRuns": 641,
+          "medianRunPx": 28,
+          "dominantRunAtLeast4Px": 29,
+          "topRuns": [
+            [
+              29,
+              98
+            ],
+            [
+              28,
+              62
+            ],
+            [
+              2,
+              57
+            ],
+            [
+              27,
+              51
+            ],
+            [
+              3,
+              40
+            ],
+            [
+              30,
+              38
+            ],
+            [
+              4,
+              28
+            ],
+            [
+              58,
+              26
+            ]
+          ],
+          "method": "RGBA quantized to RGB/32 and alpha/64; 64 sampled rows plus 64 sampled columns."
+        },
+        "calibration": "16x16 logical grid, 32x48 runtime adventurer, and existing 16/32/64px house modules"
+      },
+      "runtimeMinimum": true
+    },
+    {
+      "id": "runtime-vegetation-liana",
+      "category": "vegetation",
+      "sourcePath": "assetss-definitivo/assets_fase1/png_complementarios/lianas.png",
+      "outputPath": "prepared-assets/phase1/runtime/vegetation/liana.png",
+      "referencePath": "assetss-definitivo/assets_fase1/png_complementarios/lianas.png",
+      "dimensions": [
+        16,
+        48
+      ],
+      "frameCount": 1,
+      "frameSize": [
+        16,
+        48
+      ],
+      "fps": null,
+      "anchor": {
+        "normalized": [
+          0.5,
+          0.0
+        ],
+        "certainty": "proposed",
+        "note": "Sandbox placement proposal; art normalization does not make it a final gameplay pivot."
+      },
+      "logicalScale": {
+        "sourcePixelsPerLogicalPixel": 1,
+        "certainty": "confirmedForSandboxDerivative",
+        "gridUnitPx": 16,
+        "note": "The derivative is rendered at logical 1x; the source remains untouched."
+      },
+      "status": "processed",
+      "notes": [
+        "Minimum runtime derivative: short hanging vine.",
+        "Nearest-neighbor only; source alpha values preserved."
+      ],
+      "sha256": "ecd78c9c9bbb0f2771f0402dcc9e3e6ec4f70958ff55974afeb8a8893d53cb36",
+      "bytes": 1776,
+      "alpha": {
+        "hasAlphaChannel": true,
+        "transparentPixels": 248,
+        "semiTransparentPixels": 517,
+        "opaquePixels": 3,
+        "binaryAlpha": false,
+        "alphaBounds": [
+          0,
+          0,
+          16,
+          48
+        ]
+      },
+      "processing": {
+        "kind": "cropResizeNearest",
+        "crop": [
+          28,
+          118,
+          134,
+          404
+        ],
+        "sourceCropSize": [
+          106,
+          286
+        ],
+        "outputSize": [
+          16,
+          48
+        ],
+        "sampling": "nearest",
+        "alphaHandling": "preserved",
+        "componentLocatorAlphaThreshold": 64,
+        "reductionFactorXY": [
+          6.625,
+          5.9583
+        ],
+        "pixelBlockEvidence": {
+          "sampledRuns": 3175,
+          "medianRunPx": 4,
+          "dominantRunAtLeast4Px": 5,
+          "topRuns": [
+            [
+              2,
+              817
+            ],
+            [
+              5,
+              497
+            ],
+            [
+              3,
+              483
+            ],
+            [
+              4,
+              377
+            ],
+            [
+              6,
+              351
+            ],
+            [
+              7,
+              115
+            ],
+            [
+              8,
+              95
+            ],
+            [
+              9,
+              65
+            ]
+          ],
+          "method": "RGBA quantized to RGB/32 and alpha/64; 64 sampled rows plus 64 sampled columns."
+        },
+        "calibration": "16x16 logical grid, 32x48 runtime adventurer, and existing 16/32/64px house modules"
+      },
+      "runtimeMinimum": true
+    },
+    {
+      "id": "runtime-vegetation-roots",
+      "category": "vegetation",
+      "sourcePath": "assetss-definitivo/assets_fase1/png_complementarios/raices_tileset.png",
+      "outputPath": "prepared-assets/phase1/runtime/vegetation/roots.png",
+      "referencePath": "assetss-definitivo/assets_fase1/png_complementarios/raices_tileset.png",
+      "dimensions": [
+        24,
+        80
+      ],
+      "frameCount": 1,
+      "frameSize": [
+        24,
+        80
+      ],
+      "fps": null,
+      "anchor": {
+        "normalized": [
+          0.5,
+          0.0
+        ],
+        "certainty": "proposed",
+        "note": "Sandbox placement proposal; art normalization does not make it a final gameplay pivot."
+      },
+      "logicalScale": {
+        "sourcePixelsPerLogicalPixel": 1,
+        "certainty": "confirmedForSandboxDerivative",
+        "gridUnitPx": 16,
+        "note": "The derivative is rendered at logical 1x; the source remains untouched."
+      },
+      "status": "processed",
+      "notes": [
+        "Minimum runtime derivative: hanging root cluster.",
+        "Nearest-neighbor only; source alpha values preserved."
+      ],
+      "sha256": "fda6a4d1dcdb4f435795866370633ef51542d6f214bbdbddf44cef6e8a51173b",
+      "bytes": 3557,
+      "alpha": {
+        "hasAlphaChannel": true,
+        "transparentPixels": 883,
+        "semiTransparentPixels": 1032,
+        "opaquePixels": 5,
+        "binaryAlpha": false,
+        "alphaBounds": [
+          0,
+          0,
+          24,
+          79
+        ]
+      },
+      "processing": {
+        "kind": "cropResizeNearest",
+        "crop": [
+          70,
+          101,
+          237,
+          606
+        ],
+        "sourceCropSize": [
+          167,
+          505
+        ],
+        "outputSize": [
+          24,
+          80
+        ],
+        "sampling": "nearest",
+        "alphaHandling": "preserved",
+        "componentLocatorAlphaThreshold": 64,
+        "reductionFactorXY": [
+          6.9583,
+          6.3125
+        ],
+        "pixelBlockEvidence": {
+          "sampledRuns": 3583,
+          "medianRunPx": 4,
+          "dominantRunAtLeast4Px": 5,
+          "topRuns": [
+            [
+              2,
+              872
+            ],
+            [
+              5,
+              494
+            ],
+            [
+              4,
+              484
+            ],
+            [
+              3,
+              478
+            ],
+            [
+              6,
+              442
+            ],
+            [
+              7,
+              176
+            ],
+            [
+              8,
+              88
+            ],
+            [
+              11,
+              81
+            ]
+          ],
+          "method": "RGBA quantized to RGB/32 and alpha/64; 64 sampled rows plus 64 sampled columns."
+        },
+        "calibration": "16x16 logical grid, 32x48 runtime adventurer, and existing 16/32/64px house modules"
+      },
+      "runtimeMinimum": true
+    },
+    {
+      "id": "runtime-control-cursor-default",
+      "category": "cursorTouch",
+      "sourcePath": "assetss-definitivo/assets_fase1/png_complementarios/cursor_default.png",
+      "outputPath": "prepared-assets/phase1/runtime/controls/cursor-default.png",
+      "referencePath": "assetss-definitivo/assets_fase1/png_complementarios/cursor_default.png",
+      "dimensions": [
+        24,
+        32
+      ],
+      "frameCount": 1,
+      "frameSize": [
+        24,
+        32
+      ],
+      "fps": null,
+      "anchor": {
+        "normalized": [
+          0.0,
+          0.0
+        ],
+        "certainty": "proposed",
+        "note": "Sandbox placement proposal; art normalization does not make it a final gameplay pivot."
+      },
+      "logicalScale": {
+        "sourcePixelsPerLogicalPixel": 1,
+        "certainty": "confirmedForSandboxDerivative",
+        "gridUnitPx": 16,
+        "note": "The derivative is rendered at logical 1x; the source remains untouched."
+      },
+      "status": "processed",
+      "notes": [
+        "Minimum runtime derivative: default pointer.",
+        "Nearest-neighbor only; source alpha values preserved."
+      ],
+      "sha256": "8951ebf5745f434f69819f5d55a4132f6146179423b8e98b092dbe0ea2094ed5",
+      "bytes": 450,
+      "alpha": {
+        "hasAlphaChannel": true,
+        "transparentPixels": 685,
+        "semiTransparentPixels": 82,
+        "opaquePixels": 1,
+        "binaryAlpha": false,
+        "alphaBounds": [
+          10,
+          10,
+          20,
+          24
+        ]
+      },
+      "processing": {
+        "kind": "cropResizeNearest",
+        "crop": [
+          142,
+          49,
+          898,
+          1154
+        ],
+        "sourceCropSize": [
+          756,
+          1105
+        ],
+        "outputSize": [
+          24,
+          32
+        ],
+        "sampling": "nearest",
+        "alphaHandling": "preserved",
+        "componentLocatorAlphaThreshold": 64,
+        "reductionFactorXY": [
+          31.5,
+          34.5312
+        ],
+        "pixelBlockEvidence": {
+          "sampledRuns": 482,
+          "medianRunPx": 17,
+          "dominantRunAtLeast4Px": 4,
+          "topRuns": [
+            [
+              2,
+              78
+            ],
+            [
+              3,
+              35
+            ],
+            [
+              4,
+              25
+            ],
+            [
+              28,
+              19
+            ],
+            [
+              27,
+              15
+            ],
+            [
+              30,
+              13
+            ],
+            [
+              36,
+              13
+            ],
+            [
+              35,
+              13
+            ]
+          ],
+          "method": "RGBA quantized to RGB/32 and alpha/64; 64 sampled rows plus 64 sampled columns."
+        },
+        "calibration": "16x16 logical grid, 32x48 runtime adventurer, and existing 16/32/64px house modules"
+      },
+      "runtimeMinimum": true
+    },
+    {
+      "id": "runtime-control-touch-target",
+      "category": "cursorTouch",
+      "sourcePath": "assetss-definitivo/assets_fase1/png_complementarios/touch_mobile.png",
+      "outputPath": "prepared-assets/phase1/runtime/controls/touch-target.png",
+      "referencePath": "assetss-definitivo/assets_fase1/png_complementarios/touch_mobile.png",
+      "dimensions": [
+        32,
+        32
+      ],
+      "frameCount": 1,
+      "frameSize": [
+        32,
+        32
+      ],
+      "fps": null,
+      "anchor": {
+        "normalized": [
+          0.5,
+          0.5
+        ],
+        "certainty": "proposed",
+        "note": "Sandbox placement proposal; art normalization does not make it a final gameplay pivot."
+      },
+      "logicalScale": {
+        "sourcePixelsPerLogicalPixel": 1,
+        "certainty": "confirmedForSandboxDerivative",
+        "gridUnitPx": 16,
+        "note": "The derivative is rendered at logical 1x; the source remains untouched."
+      },
+      "status": "processed",
+      "notes": [
+        "Minimum runtime derivative: touch destination marker; resolves the source-name alias for sandbox use.",
+        "Nearest-neighbor only; source alpha values preserved."
+      ],
+      "sha256": "099450f875514d24c2294c1703e3c872b1ad979905edf35787f55a5b82ff3d4a",
+      "bytes": 618,
+      "alpha": {
+        "hasAlphaChannel": true,
+        "transparentPixels": 911,
+        "semiTransparentPixels": 113,
+        "opaquePixels": 0,
+        "binaryAlpha": false,
+        "alphaBounds": [
+          9,
+          11,
+          23,
+          24
+        ]
+      },
+      "processing": {
+        "kind": "cropResizeNearest",
+        "crop": [
+          85,
+          17,
+          1174,
+          1154
+        ],
+        "sourceCropSize": [
+          1089,
+          1137
+        ],
+        "outputSize": [
+          32,
+          32
+        ],
+        "sampling": "nearest",
+        "alphaHandling": "preserved",
+        "componentLocatorAlphaThreshold": 64,
+        "reductionFactorXY": [
+          34.0312,
+          35.5312
+        ],
+        "pixelBlockEvidence": {
+          "sampledRuns": 995,
+          "medianRunPx": 8,
+          "dominantRunAtLeast4Px": 4,
+          "topRuns": [
+            [
+              2,
+              199
+            ],
+            [
+              3,
+              90
+            ],
+            [
+              4,
+              58
+            ],
+            [
+              5,
+              49
+            ],
+            [
+              6,
+              40
+            ],
+            [
+              25,
+              36
+            ],
+            [
+              7,
+              35
+            ],
+            [
+              26,
+              34
+            ]
+          ],
+          "method": "RGBA quantized to RGB/32 and alpha/64; 64 sampled rows plus 64 sampled columns."
+        },
+        "calibration": "16x16 logical grid, 32x48 runtime adventurer, and existing 16/32/64px house modules"
+      },
+      "runtimeMinimum": true
+    }
+  ]
+}

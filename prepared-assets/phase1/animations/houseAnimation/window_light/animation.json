@@ -1,0 +1,26 @@
+{
+  "source": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/window_light/window_light.gif",
+  "frameSize": [
+    32,
+    32
+  ],
+  "frameCount": 6,
+  "durationsMs": [
+    120,
+    120,
+    120,
+    120,
+    120,
+    120
+  ],
+  "loop": 0,
+  "frames": [
+    "prepared-assets/phase1/animations/houseAnimation/window_light/frame-01.png",
+    "prepared-assets/phase1/animations/houseAnimation/window_light/frame-02.png",
+    "prepared-assets/phase1/animations/houseAnimation/window_light/frame-03.png",
+    "prepared-assets/phase1/animations/houseAnimation/window_light/frame-04.png",
+    "prepared-assets/phase1/animations/houseAnimation/window_light/frame-05.png",
+    "prepared-assets/phase1/animations/houseAnimation/window_light/frame-06.png"
+  ],
+  "sampling": "none"
+}

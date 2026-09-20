@@ -68,7 +68,7 @@ Animaciones necesarias más adelante
 - adventurer_sit.gif - HECHO
   - Para sentarse sobre cards, cofres o mobiliario.
 
-- adventurer_climb.gif - HECHO
+- adventurer_climb.gif    
   - cuerdas.
 
 - adventurer_subir_escalera.gif
@@ -100,8 +100,8 @@ PNG complementarios
   - Sombra pequeña separada.
 
 
-- umbrella_closed.png
-- umbrella_open.png
+- umbrella_closed.png - HECHO
+- umbrella_open.png - HECHO
 - magic_mirror_item.png - HECHO
 
 
@@ -131,99 +131,121 @@ Cielo y profundidad
 - forest_horizon.png - HECHO
 - 6-8 nubes PNG independientes. - HECHO
 - 3-4 nubes grandes de primer plano. - HECHO
+- 4-6 islas lejanas flotantes PNG. - HECHO
+- sun.png - HECHO
+- moon.png - HECHO
+- stars_01.png - HECHO
+- stars_02.png - HECHO
 
 
-- 4-6 islas lejanas PNG.
-- sun.png
-- moon.png
-- stars_01.png
-- stars_02.png
+
 Los fondos deben tener transparencia para poder hacer parallax.
 Tiles de la isla
 Necesitamos un tileset con:
-- Césped central.
-- Césped con borde izquierdo y derecho.
-- Esquinas interiores y exteriores.
-- Tierra superficial.
-- Tierra profunda.
-- Piedra.
-- Mezcla tierra-piedra.
-- Bordes inferiores.
-- Puntas de roca colgante.
-- Variaciones para evitar repetición.
-- Pequeñas plataformas.
-- Puente de madera.
-- Plataforma de madera.
-- Viga de soporte.
+- Césped central. - HECHO
+- Césped con borde izquierdo y derecho. - HECHO
+- Esquinas interiores y exteriores. - HECHO
+- Tierra superficial. - HECHO
+- Tierra profunda. - HECHO
+- Piedra. - HECHO
+- Mezcla tierra-piedra. - HECHO
+- Bordes inferiores. - HECHO
+- Puntas de roca colgante. - HECHO
+- Variaciones para evitar repetición. - HECHO
+- Pequeñas plataformas. - HECHO
+- Puente de madera. - HECHO
+- Plataforma de madera. - HECHO
+- Viga de soporte. - HECHO
+
+
+
 Vegetación de la isla
 PNG estáticos:
-- 3-4 troncos de árbol.
-- 4-6 piedras.
-- 8-12 flores.
-- Girasoles.
-- Pasto corto.
-- Pasto alto.
-- Arbustos.
-- Raíces colgantes.
-- Lianas con diferentes longitudes.
-- Plantas de borde.
-- Árbol rosado.
-- Tocón de árbol.
+- 3-4 troncos de árbol. - HECHO
+- 4-6 piedras. - HECHO
+- 8-12 flores. - HECHO
+
+- Girasoles. - HECHO
+- Pasto corto. - HECHO
+- Pasto alto. - HECHO
+- Arbustos. - HECHO
+- Raíces colgantes. - HECHO
+- Lianas con diferentes longitudes. - HECHO
+- Plantas de borde. - HECHO
+- Árbol rosado. - HECHO
+- Tocón de árbol. - HECHO
+
+
 GIF animados:
-- 3-4 copas de árbol moviéndose.
-- Pasto moviéndose.
-- Flores moviéndose.
-- Lianas balanceándose.
-- Hojas sueltas.
-- Partículas de polen.
+- 3-4 copas de árbol moviéndose. - HECHO
+- Pasto moviéndose. - HECHO
+- Flores moviéndose. - HECHO
+- Lianas balanceándose. - HECHO 
+- Hojas sueltas.  - HECHO
+- Partículas de polen. HECHO
+
+
 Casa de Sobre mí
 Estructura PNG:
-- Pared de madera.
-- Variantes de pared.
-- Vigas horizontales y verticales.
-- Techo central.
-- Bordes y esquinas del techo.
-- Chimenea.
-- Piso.
-- Escaleras.
-- Ventanas.
-- Marco de puerta.
-- Plataforma exterior.
-- Baranda.
-- Cartel exterior.
-- Fondo interior oscuro.
+- Pared de madera. - HECHO
+- Variantes de pared. - HECHO
+- Vigas horizontales y verticales. - HECHO
+- Techo central. - HECHO
+- Bordes y esquinas del techo. - HECHO
+- Chimenea. - HECHO
+- Piso. - HECHO
+- Escaleras. - HECHO
+- Ventanas. - HECHO
+- Marco de puerta. - HECHO
+- Plataforma exterior. - HECHO
+- Baranda. - HECHO
+- Cartel exterior. - HECHO
+- Fondo interior oscuro. - HECHO
+
+
+
 Objetos interiores PNG:
-- Mesa.
-- Silla.
-- Cama.
-- Biblioteca.
-- Estanterías.
-- Banco de trabajo.
-- Cofre.
-- Botellas y pociones.
-- Mapas.
-- Cuadros.
-- Macetas.
-- Lámparas.
-- Velas.
-- Herramientas.
-- Pequeños objetos personales.
+- Mesa. - HECHO
+- Silla. - HECHO
+- Cama. - HECHO
+- Biblioteca. - HECHO
+- Estanterías. - HECHO
+- Banco de trabajo. - HECHO
+- Cofre. - HECHO
+- Botellas y pociones. - HECHO
+- Mapas. - HECHO
+- Cuadros. - HECHO
+- Macetas. - HECHO
+- Lámparas. - HECHO
+- Velas. - HECHO
+- Herramientas. - HECHO
+- Pequeños objetos personales. - HECHO
+
+
 Elementos animados:
-- door_open.gif
-- door_close.gif
-- window_light.gif
-- chimney_smoke.gif
-- fireplace.gif
-- torch.gif
-- candle.gif
+- door_open.gif - HECHO
+- door_close.gif - HECHO
+- window_light.gif - HECHO
+- chimney_smoke.gif - HECHO
+- fireplace.gif - HECHO
+- torch.gif - HECHO
+- candle.gif - HECHO
+
+
 Agua de la isla
-- water_surface.gif
-- water_body.gif
-- waterfall_start.gif
-- waterfall_loop.gif
-- waterfall_end.gif
-- water_splash.gif
-- PNG de máscara o borde húmedo para roca.
+- water_surface.gif - HECHO
+- water_body.gif - HECHO
+- waterfall_start.gif - HECHO
+- waterfall_loop.gif - HECHO
+- waterfall_end.gif - HECHO
+- water_splash.gif - HECHO
+- PNG de máscara o borde húmedo para roca. - HECHO
+
+
+
+
+
+
 Fase 2: cielo y superficie completa
 Atmósfera exterior
 GIF:
