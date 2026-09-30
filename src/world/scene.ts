@@ -8,6 +8,8 @@ import {
   TilingSprite,
 } from 'pixi.js';
 import { PlayerAnimator, type AnimationTextures } from './animation';
+import { AmbientSystem, type AmbientDiagnostics } from './ambient/system';
+import { ambientAssetPaths } from './ambient/preset';
 import { ASSETS, WORLD } from './config';
 import { DebugOverlay } from './debug';
 import { bindDestinationInput } from './input';
@@ -15,6 +17,11 @@ import { createPlayerState, setDestination, stepPlayer, type PlayerState } from 
 
 declare global {
   interface Window {
+    __phase1Diagnostics?: {
+      version: string;
+      frame: number;
+      ambient: AmbientDiagnostics;
+    };
     __TERRARIA_DEBUG__?: {
       ready: boolean;
       player: PlayerState;
@@ -36,9 +43,11 @@ export class FloatingIslandScene {
   private readonly clouds = new Container();
   private readonly player = createPlayerState();
   private readonly debugEnabled = new URLSearchParams(window.location.search).get('debug') === '1';
-  private readonly reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  private readonly motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
   private readonly abort = new AbortController();
+  private reducedMotion = this.motionPreference.matches;
   private animator?: PlayerAnimator;
+  private ambient?: AmbientSystem;
   private marker?: Sprite;
   private markerAge = 0;
   private input?: ReturnType<typeof bindDestinationInput>;
@@ -47,6 +56,7 @@ export class FloatingIslandScene {
   private debug?: DebugOverlay;
   private destroyed = false;
   private initialized = false;
+  private cloudElapsed = 0;
 
   constructor(private readonly options: SceneOptions) {}
 
@@ -88,19 +98,29 @@ export class FloatingIslandScene {
 
     this.observer = new ResizeObserver(() => this.layout());
     this.observer.observe(this.options.mount);
+    this.motionPreference.addEventListener('change', this.handleMotionPreference, { signal: this.abort.signal });
+    document.addEventListener('visibilitychange', this.handleVisibility, { signal: this.abort.signal });
     this.app.ticker.add(this.tick);
+    this.app.ticker.maxFPS = 60;
     window.__TERRARIA_DEBUG__ = {
       ready: true,
       player: this.player,
       setDestination: (x) => setDestination(this.player, x),
       viewport: () => ({ width: this.app.screen.width, height: this.app.screen.height }),
     };
+    if (this.ambient) {
+      window.__phase1Diagnostics = {
+        version: 'phase1.5-v1',
+        frame: 0,
+        ambient: this.ambient.diagnostics,
+      };
+    }
     this.options.onStatus('Isla lista. Indica un destino sobre el terreno.');
   }
 
   private async loadTextures(): Promise<Record<string, Texture>> {
     const paths = [
-      ASSETS.island,
+      ASSETS.cleanPlate,
       ASSETS.sky,
       ASSETS.mountainsFar,
       ASSETS.mountainsMid,
@@ -108,6 +128,7 @@ export class FloatingIslandScene {
       ASSETS.touchTarget,
       ...ASSETS.clouds,
       ...Object.values(ASSETS.adventurer).flat(),
+      ...ambientAssetPaths,
     ];
     const loaded = (await Assets.load(paths)) as Record<string, Texture>;
     for (const texture of Object.values(loaded)) texture.source.scaleMode = 'nearest';
@@ -149,23 +170,25 @@ export class FloatingIslandScene {
       sprite.zIndex = 2;
       (sprite as Sprite & { baseX?: number; speed?: number }).baseX = item.x;
       (sprite as Sprite & { baseX?: number; speed?: number }).speed = 2.2 + index * 0.55;
+      (sprite as Sprite & { baseY?: number; phase?: number }).baseY = item.y;
+      (sprite as Sprite & { baseY?: number; phase?: number }).phase = index * 1.73;
       this.cloudSprites.push(sprite);
       this.clouds.addChild(sprite);
     });
   }
 
   private createWorld(textures: Record<string, Texture>): void {
-    const island = new Sprite(textures[ASSETS.island]);
-    island.label = 'approved-floating-island';
-    island.roundPixels = true;
-    island.zIndex = 10;
-    this.world.addChild(island);
+    const mobile = this.app.screen.width < 700 || this.app.screen.width / this.app.screen.height < 0.9;
+    this.ambient = new AmbientSystem(textures, { mobile, reducedMotion: this.reducedMotion });
+    this.ambient.container.label = 'approved-floating-island-layers';
+    this.ambient.container.zIndex = 10;
+    this.world.addChild(this.ambient.container);
 
     const animationTextures = Object.fromEntries(
       Object.entries(ASSETS.adventurer).map(([state, paths]) => [state, paths.map((path) => textures[path])]),
     ) as AnimationTextures;
     this.animator = new PlayerAnimator(animationTextures);
-    this.animator.sprite.zIndex = 20;
+    this.animator.sprite.zIndex = 100;
     this.animator.sprite.position.set(this.player.x, this.player.y);
     this.world.addChild(this.animator.sprite);
 
@@ -173,7 +196,7 @@ export class FloatingIslandScene {
     this.marker.anchor.set(0.5);
     this.marker.visible = false;
     this.marker.alpha = 0;
-    this.marker.zIndex = 25;
+    this.marker.zIndex = 110;
     this.marker.roundPixels = true;
     this.world.addChild(this.marker);
 
@@ -207,7 +230,8 @@ export class FloatingIslandScene {
     this.cloudSprites.forEach((cloud, index) => {
       const baseX = (cloud as Sprite & { baseX?: number }).baseX ?? 0.5;
       cloud.x = width * baseX;
-      cloud.y = height * ([0.16, 0.1, 0.23, 0.32][index] ?? 0.2);
+      const baseY = (cloud as Sprite & { baseY?: number }).baseY ?? 0.2;
+      cloud.y = height * baseY;
     });
     this.positionCamera(true);
   }
@@ -239,6 +263,7 @@ export class FloatingIslandScene {
 
   private tick = () => {
     const dt = this.app.ticker.deltaMS / 1000;
+    this.ambient?.update(dt);
     stepPlayer(this.player, dt);
     if (this.animator) {
       this.animator.sprite.position.set(Math.round(this.player.x), Math.round(this.player.y));
@@ -251,14 +276,31 @@ export class FloatingIslandScene {
       if (this.marker.alpha <= 0) this.marker.visible = false;
     }
     if (!this.reducedMotion) {
+      this.cloudElapsed += Math.min(dt, 1 / 20);
       this.cloudSprites.forEach((cloud) => {
         const speed = (cloud as Sprite & { speed?: number }).speed ?? 2;
         cloud.x += speed * dt;
+        const baseY = (cloud as Sprite & { baseY?: number }).baseY ?? 0.2;
+        const phase = (cloud as Sprite & { phase?: number }).phase ?? 0;
+        cloud.y = Math.round(this.app.screen.height * baseY + Math.sin(this.cloudElapsed * (0.09 + phase * 0.006) + phase) * 2);
         if (cloud.x - cloud.width / 2 > this.app.screen.width) cloud.x = -cloud.width / 2;
       });
     }
     this.positionCamera();
-    this.debug?.draw(this.player, this.app.ticker.FPS);
+    if (window.__phase1Diagnostics) window.__phase1Diagnostics.frame += 1;
+    this.debug?.draw(this.player, this.app.ticker.FPS, this.ambient?.diagnostics);
+  };
+
+  private handleMotionPreference = (event: MediaQueryListEvent) => {
+    this.reducedMotion = event.matches;
+    this.ambient?.setReducedMotion(event.matches);
+  };
+
+  private handleVisibility = () => {
+    const paused = document.hidden;
+    this.ambient?.setPaused(paused);
+    if (paused) this.app.ticker.stop();
+    else this.app.ticker.start();
   };
 
   destroy(): void {
@@ -266,7 +308,10 @@ export class FloatingIslandScene {
     this.abort.abort();
     this.input?.destroy();
     this.observer?.disconnect();
+    this.ambient?.container.removeFromParent();
+    this.ambient?.destroy();
     if (window.__TERRARIA_DEBUG__?.player === this.player) delete window.__TERRARIA_DEBUG__;
+    delete window.__phase1Diagnostics;
     if (this.initialized) {
       this.app.ticker.remove(this.tick);
       this.app.destroy({ removeView: true }, { children: true, texture: false, textureSource: false });

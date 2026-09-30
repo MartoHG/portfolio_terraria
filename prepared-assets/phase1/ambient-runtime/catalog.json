@@ -1,0 +1,2111 @@
+{
+  "schemaVersion": 1,
+  "phase": "1.5-ambient",
+  "gridUnitPx": 16,
+  "pixelPolicy": {
+    "resampling": "nearest",
+    "textureFiltering": "nearest",
+    "sourceMutation": "forbidden"
+  },
+  "approvedVisualReference": "prepared-assets/phase1/art-direction/phase1-floating-island-workshop-v1.png",
+  "statusCounts": {
+    "runtimeReady": 7,
+    "referenceOnly": 14
+  },
+  "animations": [
+    {
+      "id": "candle-flame",
+      "category": "fire",
+      "status": "runtimeReady",
+      "sourcePath": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/candle/candle.gif",
+      "sourceFramePaths": [
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/candle/candle_1.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/candle/candle_2.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/candle/candle_3.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/candle/candle_4.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/candle/candle_5.png"
+      ],
+      "frameCount": 5,
+      "frameSizePx": [
+        9,
+        12
+      ],
+      "logicalSizePx": [
+        9,
+        12
+      ],
+      "fps": {
+        "value": 9.0909,
+        "certainty": "confirmedFromGifMetadata"
+      },
+      "loop": {
+        "value": true,
+        "certainty": "confirmedFromGifMetadata"
+      },
+      "anchor": {
+        "normalized": [
+          0.5,
+          1.0
+        ],
+        "certainty": "proposedForIntegration"
+      },
+      "blendModesAllowed": [
+        "normal",
+        "add",
+        "screen"
+      ],
+      "tintAllowed": true,
+      "reducedMotionBehavior": "Freeze on frame 1 and replace the animated light pulse with constant low-intensity warm light.",
+      "estimatedCost": {
+        "tier": "low",
+        "frameTexturePixels": 540,
+        "estimatedRgbaBytes": 2160,
+        "note": "CPU/GPU runtime cost still depends on instance count, batching and emitter limits."
+      },
+      "recommendation": {
+        "method": "spriteFrames",
+        "rationale": "Use the exact five-frame flame palette over the approved candle fixture."
+      },
+      "visualCompatibility": {
+        "approvedIsland": "effectOnlyCandidate",
+        "reason": "Generic effect pixels or vegetation normalized to the accepted 32x48 player / 16px grid calibration; final placement remains an in-scene decision."
+      },
+      "processing": {
+        "kind": "cropAndExactPaletteIsolation",
+        "crop": [
+          4,
+          3,
+          13,
+          15
+        ],
+        "retainedRgbPalette": [
+          [
+            154,
+            61,
+            31
+          ],
+          [
+            230,
+            120,
+            45
+          ],
+          [
+            255,
+            209,
+            102
+          ],
+          [
+            255,
+            242,
+            173
+          ]
+        ],
+        "alphaHandling": "retained source alpha for exact flame colors; non-effect fixture pixels made transparent",
+        "resampling": "none"
+      },
+      "alpha": {
+        "transparentPixels": 84,
+        "semiTransparentPixels": 0,
+        "opaquePixels": 24,
+        "hasTransparency": true,
+        "binaryAlpha": true,
+        "alphaBounds": [
+          2,
+          3,
+          6,
+          12
+        ]
+      },
+      "outputs": {
+        "frames": [
+          "prepared-assets/phase1/ambient-runtime/runtime/fire/candle-flame/frame-01.png",
+          "prepared-assets/phase1/ambient-runtime/runtime/fire/candle-flame/frame-02.png",
+          "prepared-assets/phase1/ambient-runtime/runtime/fire/candle-flame/frame-03.png",
+          "prepared-assets/phase1/ambient-runtime/runtime/fire/candle-flame/frame-04.png",
+          "prepared-assets/phase1/ambient-runtime/runtime/fire/candle-flame/frame-05.png"
+        ],
+        "sheet": "prepared-assets/phase1/ambient-runtime/runtime/fire/candle-flame/sheet.png",
+        "hashes": {
+          "prepared-assets/phase1/ambient-runtime/runtime/fire/candle-flame/frame-01.png": "916f5dc1cb26a37d84c0d59225287161e43974c9aa554cf2810001f25af6dd07",
+          "prepared-assets/phase1/ambient-runtime/runtime/fire/candle-flame/frame-02.png": "7c214ab03ea9b95582cbdcca2149a2f7f2cb7e904cfef673311479cba179139a",
+          "prepared-assets/phase1/ambient-runtime/runtime/fire/candle-flame/frame-03.png": "22cbd7f0bdaebb1007c827d019937b416abbfb4586bb1acf61cae9f9f0c0daef",
+          "prepared-assets/phase1/ambient-runtime/runtime/fire/candle-flame/frame-04.png": "002a8968704474a52f54d353ab8388a7e0178f3d63ed92a3875af1b5d57130a8",
+          "prepared-assets/phase1/ambient-runtime/runtime/fire/candle-flame/frame-05.png": "c5d4ae1c94d509dc1bbaf848da37dd280a2f9fe588239bdcadfcda38f9d676ff",
+          "prepared-assets/phase1/ambient-runtime/runtime/fire/candle-flame/sheet.png": "17f22b62c39c462e6e0054da31ba8fabeb76217d774a9b569091058fb46afb26"
+        }
+      }
+    },
+    {
+      "id": "torch-flame",
+      "category": "fire",
+      "status": "runtimeReady",
+      "sourcePath": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/torch/torch.gif",
+      "sourceFramePaths": [
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/torch/torch_1.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/torch/torch_2.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/torch/torch_3.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/torch/torch_4.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/torch/torch_5.png"
+      ],
+      "frameCount": 5,
+      "frameSizePx": [
+        13,
+        16
+      ],
+      "logicalSizePx": [
+        13,
+        16
+      ],
+      "fps": {
+        "value": 11.1111,
+        "certainty": "confirmedFromGifMetadata"
+      },
+      "loop": {
+        "value": true,
+        "certainty": "confirmedFromGifMetadata"
+      },
+      "anchor": {
+        "normalized": [
+          0.5,
+          1.0
+        ],
+        "certainty": "proposedForIntegration"
+      },
+      "blendModesAllowed": [
+        "normal",
+        "add",
+        "screen"
+      ],
+      "tintAllowed": true,
+      "reducedMotionBehavior": "Freeze on frame 1 and replace the animated light pulse with constant low-intensity warm light.",
+      "estimatedCost": {
+        "tier": "low",
+        "frameTexturePixels": 1040,
+        "estimatedRgbaBytes": 4160,
+        "note": "CPU/GPU runtime cost still depends on instance count, batching and emitter limits."
+      },
+      "recommendation": {
+        "method": "spriteFrames",
+        "rationale": "Use the exact five-frame flame palette over the approved torch fixture."
+      },
+      "visualCompatibility": {
+        "approvedIsland": "effectOnlyCandidate",
+        "reason": "Generic effect pixels or vegetation normalized to the accepted 32x48 player / 16px grid calibration; final placement remains an in-scene decision."
+      },
+      "processing": {
+        "kind": "cropAndExactPaletteIsolation",
+        "crop": [
+          2,
+          2,
+          15,
+          18
+        ],
+        "retainedRgbPalette": [
+          [
+            154,
+            61,
+            31
+          ],
+          [
+            230,
+            120,
+            45
+          ],
+          [
+            255,
+            209,
+            102
+          ],
+          [
+            255,
+            242,
+            173
+          ]
+        ],
+        "alphaHandling": "retained source alpha for exact flame colors; non-effect fixture pixels made transparent",
+        "resampling": "none"
+      },
+      "alpha": {
+        "transparentPixels": 171,
+        "semiTransparentPixels": 0,
+        "opaquePixels": 37,
+        "hasTransparency": true,
+        "binaryAlpha": true,
+        "alphaBounds": [
+          3,
+          5,
+          10,
+          15
+        ]
+      },
+      "outputs": {
+        "frames": [
+          "prepared-assets/phase1/ambient-runtime/runtime/fire/torch-flame/frame-01.png",
+          "prepared-assets/phase1/ambient-runtime/runtime/fire/torch-flame/frame-02.png",
+          "prepared-assets/phase1/ambient-runtime/runtime/fire/torch-flame/frame-03.png",
+          "prepared-assets/phase1/ambient-runtime/runtime/fire/torch-flame/frame-04.png",
+          "prepared-assets/phase1/ambient-runtime/runtime/fire/torch-flame/frame-05.png"
+        ],
+        "sheet": "prepared-assets/phase1/ambient-runtime/runtime/fire/torch-flame/sheet.png",
+        "hashes": {
+          "prepared-assets/phase1/ambient-runtime/runtime/fire/torch-flame/frame-01.png": "706e4810dbd810f09eddcb2e37a7f7fd4ad666f1774fea56eb96c748c4273ba1",
+          "prepared-assets/phase1/ambient-runtime/runtime/fire/torch-flame/frame-02.png": "ddd1cb2bc44b000a74ef3b0fa6063893250fd40c4685db42029d87d662f6cd21",
+          "prepared-assets/phase1/ambient-runtime/runtime/fire/torch-flame/frame-03.png": "3a6ad77fd0777639b3fa5c0156480d0bd5d127ed76ea800a3c33efff358e2567",
+          "prepared-assets/phase1/ambient-runtime/runtime/fire/torch-flame/frame-04.png": "01acd2d53ffa04786e1be2c2007140169c75db438529d54bc9efabd84aa4ea5e",
+          "prepared-assets/phase1/ambient-runtime/runtime/fire/torch-flame/frame-05.png": "56f72b7b4046cda7672133ffaddf2e1f3cbd6e83c5a477eb895e998795040b22",
+          "prepared-assets/phase1/ambient-runtime/runtime/fire/torch-flame/sheet.png": "fb0caac0f305c1233a9e87efcbd509a417c21b08bb21855e346f3810f6ed280d"
+        }
+      }
+    },
+    {
+      "id": "fireplace-flame",
+      "category": "fire",
+      "status": "runtimeReady",
+      "sourcePath": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/fireplace/fireplace.gif",
+      "sourceFramePaths": [
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/fireplace/fireplace_1.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/fireplace/fireplace_2.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/fireplace/fireplace_3.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/fireplace/fireplace_4.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/fireplace/fireplace_5.png"
+      ],
+      "frameCount": 5,
+      "frameSizePx": [
+        20,
+        27
+      ],
+      "logicalSizePx": [
+        20,
+        27
+      ],
+      "fps": {
+        "value": 9.0909,
+        "certainty": "confirmedFromGifMetadata"
+      },
+      "loop": {
+        "value": true,
+        "certainty": "confirmedFromGifMetadata"
+      },
+      "anchor": {
+        "normalized": [
+          0.5,
+          1.0
+        ],
+        "certainty": "proposedForIntegration"
+      },
+      "blendModesAllowed": [
+        "normal",
+        "add",
+        "screen"
+      ],
+      "tintAllowed": true,
+      "reducedMotionBehavior": "Freeze on frame 1 and replace the animated light pulse with constant low-intensity warm light.",
+      "estimatedCost": {
+        "tier": "low",
+        "frameTexturePixels": 2700,
+        "estimatedRgbaBytes": 10800,
+        "note": "CPU/GPU runtime cost still depends on instance count, batching and emitter limits."
+      },
+      "recommendation": {
+        "method": "spriteFrames",
+        "rationale": "Use only the flame pixels; keep the approved fireplace masonry untouched."
+      },
+      "visualCompatibility": {
+        "approvedIsland": "effectOnlyCandidate",
+        "reason": "Generic effect pixels or vegetation normalized to the accepted 32x48 player / 16px grid calibration; final placement remains an in-scene decision."
+      },
+      "processing": {
+        "kind": "cropAndExactPaletteIsolation",
+        "crop": [
+          13,
+          15,
+          33,
+          42
+        ],
+        "retainedRgbPalette": [
+          [
+            154,
+            61,
+            31
+          ],
+          [
+            230,
+            120,
+            45
+          ],
+          [
+            255,
+            209,
+            102
+          ],
+          [
+            255,
+            242,
+            173
+          ]
+        ],
+        "alphaHandling": "retained source alpha for exact flame colors; non-effect fixture pixels made transparent",
+        "resampling": "none"
+      },
+      "alpha": {
+        "transparentPixels": 427,
+        "semiTransparentPixels": 0,
+        "opaquePixels": 113,
+        "hasTransparency": true,
+        "binaryAlpha": true,
+        "alphaBounds": [
+          3,
+          7,
+          15,
+          24
+        ]
+      },
+      "outputs": {
+        "frames": [
+          "prepared-assets/phase1/ambient-runtime/runtime/fire/fireplace-flame/frame-01.png",
+          "prepared-assets/phase1/ambient-runtime/runtime/fire/fireplace-flame/frame-02.png",
+          "prepared-assets/phase1/ambient-runtime/runtime/fire/fireplace-flame/frame-03.png",
+          "prepared-assets/phase1/ambient-runtime/runtime/fire/fireplace-flame/frame-04.png",
+          "prepared-assets/phase1/ambient-runtime/runtime/fire/fireplace-flame/frame-05.png"
+        ],
+        "sheet": "prepared-assets/phase1/ambient-runtime/runtime/fire/fireplace-flame/sheet.png",
+        "hashes": {
+          "prepared-assets/phase1/ambient-runtime/runtime/fire/fireplace-flame/frame-01.png": "35b8a36632193bef9092762810aef11a2aac46e9438848c4821c29f94b9b5ada",
+          "prepared-assets/phase1/ambient-runtime/runtime/fire/fireplace-flame/frame-02.png": "09d6f5161dd5e3c92912fce83c12697d82491d76a63fe62d0485e770227c1be0",
+          "prepared-assets/phase1/ambient-runtime/runtime/fire/fireplace-flame/frame-03.png": "0623e45b16aafdd4c81ef0a112c038466cb1d6d96897caf6774e216d1e34d1d0",
+          "prepared-assets/phase1/ambient-runtime/runtime/fire/fireplace-flame/frame-04.png": "6dc4ecb2f2426b90e552c1c259642b479cfbd03377931b54942da607ba1f3c6a",
+          "prepared-assets/phase1/ambient-runtime/runtime/fire/fireplace-flame/frame-05.png": "883d7470d0c32ee62f67e9b9a21c02a167e739725a7dca74445a98af6cf3eec9",
+          "prepared-assets/phase1/ambient-runtime/runtime/fire/fireplace-flame/sheet.png": "9d3afc1d3f96ea7664d5ff6ad96da866e86f4c338be3ad54c2fb3a93723e46ae"
+        }
+      }
+    },
+    {
+      "id": "chimney-smoke",
+      "category": "smoke",
+      "status": "runtimeReady",
+      "sourcePath": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/chimney_smoke/chimney_smoke.gif",
+      "sourceFramePaths": [
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/chimney_smoke/chimney_smoke_1.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/chimney_smoke/chimney_smoke_2.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/chimney_smoke/chimney_smoke_3.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/chimney_smoke/chimney_smoke_4.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/chimney_smoke/chimney_smoke_5.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/chimney_smoke/chimney_smoke_6.png"
+      ],
+      "frameCount": 6,
+      "frameSizePx": [
+        32,
+        48
+      ],
+      "logicalSizePx": [
+        32,
+        48
+      ],
+      "fps": {
+        "value": 7.1429,
+        "certainty": "confirmedFromGifMetadata"
+      },
+      "loop": {
+        "value": true,
+        "certainty": "confirmedFromGifMetadata"
+      },
+      "anchor": {
+        "normalized": [
+          0.5,
+          1.0
+        ],
+        "certainty": "proposedForIntegration"
+      },
+      "blendModesAllowed": [
+        "normal"
+      ],
+      "tintAllowed": true,
+      "reducedMotionBehavior": "Hide smoke entirely; the chimney remains visible in the approved house layer.",
+      "estimatedCost": {
+        "tier": "low",
+        "frameTexturePixels": 9216,
+        "estimatedRgbaBytes": 36864,
+        "note": "CPU/GPU runtime cost still depends on instance count, batching and emitter limits."
+      },
+      "recommendation": {
+        "method": "spriteFrames",
+        "rationale": "The top 47 source rows contain only smoke; the brick chimney begins on row 47 and is excluded."
+      },
+      "visualCompatibility": {
+        "approvedIsland": "effectOnlyCandidate",
+        "reason": "Generic effect pixels or vegetation normalized to the accepted 32x48 player / 16px grid calibration; final placement remains an in-scene decision."
+      },
+      "processing": {
+        "kind": "fixedCrop",
+        "crop": [
+          0,
+          0,
+          32,
+          47
+        ],
+        "outputSize": [
+          32,
+          48
+        ],
+        "alphaHandling": "preserved",
+        "resampling": "none"
+      },
+      "alpha": {
+        "transparentPixels": 1506,
+        "semiTransparentPixels": 0,
+        "opaquePixels": 30,
+        "hasTransparency": true,
+        "binaryAlpha": true,
+        "alphaBounds": [
+          14,
+          41,
+          21,
+          46
+        ]
+      },
+      "outputs": {
+        "frames": [
+          "prepared-assets/phase1/ambient-runtime/runtime/smoke/chimney-smoke/frame-01.png",
+          "prepared-assets/phase1/ambient-runtime/runtime/smoke/chimney-smoke/frame-02.png",
+          "prepared-assets/phase1/ambient-runtime/runtime/smoke/chimney-smoke/frame-03.png",
+          "prepared-assets/phase1/ambient-runtime/runtime/smoke/chimney-smoke/frame-04.png",
+          "prepared-assets/phase1/ambient-runtime/runtime/smoke/chimney-smoke/frame-05.png",
+          "prepared-assets/phase1/ambient-runtime/runtime/smoke/chimney-smoke/frame-06.png"
+        ],
+        "sheet": "prepared-assets/phase1/ambient-runtime/runtime/smoke/chimney-smoke/sheet.png",
+        "hashes": {
+          "prepared-assets/phase1/ambient-runtime/runtime/smoke/chimney-smoke/frame-01.png": "2c79cd09b977b7617f6967d91b8a2ec2c2a9da2c348273d7b5aae462ca75b03e",
+          "prepared-assets/phase1/ambient-runtime/runtime/smoke/chimney-smoke/frame-02.png": "e646dfd7251fd2c5bc512623a2a9dfce252a4239f96fd74e5256931db66f29f3",
+          "prepared-assets/phase1/ambient-runtime/runtime/smoke/chimney-smoke/frame-03.png": "0eda3da9cc45384029d6a23e2c2e0ceaa2ab92df78e45f065409a2741f401e18",
+          "prepared-assets/phase1/ambient-runtime/runtime/smoke/chimney-smoke/frame-04.png": "ca42485a909f880e8374a1c32c8f2f95a524408c39755cf51faff87a6e1a084b",
+          "prepared-assets/phase1/ambient-runtime/runtime/smoke/chimney-smoke/frame-05.png": "bdec7c35a63eb07c4933ef31e523bafa8e9c7a0515a68a44aac2aad6b426c89d",
+          "prepared-assets/phase1/ambient-runtime/runtime/smoke/chimney-smoke/frame-06.png": "5ae8342b0f394092221169ba36b9bbb1cfe2470b474f00eb0b1da7cee5475242",
+          "prepared-assets/phase1/ambient-runtime/runtime/smoke/chimney-smoke/sheet.png": "992f7a8b9d98d2e5db43a79468ae25fba372c75cf40034c027ea22fb3ef213c7"
+        }
+      }
+    },
+    {
+      "id": "green-crown-sway",
+      "category": "vegetation",
+      "status": "runtimeReady",
+      "sourcePath": "assetss-definitivo/assets_fase1/png_complementarios/copadearbol_tileset_1.png",
+      "sourceFramePaths": [
+        "assetss-definitivo/assets_fase1/png_complementarios/copadearbol_tileset_1.png"
+      ],
+      "frameCount": 6,
+      "frameSizePx": [
+        64,
+        56
+      ],
+      "logicalSizePx": [
+        64,
+        56
+      ],
+      "fps": {
+        "value": 6.0,
+        "certainty": "proposedNoTimingMetadata"
+      },
+      "loop": {
+        "value": true,
+        "certainty": "proposedFromSixPoseSheet"
+      },
+      "anchor": {
+        "normalized": [
+          0.5,
+          1.0
+        ],
+        "certainty": "proposedForIntegration"
+      },
+      "blendModesAllowed": [
+        "normal"
+      ],
+      "tintAllowed": true,
+      "reducedMotionBehavior": "Freeze on frame 1; do not add transform sway.",
+      "estimatedCost": {
+        "tier": "low",
+        "frameTexturePixels": 21504,
+        "estimatedRgbaBytes": 86016,
+        "note": "CPU/GPU runtime cost still depends on instance count, batching and emitter limits."
+      },
+      "recommendation": {
+        "method": "spriteFrames",
+        "rationale": "Six unambiguous equal-width poses normalize to the existing accepted 64x56 crown runtime size."
+      },
+      "visualCompatibility": {
+        "approvedIsland": "effectOnlyCandidate",
+        "reason": "Generic effect pixels or vegetation normalized to the accepted 32x48 player / 16px grid calibration; final placement remains an in-scene decision."
+      },
+      "processing": {
+        "kind": "equalGridCropResizeNearest",
+        "grid": [
+          6,
+          1
+        ],
+        "sourceCellSize": [
+          362,
+          724
+        ],
+        "commonCropWithinCell": [
+          3,
+          202,
+          361,
+          511
+        ],
+        "outputSize": [
+          64,
+          56
+        ],
+        "componentLocatorAlphaThreshold": 64,
+        "alphaHandling": "preserved inside the common crop",
+        "resampling": "nearest",
+        "calibration": "Existing accepted crown runtime is 64x56; player is 32x48 on a 16px logical grid."
+      },
+      "alpha": {
+        "transparentPixels": 1117,
+        "semiTransparentPixels": 2463,
+        "opaquePixels": 4,
+        "hasTransparency": true,
+        "binaryAlpha": false,
+        "alphaBounds": [
+          0,
+          1,
+          64,
+          56
+        ]
+      },
+      "outputs": {
+        "frames": [
+          "prepared-assets/phase1/ambient-runtime/runtime/vegetation/green-crown-sway/frame-01.png",
+          "prepared-assets/phase1/ambient-runtime/runtime/vegetation/green-crown-sway/frame-02.png",
+          "prepared-assets/phase1/ambient-runtime/runtime/vegetation/green-crown-sway/frame-03.png",
+          "prepared-assets/phase1/ambient-runtime/runtime/vegetation/green-crown-sway/frame-04.png",
+          "prepared-assets/phase1/ambient-runtime/runtime/vegetation/green-crown-sway/frame-05.png",
+          "prepared-assets/phase1/ambient-runtime/runtime/vegetation/green-crown-sway/frame-06.png"
+        ],
+        "sheet": "prepared-assets/phase1/ambient-runtime/runtime/vegetation/green-crown-sway/sheet.png",
+        "hashes": {
+          "prepared-assets/phase1/ambient-runtime/runtime/vegetation/green-crown-sway/frame-01.png": "46c1855e2616dece1d854e0c3a8afd5fd33e1045f2c027c0e12ec2ca160fe4b0",
+          "prepared-assets/phase1/ambient-runtime/runtime/vegetation/green-crown-sway/frame-02.png": "787e9b0c40bb386cd49c0c17d437723c42f9b5156f48d2c35b62f1a60399be2c",
+          "prepared-assets/phase1/ambient-runtime/runtime/vegetation/green-crown-sway/frame-03.png": "2b1726958a77f3ca18817f3f549b6e59e5b999ec21a5aac79257e32eaa45eb7f",
+          "prepared-assets/phase1/ambient-runtime/runtime/vegetation/green-crown-sway/frame-04.png": "4061a4c95ef7f270480c035c483dacb7b2c4433e9b7dbe2b0b45019a52a06f9c",
+          "prepared-assets/phase1/ambient-runtime/runtime/vegetation/green-crown-sway/frame-05.png": "142601b4d474001dfc1e76914cee72750bec6090f6a03f45beca45d41c13906c",
+          "prepared-assets/phase1/ambient-runtime/runtime/vegetation/green-crown-sway/frame-06.png": "254698dda59fed58522ec7a9e62f36d632e9e0b50b9e70693f4df1d4fbd68a30",
+          "prepared-assets/phase1/ambient-runtime/runtime/vegetation/green-crown-sway/sheet.png": "89049d96f707f488e2c9149f316a37a6c6d310ba05a8fb1c66d290ac7eea5f1d"
+        }
+      }
+    },
+    {
+      "id": "grass-sway",
+      "category": "vegetation",
+      "status": "runtimeReady",
+      "sourcePath": "assetss-definitivo/assets_fase1/png_complementarios/pasto_moviendose.png",
+      "sourceFramePaths": [
+        "assetss-definitivo/assets_fase1/png_complementarios/pasto_moviendose.png"
+      ],
+      "frameCount": 6,
+      "frameSizePx": [
+        64,
+        36
+      ],
+      "logicalSizePx": [
+        64,
+        36
+      ],
+      "fps": {
+        "value": 6.0,
+        "certainty": "proposedNoTimingMetadata"
+      },
+      "loop": {
+        "value": true,
+        "certainty": "proposedFromSixPoseSheet"
+      },
+      "anchor": {
+        "normalized": [
+          0.5,
+          1.0
+        ],
+        "certainty": "proposedForIntegration"
+      },
+      "blendModesAllowed": [
+        "normal"
+      ],
+      "tintAllowed": true,
+      "reducedMotionBehavior": "Freeze on frame 1.",
+      "estimatedCost": {
+        "tier": "low",
+        "frameTexturePixels": 13824,
+        "estimatedRgbaBytes": 55296,
+        "note": "CPU/GPU runtime cost still depends on instance count, batching and emitter limits."
+      },
+      "recommendation": {
+        "method": "spriteFrames",
+        "rationale": "Use sparingly as a foreground clump; six equal-width poses support a slow wind loop."
+      },
+      "visualCompatibility": {
+        "approvedIsland": "effectOnlyCandidate",
+        "reason": "Generic effect pixels or vegetation normalized to the accepted 32x48 player / 16px grid calibration; final placement remains an in-scene decision."
+      },
+      "processing": {
+        "kind": "equalGridCropResizeNearest",
+        "grid": [
+          6,
+          1
+        ],
+        "sourceCellSize": [
+          362,
+          724
+        ],
+        "commonCropWithinCell": [
+          11,
+          268,
+          350,
+          465
+        ],
+        "outputSize": [
+          64,
+          36
+        ],
+        "componentLocatorAlphaThreshold": 64,
+        "alphaHandling": "preserved inside the common crop",
+        "resampling": "nearest",
+        "calibration": "Output spans four 16px columns and remains comparable with the 32x48 player."
+      },
+      "alpha": {
+        "transparentPixels": 940,
+        "semiTransparentPixels": 1318,
+        "opaquePixels": 46,
+        "hasTransparency": true,
+        "binaryAlpha": false,
+        "alphaBounds": [
+          2,
+          3,
+          62,
+          36
+        ]
+      },
+      "outputs": {
+        "frames": [
+          "prepared-assets/phase1/ambient-runtime/runtime/vegetation/grass-sway/frame-01.png",
+          "prepared-assets/phase1/ambient-runtime/runtime/vegetation/grass-sway/frame-02.png",
+          "prepared-assets/phase1/ambient-runtime/runtime/vegetation/grass-sway/frame-03.png",
+          "prepared-assets/phase1/ambient-runtime/runtime/vegetation/grass-sway/frame-04.png",
+          "prepared-assets/phase1/ambient-runtime/runtime/vegetation/grass-sway/frame-05.png",
+          "prepared-assets/phase1/ambient-runtime/runtime/vegetation/grass-sway/frame-06.png"
+        ],
+        "sheet": "prepared-assets/phase1/ambient-runtime/runtime/vegetation/grass-sway/sheet.png",
+        "hashes": {
+          "prepared-assets/phase1/ambient-runtime/runtime/vegetation/grass-sway/frame-01.png": "20aec12cca9d51f4d0d32adaa1c83165d02e9ea3ab8de4c590ac80549c3d71ad",
+          "prepared-assets/phase1/ambient-runtime/runtime/vegetation/grass-sway/frame-02.png": "d0d83fca24267a340eccd2e3dfd57bc172b8bd70839fadc21ba822bdd19d23ec",
+          "prepared-assets/phase1/ambient-runtime/runtime/vegetation/grass-sway/frame-03.png": "fae0e2bb5da87c40de23e28bd3e016f6b3e1622f1f03bb2222208eb804b526c1",
+          "prepared-assets/phase1/ambient-runtime/runtime/vegetation/grass-sway/frame-04.png": "08be7cf4abb31186e03eca0a96cbd5a66924119cb88e6080677014343e50c922",
+          "prepared-assets/phase1/ambient-runtime/runtime/vegetation/grass-sway/frame-05.png": "f23f746e5d475a486b962c8ed4081b089263f6da5343fc313cb420143f93543c",
+          "prepared-assets/phase1/ambient-runtime/runtime/vegetation/grass-sway/frame-06.png": "fd2ba257ae893b3785b3304edb8b2dbff05fb608ed878f1a95fad306f56a1f7c",
+          "prepared-assets/phase1/ambient-runtime/runtime/vegetation/grass-sway/sheet.png": "a3e98dbe3e1fbbde112b9f48b33d1041898ca45e6a36507ee9b09b1173142a51"
+        }
+      }
+    },
+    {
+      "id": "pink-petal-gust",
+      "category": "particles",
+      "status": "runtimeReady",
+      "sourcePath": "assetss-definitivo/assets_fase1/png_complementarios/pink_leaves.png",
+      "sourceFramePaths": [
+        "assetss-definitivo/assets_fase1/png_complementarios/pink_leaves.png"
+      ],
+      "frameCount": 8,
+      "frameSizePx": [
+        48,
+        80
+      ],
+      "logicalSizePx": [
+        48,
+        80
+      ],
+      "fps": {
+        "value": 8.0,
+        "certainty": "proposedNoTimingMetadata"
+      },
+      "loop": {
+        "value": false,
+        "certainty": "proposedForOneShotGust"
+      },
+      "anchor": {
+        "normalized": [
+          0.5,
+          0.5
+        ],
+        "certainty": "proposedForIntegration"
+      },
+      "blendModesAllowed": [
+        "normal"
+      ],
+      "tintAllowed": true,
+      "reducedMotionBehavior": "Disable autonomous gusts; optionally show one static petal near the tree.",
+      "estimatedCost": {
+        "tier": "low",
+        "frameTexturePixels": 30720,
+        "estimatedRgbaBytes": 122880,
+        "note": "CPU/GPU runtime cost still depends on instance count, batching and emitter limits."
+      },
+      "recommendation": {
+        "method": "particles",
+        "rationale": "Treat the eight clusters as one-shot gust/burst frames near the approved pink tree, never as a perpetual full-screen loop."
+      },
+      "visualCompatibility": {
+        "approvedIsland": "effectOnlyCandidate",
+        "reason": "Generic effect pixels or vegetation normalized to the accepted 32x48 player / 16px grid calibration; final placement remains an in-scene decision."
+      },
+      "processing": {
+        "kind": "equalGridCropResizeNearest",
+        "grid": [
+          4,
+          2
+        ],
+        "sourceCellSize": [
+          362,
+          543
+        ],
+        "commonCropWithinCell": [
+          67,
+          101,
+          290,
+          488
+        ],
+        "outputSize": [
+          48,
+          80
+        ],
+        "componentLocatorAlphaThreshold": 64,
+        "alphaHandling": "preserved inside the common crop",
+        "resampling": "nearest",
+        "calibration": "Three by five logical 16px cells; intended as a sparse localized burst."
+      },
+      "alpha": {
+        "transparentPixels": 3258,
+        "semiTransparentPixels": 572,
+        "opaquePixels": 10,
+        "hasTransparency": true,
+        "binaryAlpha": false,
+        "alphaBounds": [
+          1,
+          2,
+          44,
+          76
+        ]
+      },
+      "outputs": {
+        "frames": [
+          "prepared-assets/phase1/ambient-runtime/runtime/particles/pink-petal-gust/frame-01.png",
+          "prepared-assets/phase1/ambient-runtime/runtime/particles/pink-petal-gust/frame-02.png",
+          "prepared-assets/phase1/ambient-runtime/runtime/particles/pink-petal-gust/frame-03.png",
+          "prepared-assets/phase1/ambient-runtime/runtime/particles/pink-petal-gust/frame-04.png",
+          "prepared-assets/phase1/ambient-runtime/runtime/particles/pink-petal-gust/frame-05.png",
+          "prepared-assets/phase1/ambient-runtime/runtime/particles/pink-petal-gust/frame-06.png",
+          "prepared-assets/phase1/ambient-runtime/runtime/particles/pink-petal-gust/frame-07.png",
+          "prepared-assets/phase1/ambient-runtime/runtime/particles/pink-petal-gust/frame-08.png"
+        ],
+        "sheet": "prepared-assets/phase1/ambient-runtime/runtime/particles/pink-petal-gust/sheet.png",
+        "hashes": {
+          "prepared-assets/phase1/ambient-runtime/runtime/particles/pink-petal-gust/frame-01.png": "7d2396aa072463d56924ec120c8d8b68668bab20ab0f49ee3c12d9cf1a206c05",
+          "prepared-assets/phase1/ambient-runtime/runtime/particles/pink-petal-gust/frame-02.png": "bdb5f484ca2ea4375bd3ae0da02cf6dc4ba147907644894aff1d062cf85577a7",
+          "prepared-assets/phase1/ambient-runtime/runtime/particles/pink-petal-gust/frame-03.png": "7092a00a4ad0043446aa1e098a6581ee1a1617a486b18b12984328107c208159",
+          "prepared-assets/phase1/ambient-runtime/runtime/particles/pink-petal-gust/frame-04.png": "b48f17fa884092bc9d0e731770470b2ae6c1556adc752c39ebf3100ce8de5cd0",
+          "prepared-assets/phase1/ambient-runtime/runtime/particles/pink-petal-gust/frame-05.png": "14ba22c9d85200ca08c43e9f931a728d1b6aca9f6d55e656d24d59c71442e42c",
+          "prepared-assets/phase1/ambient-runtime/runtime/particles/pink-petal-gust/frame-06.png": "15edc285afc24558a35a6db9d6b4873fbc2dbd9f020fbdc774eef61232eab6b7",
+          "prepared-assets/phase1/ambient-runtime/runtime/particles/pink-petal-gust/frame-07.png": "0ed25e66a1b9e4e4bcf6146908ae2cb172abade83a7f1feffbb019fa4b2c2368",
+          "prepared-assets/phase1/ambient-runtime/runtime/particles/pink-petal-gust/frame-08.png": "11e15fbd237e0dec70e207a6cc1b27d190daf0c4c487c54a51ec9ebab6b11361",
+          "prepared-assets/phase1/ambient-runtime/runtime/particles/pink-petal-gust/sheet.png": "d04d5a1a73097637ca33b28d0aea440d0d18857ce43325c2d186a5e04a4c43cb"
+        }
+      }
+    },
+    {
+      "id": "waterfall-start-reference",
+      "category": "water",
+      "status": "referenceOnly",
+      "sourcePath": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/waterfall_start/waterfall_start.gif",
+      "sourceFramePaths": [
+        "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/waterfall_start/waterfall_start_1.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/waterfall_start/waterfall_start_2.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/waterfall_start/waterfall_start_3.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/waterfall_start/waterfall_start_4.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/waterfall_start/waterfall_start_5.png"
+      ],
+      "frameCount": 5,
+      "frameSizePx": [
+        32,
+        32
+      ],
+      "logicalSizePx": [
+        32,
+        32
+      ],
+      "fps": {
+        "value": 10.0,
+        "certainty": "confirmedFromGifMetadata",
+        "durationsMs": [
+          100,
+          100,
+          100,
+          100,
+          100
+        ]
+      },
+      "loop": {
+        "value": true,
+        "certainty": "confirmedFromGifMetadata"
+      },
+      "anchor": {
+        "normalized": [
+          0.5,
+          0.0
+        ],
+        "certainty": "proposedForIntegration"
+      },
+      "blendModesAllowed": [
+        "normal"
+      ],
+      "tintAllowed": false,
+      "reducedMotionBehavior": "Show the first static frame of the separated approved waterfall layer.",
+      "estimatedCost": {
+        "tier": "low",
+        "frameTexturePixels": 5120,
+        "estimatedRgbaBytes": 20480,
+        "note": "CPU/GPU runtime cost still depends on instance count, batching and emitter limits."
+      },
+      "recommendation": {
+        "method": "maskScrollUV",
+        "rationale": "Use the cadence as motion reference; animate the separated approved waterfall layer instead of overlaying the flat cyan sprite."
+      },
+      "visualCompatibility": {
+        "approvedIsland": "mismatch",
+        "reason": "Lower-detail source fixture/palette does not match the approved island render; do not integrate directly."
+      },
+      "processing": {
+        "kind": "losslessRgbaFrameCopy",
+        "resampling": "none",
+        "alphaHandling": "preserved"
+      },
+      "alpha": {
+        "transparentPixels": 536,
+        "semiTransparentPixels": 0,
+        "opaquePixels": 488,
+        "hasTransparency": true,
+        "binaryAlpha": true,
+        "alphaBounds": [
+          0,
+          3,
+          32,
+          32
+        ]
+      },
+      "outputs": {
+        "frames": [
+          "prepared-assets/phase1/ambient-runtime/reference/water/waterfall-start-reference/frame-01.png",
+          "prepared-assets/phase1/ambient-runtime/reference/water/waterfall-start-reference/frame-02.png",
+          "prepared-assets/phase1/ambient-runtime/reference/water/waterfall-start-reference/frame-03.png",
+          "prepared-assets/phase1/ambient-runtime/reference/water/waterfall-start-reference/frame-04.png",
+          "prepared-assets/phase1/ambient-runtime/reference/water/waterfall-start-reference/frame-05.png"
+        ],
+        "sheet": "prepared-assets/phase1/ambient-runtime/reference/water/waterfall-start-reference/sheet.png",
+        "hashes": {
+          "prepared-assets/phase1/ambient-runtime/reference/water/waterfall-start-reference/frame-01.png": "07df40035ffd01905a5bccd504f6b7e2a751b35ca2454a05f219063d5580a4d3",
+          "prepared-assets/phase1/ambient-runtime/reference/water/waterfall-start-reference/frame-02.png": "3421aaa68e30f458225f7ff1ec719eb7be69a9eb2762b967dad805276f9dc385",
+          "prepared-assets/phase1/ambient-runtime/reference/water/waterfall-start-reference/frame-03.png": "f616ef07a63add19898efbb41b1752a65cf8a7b145b52ff620cb099aa313df0d",
+          "prepared-assets/phase1/ambient-runtime/reference/water/waterfall-start-reference/frame-04.png": "7a4b1b2329abfa3e2446abea04d62a2d36efb14524a0d30f5066b09c50223515",
+          "prepared-assets/phase1/ambient-runtime/reference/water/waterfall-start-reference/frame-05.png": "fb3311cb46bdc021d83c708c8b3f92774ffe00b482171aa90ce5c1de99fa21c5",
+          "prepared-assets/phase1/ambient-runtime/reference/water/waterfall-start-reference/sheet.png": "891628f8f240427727ca7ed86474df6b64f2d844b689ac6e8a700264b1b6aa5e"
+        }
+      }
+    },
+    {
+      "id": "waterfall-loop-reference",
+      "category": "water",
+      "status": "referenceOnly",
+      "sourcePath": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/waterfall_loop/waterfall_loop.gif",
+      "sourceFramePaths": [
+        "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/waterfall_loop/waterfall_loop_1.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/waterfall_loop/waterfall_loop_2.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/waterfall_loop/waterfall_loop_3.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/waterfall_loop/waterfall_loop_4.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/waterfall_loop/waterfall_loop_5.png"
+      ],
+      "frameCount": 5,
+      "frameSizePx": [
+        32,
+        64
+      ],
+      "logicalSizePx": [
+        32,
+        64
+      ],
+      "fps": {
+        "value": 11.1111,
+        "certainty": "confirmedFromGifMetadata",
+        "durationsMs": [
+          90,
+          90,
+          90,
+          90,
+          90
+        ]
+      },
+      "loop": {
+        "value": true,
+        "certainty": "confirmedFromGifMetadata"
+      },
+      "anchor": {
+        "normalized": [
+          0.5,
+          0.0
+        ],
+        "certainty": "proposedForIntegration"
+      },
+      "blendModesAllowed": [
+        "normal"
+      ],
+      "tintAllowed": false,
+      "reducedMotionBehavior": "Freeze the separated waterfall texture with no UV scroll.",
+      "estimatedCost": {
+        "tier": "low",
+        "frameTexturePixels": 10240,
+        "estimatedRgbaBytes": 40960,
+        "note": "CPU/GPU runtime cost still depends on instance count, batching and emitter limits."
+      },
+      "recommendation": {
+        "method": "maskScrollUV",
+        "rationale": "Scroll the separated approved waterfall texture inside its authored silhouette; this source is lower-detail and color-incompatible with the approved island."
+      },
+      "visualCompatibility": {
+        "approvedIsland": "mismatch",
+        "reason": "Lower-detail source fixture/palette does not match the approved island render; do not integrate directly."
+      },
+      "processing": {
+        "kind": "losslessRgbaFrameCopy",
+        "resampling": "none",
+        "alphaHandling": "preserved"
+      },
+      "alpha": {
+        "transparentPixels": 896,
+        "semiTransparentPixels": 0,
+        "opaquePixels": 1152,
+        "hasTransparency": true,
+        "binaryAlpha": true,
+        "alphaBounds": [
+          7,
+          0,
+          25,
+          64
+        ]
+      },
+      "outputs": {
+        "frames": [
+          "prepared-assets/phase1/ambient-runtime/reference/water/waterfall-loop-reference/frame-01.png",
+          "prepared-assets/phase1/ambient-runtime/reference/water/waterfall-loop-reference/frame-02.png",
+          "prepared-assets/phase1/ambient-runtime/reference/water/waterfall-loop-reference/frame-03.png",
+          "prepared-assets/phase1/ambient-runtime/reference/water/waterfall-loop-reference/frame-04.png",
+          "prepared-assets/phase1/ambient-runtime/reference/water/waterfall-loop-reference/frame-05.png"
+        ],
+        "sheet": "prepared-assets/phase1/ambient-runtime/reference/water/waterfall-loop-reference/sheet.png",
+        "hashes": {
+          "prepared-assets/phase1/ambient-runtime/reference/water/waterfall-loop-reference/frame-01.png": "d1940444f2be12111674806ff33cc9b9d98c9237c0b5c45fabfa36b8b372fbb2",
+          "prepared-assets/phase1/ambient-runtime/reference/water/waterfall-loop-reference/frame-02.png": "4bfa96735f29c0c449c6499dab4d06bdd601429fc3e9d59276bf7551dd1ffab6",
+          "prepared-assets/phase1/ambient-runtime/reference/water/waterfall-loop-reference/frame-03.png": "96bf517d80692baf4f3882bdebec64dc1a67b74c31fd47e17236f35e5e31f94f",
+          "prepared-assets/phase1/ambient-runtime/reference/water/waterfall-loop-reference/frame-04.png": "245ba03b41a36538de297e5c566a3b4bf59645fdfb40684b763094e56da787ab",
+          "prepared-assets/phase1/ambient-runtime/reference/water/waterfall-loop-reference/frame-05.png": "8cb7512b7f42726b49344546777355782c039e01480d08580e5c7c4c1ff69330",
+          "prepared-assets/phase1/ambient-runtime/reference/water/waterfall-loop-reference/sheet.png": "543d37b26c1fb1bf3f88132ba794006302ee747c23d92d3711dd33244acaafe6"
+        }
+      }
+    },
+    {
+      "id": "waterfall-end-reference",
+      "category": "water",
+      "status": "referenceOnly",
+      "sourcePath": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/waterfall_end/waterfall_end.gif",
+      "sourceFramePaths": [
+        "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/waterfall_end/waterfall_end_1.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/waterfall_end/waterfall_end_2.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/waterfall_end/waterfall_end_3.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/waterfall_end/waterfall_end_4.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/waterfall_end/waterfall_end_5.png"
+      ],
+      "frameCount": 5,
+      "frameSizePx": [
+        32,
+        32
+      ],
+      "logicalSizePx": [
+        32,
+        32
+      ],
+      "fps": {
+        "value": 10.0,
+        "certainty": "confirmedFromGifMetadata",
+        "durationsMs": [
+          100,
+          100,
+          100,
+          100,
+          100
+        ]
+      },
+      "loop": {
+        "value": true,
+        "certainty": "confirmedFromGifMetadata"
+      },
+      "anchor": {
+        "normalized": [
+          0.5,
+          1.0
+        ],
+        "certainty": "proposedForIntegration"
+      },
+      "blendModesAllowed": [
+        "normal"
+      ],
+      "tintAllowed": false,
+      "reducedMotionBehavior": "Show a static lower-water layer.",
+      "estimatedCost": {
+        "tier": "low",
+        "frameTexturePixels": 5120,
+        "estimatedRgbaBytes": 20480,
+        "note": "CPU/GPU runtime cost still depends on instance count, batching and emitter limits."
+      },
+      "recommendation": {
+        "method": "maskScrollUV",
+        "rationale": "Use as timing reference for the lower turbulence mask, not as a direct overlay."
+      },
+      "visualCompatibility": {
+        "approvedIsland": "mismatch",
+        "reason": "Lower-detail source fixture/palette does not match the approved island render; do not integrate directly."
+      },
+      "processing": {
+        "kind": "losslessRgbaFrameCopy",
+        "resampling": "none",
+        "alphaHandling": "preserved"
+      },
+      "alpha": {
+        "transparentPixels": 295,
+        "semiTransparentPixels": 0,
+        "opaquePixels": 729,
+        "hasTransparency": true,
+        "binaryAlpha": true,
+        "alphaBounds": [
+          0,
+          0,
+          32,
+          32
+        ]
+      },
+      "outputs": {
+        "frames": [
+          "prepared-assets/phase1/ambient-runtime/reference/water/waterfall-end-reference/frame-01.png",
+          "prepared-assets/phase1/ambient-runtime/reference/water/waterfall-end-reference/frame-02.png",
+          "prepared-assets/phase1/ambient-runtime/reference/water/waterfall-end-reference/frame-03.png",
+          "prepared-assets/phase1/ambient-runtime/reference/water/waterfall-end-reference/frame-04.png",
+          "prepared-assets/phase1/ambient-runtime/reference/water/waterfall-end-reference/frame-05.png"
+        ],
+        "sheet": "prepared-assets/phase1/ambient-runtime/reference/water/waterfall-end-reference/sheet.png",
+        "hashes": {
+          "prepared-assets/phase1/ambient-runtime/reference/water/waterfall-end-reference/frame-01.png": "4c570de8ba9cf26d926b7eb77d4c726c59dbd344cd5cd4c3db64433ce882c44a",
+          "prepared-assets/phase1/ambient-runtime/reference/water/waterfall-end-reference/frame-02.png": "d6c07bbf66113b9d5e40e3ec90f8dbf4c9bd3e1e432455fc3928d24758093c0d",
+          "prepared-assets/phase1/ambient-runtime/reference/water/waterfall-end-reference/frame-03.png": "40ce8e2ffd01bdb566b331c3e591ae3a553a0e34cb539b91c49ad42b7913ed4a",
+          "prepared-assets/phase1/ambient-runtime/reference/water/waterfall-end-reference/frame-04.png": "1e11e0aac3f35b93beb37d7ccb82b76855a55c305ca46d9d4a6510c6d07997ab",
+          "prepared-assets/phase1/ambient-runtime/reference/water/waterfall-end-reference/frame-05.png": "e4bf0220d28086d7d48a9c73e5b663637c8c4ad7ff2804a2154edd1f6eed373c",
+          "prepared-assets/phase1/ambient-runtime/reference/water/waterfall-end-reference/sheet.png": "e5482600ab331c1d92f4a00278edae3855806e6643c9753f9c23d2fc64432e19"
+        }
+      }
+    },
+    {
+      "id": "water-surface-reference",
+      "category": "water",
+      "status": "referenceOnly",
+      "sourcePath": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/water_surface/water_surface.gif",
+      "sourceFramePaths": [
+        "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/water_surface/water_surface_1.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/water_surface/water_surface_2.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/water_surface/water_surface_3.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/water_surface/water_surface_4.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/water_surface/water_surface_5.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/water_surface/water_surface_6.png"
+      ],
+      "frameCount": 6,
+      "frameSizePx": [
+        64,
+        16
+      ],
+      "logicalSizePx": [
+        64,
+        16
+      ],
+      "fps": {
+        "value": 10.0,
+        "certainty": "confirmedFromGifMetadata",
+        "durationsMs": [
+          100,
+          100,
+          100,
+          100,
+          100,
+          100
+        ]
+      },
+      "loop": {
+        "value": true,
+        "certainty": "confirmedFromGifMetadata"
+      },
+      "anchor": {
+        "normalized": [
+          0.5,
+          0.5
+        ],
+        "certainty": "proposedForIntegration"
+      },
+      "blendModesAllowed": [
+        "normal"
+      ],
+      "tintAllowed": false,
+      "reducedMotionBehavior": "Freeze on a calm authored surface frame.",
+      "estimatedCost": {
+        "tier": "low",
+        "frameTexturePixels": 6144,
+        "estimatedRgbaBytes": 24576,
+        "note": "CPU/GPU runtime cost still depends on instance count, batching and emitter limits."
+      },
+      "recommendation": {
+        "method": "maskScrollUV",
+        "rationale": "Apply a slow horizontal UV offset or small masked sprite sequence to the approved pond surface layer."
+      },
+      "visualCompatibility": {
+        "approvedIsland": "mismatch",
+        "reason": "Lower-detail source fixture/palette does not match the approved island render; do not integrate directly."
+      },
+      "processing": {
+        "kind": "losslessRgbaFrameCopy",
+        "resampling": "none",
+        "alphaHandling": "preserved"
+      },
+      "alpha": {
+        "transparentPixels": 280,
+        "semiTransparentPixels": 0,
+        "opaquePixels": 744,
+        "hasTransparency": true,
+        "binaryAlpha": true,
+        "alphaBounds": [
+          0,
+          2,
+          64,
+          16
+        ]
+      },
+      "outputs": {
+        "frames": [
+          "prepared-assets/phase1/ambient-runtime/reference/water/water-surface-reference/frame-01.png",
+          "prepared-assets/phase1/ambient-runtime/reference/water/water-surface-reference/frame-02.png",
+          "prepared-assets/phase1/ambient-runtime/reference/water/water-surface-reference/frame-03.png",
+          "prepared-assets/phase1/ambient-runtime/reference/water/water-surface-reference/frame-04.png",
+          "prepared-assets/phase1/ambient-runtime/reference/water/water-surface-reference/frame-05.png",
+          "prepared-assets/phase1/ambient-runtime/reference/water/water-surface-reference/frame-06.png"
+        ],
+        "sheet": "prepared-assets/phase1/ambient-runtime/reference/water/water-surface-reference/sheet.png",
+        "hashes": {
+          "prepared-assets/phase1/ambient-runtime/reference/water/water-surface-reference/frame-01.png": "65b213792a1b458751521fb433daa3d1ef9ba4fd5723790d6dd1d84a33514234",
+          "prepared-assets/phase1/ambient-runtime/reference/water/water-surface-reference/frame-02.png": "1fa2cf17a20f1eb024f248c76151c0af89f028605942b69469162b1df1449f53",
+          "prepared-assets/phase1/ambient-runtime/reference/water/water-surface-reference/frame-03.png": "6579167de1520e3effc9a780869fe276030d4c5e94d8ff7442cc99c4f505c2db",
+          "prepared-assets/phase1/ambient-runtime/reference/water/water-surface-reference/frame-04.png": "4cbccfc087820495f59d0802c924cc3bfb452b02707f94c1186e92084b653266",
+          "prepared-assets/phase1/ambient-runtime/reference/water/water-surface-reference/frame-05.png": "4d9b2b8ee6ef229b7ea8f9b43e605edc330b5ef2baaae062334dac364803b827",
+          "prepared-assets/phase1/ambient-runtime/reference/water/water-surface-reference/frame-06.png": "60ee8201b438b14324d3853cab2632b9bf4284c759aa2a3577f894d5c4b6ae94",
+          "prepared-assets/phase1/ambient-runtime/reference/water/water-surface-reference/sheet.png": "d2f1a510e605eada5cf088192a51362aa293b792585c7380d39595689d7f9b95"
+        }
+      }
+    },
+    {
+      "id": "water-body-reference",
+      "category": "water",
+      "status": "referenceOnly",
+      "sourcePath": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/water_body/water_body.gif",
+      "sourceFramePaths": [
+        "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/water_body/water_body_1.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/water_body/water_body_2.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/water_body/water_body_3.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/water_body/water_body_4.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/water_body/water_body_5.png"
+      ],
+      "frameCount": 5,
+      "frameSizePx": [
+        64,
+        64
+      ],
+      "logicalSizePx": [
+        64,
+        64
+      ],
+      "fps": {
+        "value": 7.6923,
+        "certainty": "confirmedFromGifMetadata",
+        "durationsMs": [
+          130,
+          130,
+          130,
+          130,
+          130
+        ]
+      },
+      "loop": {
+        "value": true,
+        "certainty": "confirmedFromGifMetadata"
+      },
+      "anchor": {
+        "normalized": [
+          0.5,
+          0.5
+        ],
+        "certainty": "proposedForIntegration"
+      },
+      "blendModesAllowed": [
+        "normal"
+      ],
+      "tintAllowed": false,
+      "reducedMotionBehavior": "Disable internal drift and retain the static approved water body.",
+      "estimatedCost": {
+        "tier": "low",
+        "frameTexturePixels": 20480,
+        "estimatedRgbaBytes": 81920,
+        "note": "CPU/GPU runtime cost still depends on instance count, batching and emitter limits."
+      },
+      "recommendation": {
+        "method": "maskScrollUV",
+        "rationale": "The approved water body should keep its texture; use this only to calibrate slow internal drift."
+      },
+      "visualCompatibility": {
+        "approvedIsland": "mismatch",
+        "reason": "Lower-detail source fixture/palette does not match the approved island render; do not integrate directly."
+      },
+      "processing": {
+        "kind": "losslessRgbaFrameCopy",
+        "resampling": "none",
+        "alphaHandling": "preserved"
+      },
+      "alpha": {
+        "transparentPixels": 0,
+        "semiTransparentPixels": 0,
+        "opaquePixels": 4096,
+        "hasTransparency": false,
+        "binaryAlpha": true,
+        "alphaBounds": [
+          0,
+          0,
+          64,
+          64
+        ]
+      },
+      "outputs": {
+        "frames": [
+          "prepared-assets/phase1/ambient-runtime/reference/water/water-body-reference/frame-01.png",
+          "prepared-assets/phase1/ambient-runtime/reference/water/water-body-reference/frame-02.png",
+          "prepared-assets/phase1/ambient-runtime/reference/water/water-body-reference/frame-03.png",
+          "prepared-assets/phase1/ambient-runtime/reference/water/water-body-reference/frame-04.png",
+          "prepared-assets/phase1/ambient-runtime/reference/water/water-body-reference/frame-05.png"
+        ],
+        "sheet": "prepared-assets/phase1/ambient-runtime/reference/water/water-body-reference/sheet.png",
+        "hashes": {
+          "prepared-assets/phase1/ambient-runtime/reference/water/water-body-reference/frame-01.png": "8f585efce033acd5300d94fa2d0454dd8af935e7d95e8059007b6f3028e012cf",
+          "prepared-assets/phase1/ambient-runtime/reference/water/water-body-reference/frame-02.png": "098ccffe254d7f3e1fe72af0d22dc24ecbda3bb27f8ce57b8bcc9515394bf0ea",
+          "prepared-assets/phase1/ambient-runtime/reference/water/water-body-reference/frame-03.png": "2de37fe8713b0094e45427fdd51a20dfa0c1762c656fe2c162722f8ad2f7188a",
+          "prepared-assets/phase1/ambient-runtime/reference/water/water-body-reference/frame-04.png": "e312dc9e5dfbc80d141574a8887605334895f887589cc1e3daa6e31e5bb02441",
+          "prepared-assets/phase1/ambient-runtime/reference/water/water-body-reference/frame-05.png": "f3875ef1b964769a341834d3c178dee720f3d5c2dbadb01dcf1b76a38d3904a1",
+          "prepared-assets/phase1/ambient-runtime/reference/water/water-body-reference/sheet.png": "b765dcc2dbfd8a317a5e5361237f8ba8e1f429895585b8687b2c71d88fd7f0c2"
+        }
+      }
+    },
+    {
+      "id": "water-splash-reference",
+      "category": "water",
+      "status": "referenceOnly",
+      "sourcePath": "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/water_splash/water_splash.gif",
+      "sourceFramePaths": [
+        "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/water_splash/water_splash_1.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/water_splash/water_splash_2.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/water_splash/water_splash_3.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/water_splash/water_splash_4.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/island_water_animated_set/water_splash/water_splash_5.png"
+      ],
+      "frameCount": 5,
+      "frameSizePx": [
+        64,
+        32
+      ],
+      "logicalSizePx": [
+        64,
+        32
+      ],
+      "fps": {
+        "value": 10.0,
+        "certainty": "confirmedFromGifMetadata",
+        "durationsMs": [
+          100,
+          100,
+          100,
+          100,
+          100
+        ]
+      },
+      "loop": {
+        "value": true,
+        "certainty": "confirmedFromGifMetadata"
+      },
+      "anchor": {
+        "normalized": [
+          0.5,
+          1.0
+        ],
+        "certainty": "proposedForIntegration"
+      },
+      "blendModesAllowed": [
+        "normal",
+        "screen"
+      ],
+      "tintAllowed": true,
+      "reducedMotionBehavior": "Disable recurring droplets; retain a static foam edge.",
+      "estimatedCost": {
+        "tier": "low",
+        "frameTexturePixels": 10240,
+        "estimatedRgbaBytes": 40960,
+        "note": "CPU/GPU runtime cost still depends on instance count, batching and emitter limits."
+      },
+      "recommendation": {
+        "method": "particles",
+        "rationale": "Recreate sparse droplets from the approved water palette; the cyan source sprite is a motion reference only."
+      },
+      "visualCompatibility": {
+        "approvedIsland": "mismatch",
+        "reason": "Lower-detail source fixture/palette does not match the approved island render; do not integrate directly."
+      },
+      "processing": {
+        "kind": "losslessRgbaFrameCopy",
+        "resampling": "none",
+        "alphaHandling": "preserved"
+      },
+      "alpha": {
+        "transparentPixels": 1472,
+        "semiTransparentPixels": 0,
+        "opaquePixels": 576,
+        "hasTransparency": true,
+        "binaryAlpha": true,
+        "alphaBounds": [
+          4,
+          10,
+          62,
+          32
+        ]
+      },
+      "outputs": {
+        "frames": [
+          "prepared-assets/phase1/ambient-runtime/reference/water/water-splash-reference/frame-01.png",
+          "prepared-assets/phase1/ambient-runtime/reference/water/water-splash-reference/frame-02.png",
+          "prepared-assets/phase1/ambient-runtime/reference/water/water-splash-reference/frame-03.png",
+          "prepared-assets/phase1/ambient-runtime/reference/water/water-splash-reference/frame-04.png",
+          "prepared-assets/phase1/ambient-runtime/reference/water/water-splash-reference/frame-05.png"
+        ],
+        "sheet": "prepared-assets/phase1/ambient-runtime/reference/water/water-splash-reference/sheet.png",
+        "hashes": {
+          "prepared-assets/phase1/ambient-runtime/reference/water/water-splash-reference/frame-01.png": "13cea80f343ce2c7697f69b631ea66081e639b861d451a677c681ea95816efe9",
+          "prepared-assets/phase1/ambient-runtime/reference/water/water-splash-reference/frame-02.png": "05258ad040a77d82fe278e906373674eabd6664dfeff6b309b15bfcd98fd1a08",
+          "prepared-assets/phase1/ambient-runtime/reference/water/water-splash-reference/frame-03.png": "ebded5ad20aa0cb5cf68e8be57d8186806d1fb29bc2dbbc431b47d7a9c8b0112",
+          "prepared-assets/phase1/ambient-runtime/reference/water/water-splash-reference/frame-04.png": "9239dd5056a0ff7e0da150fd5a2c58e5b139ba61d1dc6c8dc5211adffc174b47",
+          "prepared-assets/phase1/ambient-runtime/reference/water/water-splash-reference/frame-05.png": "b4c345cad1d8836ec76ce0f1ba1ec4a4d55fc489fb716b856e0d2d06866b3d0c",
+          "prepared-assets/phase1/ambient-runtime/reference/water/water-splash-reference/sheet.png": "b9a5ac4463d6ce9a9a3b867a88165241cc298fee00a393b055fc5b64935ef7fc"
+        }
+      }
+    },
+    {
+      "id": "candle-full-reference",
+      "category": "fire",
+      "status": "referenceOnly",
+      "sourcePath": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/candle/candle.gif",
+      "sourceFramePaths": [
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/candle/candle_1.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/candle/candle_2.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/candle/candle_3.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/candle/candle_4.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/candle/candle_5.png"
+      ],
+      "frameCount": 5,
+      "frameSizePx": [
+        16,
+        32
+      ],
+      "logicalSizePx": [
+        16,
+        32
+      ],
+      "fps": {
+        "value": 9.0909,
+        "certainty": "confirmedFromGifMetadata",
+        "durationsMs": [
+          110,
+          110,
+          110,
+          110,
+          110
+        ]
+      },
+      "loop": {
+        "value": true,
+        "certainty": "confirmedFromGifMetadata"
+      },
+      "anchor": {
+        "normalized": [
+          0.5,
+          1.0
+        ],
+        "certainty": "proposedForIntegration"
+      },
+      "blendModesAllowed": [
+        "normal"
+      ],
+      "tintAllowed": false,
+      "reducedMotionBehavior": "Use one isolated flame frame and keep the light pulse static.",
+      "estimatedCost": {
+        "tier": "low",
+        "frameTexturePixels": 2560,
+        "estimatedRgbaBytes": 10240,
+        "note": "CPU/GPU runtime cost still depends on instance count, batching and emitter limits."
+      },
+      "recommendation": {
+        "method": "spriteFrames",
+        "rationale": "The candle body does not match the approved interior; only the isolated flame derivative is runtime-ready."
+      },
+      "visualCompatibility": {
+        "approvedIsland": "mismatch",
+        "reason": "Lower-detail source fixture/palette does not match the approved island render; do not integrate directly."
+      },
+      "processing": {
+        "kind": "losslessRgbaFrameCopy",
+        "resampling": "none",
+        "alphaHandling": "preserved"
+      },
+      "alpha": {
+        "transparentPixels": 362,
+        "semiTransparentPixels": 0,
+        "opaquePixels": 150,
+        "hasTransparency": true,
+        "binaryAlpha": true,
+        "alphaBounds": [
+          2,
+          6,
+          14,
+          32
+        ]
+      },
+      "outputs": {
+        "frames": [
+          "prepared-assets/phase1/ambient-runtime/reference/fire/candle-full-reference/frame-01.png",
+          "prepared-assets/phase1/ambient-runtime/reference/fire/candle-full-reference/frame-02.png",
+          "prepared-assets/phase1/ambient-runtime/reference/fire/candle-full-reference/frame-03.png",
+          "prepared-assets/phase1/ambient-runtime/reference/fire/candle-full-reference/frame-04.png",
+          "prepared-assets/phase1/ambient-runtime/reference/fire/candle-full-reference/frame-05.png"
+        ],
+        "sheet": "prepared-assets/phase1/ambient-runtime/reference/fire/candle-full-reference/sheet.png",
+        "hashes": {
+          "prepared-assets/phase1/ambient-runtime/reference/fire/candle-full-reference/frame-01.png": "c7bc2c1f2699b274cdfedb0f9ebfdc9e0645b13d92668f8f4d53ca5f1a185023",
+          "prepared-assets/phase1/ambient-runtime/reference/fire/candle-full-reference/frame-02.png": "93ecf216a40b75f8b5d3f9bd00374679a2d669a20dbdec43e488e1adaf083bf0",
+          "prepared-assets/phase1/ambient-runtime/reference/fire/candle-full-reference/frame-03.png": "a3ce093d3ed293a6dbf2732e3f64ddc0c21ee5e963c2ec49265c7cee8c402d0d",
+          "prepared-assets/phase1/ambient-runtime/reference/fire/candle-full-reference/frame-04.png": "0c123e12d9389db763c4d63211293ca872227c64646904be4259761fa35ef8d5",
+          "prepared-assets/phase1/ambient-runtime/reference/fire/candle-full-reference/frame-05.png": "771f0dfed9bba03314389b691216fa79fe8443545d28d03f3a16f0bd064d87f6",
+          "prepared-assets/phase1/ambient-runtime/reference/fire/candle-full-reference/sheet.png": "aef5279143d5ac8b4f3d3f133396cc0ca446970ced8419e473b6710608ab59be"
+        }
+      }
+    },
+    {
+      "id": "torch-full-reference",
+      "category": "fire",
+      "status": "referenceOnly",
+      "sourcePath": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/torch/torch.gif",
+      "sourceFramePaths": [
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/torch/torch_1.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/torch/torch_2.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/torch/torch_3.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/torch/torch_4.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/torch/torch_5.png"
+      ],
+      "frameCount": 5,
+      "frameSizePx": [
+        16,
+        32
+      ],
+      "logicalSizePx": [
+        16,
+        32
+      ],
+      "fps": {
+        "value": 11.1111,
+        "certainty": "confirmedFromGifMetadata",
+        "durationsMs": [
+          90,
+          90,
+          90,
+          90,
+          90
+        ]
+      },
+      "loop": {
+        "value": true,
+        "certainty": "confirmedFromGifMetadata"
+      },
+      "anchor": {
+        "normalized": [
+          0.5,
+          1.0
+        ],
+        "certainty": "proposedForIntegration"
+      },
+      "blendModesAllowed": [
+        "normal"
+      ],
+      "tintAllowed": false,
+      "reducedMotionBehavior": "Use one isolated flame frame and keep the light pulse static.",
+      "estimatedCost": {
+        "tier": "low",
+        "frameTexturePixels": 2560,
+        "estimatedRgbaBytes": 10240,
+        "note": "CPU/GPU runtime cost still depends on instance count, batching and emitter limits."
+      },
+      "recommendation": {
+        "method": "spriteFrames",
+        "rationale": "The bracket and wall pixels do not match the approved house; only the isolated flame derivative is runtime-ready."
+      },
+      "visualCompatibility": {
+        "approvedIsland": "mismatch",
+        "reason": "Lower-detail source fixture/palette does not match the approved island render; do not integrate directly."
+      },
+      "processing": {
+        "kind": "losslessRgbaFrameCopy",
+        "resampling": "none",
+        "alphaHandling": "preserved"
+      },
+      "alpha": {
+        "transparentPixels": 305,
+        "semiTransparentPixels": 0,
+        "opaquePixels": 207,
+        "hasTransparency": true,
+        "binaryAlpha": true,
+        "alphaBounds": [
+          1,
+          7,
+          13,
+          32
+        ]
+      },
+      "outputs": {
+        "frames": [
+          "prepared-assets/phase1/ambient-runtime/reference/fire/torch-full-reference/frame-01.png",
+          "prepared-assets/phase1/ambient-runtime/reference/fire/torch-full-reference/frame-02.png",
+          "prepared-assets/phase1/ambient-runtime/reference/fire/torch-full-reference/frame-03.png",
+          "prepared-assets/phase1/ambient-runtime/reference/fire/torch-full-reference/frame-04.png",
+          "prepared-assets/phase1/ambient-runtime/reference/fire/torch-full-reference/frame-05.png"
+        ],
+        "sheet": "prepared-assets/phase1/ambient-runtime/reference/fire/torch-full-reference/sheet.png",
+        "hashes": {
+          "prepared-assets/phase1/ambient-runtime/reference/fire/torch-full-reference/frame-01.png": "1af041080bfa64e600e0af1d55e3d2b34a7734e1674cfe7fa5fa0f26c4c9fb9d",
+          "prepared-assets/phase1/ambient-runtime/reference/fire/torch-full-reference/frame-02.png": "39b0a3ac1a2842eef542bbdfc81bea7bfc5e755ca98e0b1c3280ee9c619880ab",
+          "prepared-assets/phase1/ambient-runtime/reference/fire/torch-full-reference/frame-03.png": "cbb629461e5de69fc56ab9a83150810675fab0aa9f9b1a45c8c80342c3458d34",
+          "prepared-assets/phase1/ambient-runtime/reference/fire/torch-full-reference/frame-04.png": "3870a9a2e4063d5fd945f7ce59c97b1f8db90594fa7755bb369de2135098fe44",
+          "prepared-assets/phase1/ambient-runtime/reference/fire/torch-full-reference/frame-05.png": "30133504950b9b35b3540872eeb5544c29e194c72aed952e71c4adf98a39986c",
+          "prepared-assets/phase1/ambient-runtime/reference/fire/torch-full-reference/sheet.png": "ce15e97876e4150df406001080e074262b38c3c967514b28775992e963d33bba"
+        }
+      }
+    },
+    {
+      "id": "fireplace-full-reference",
+      "category": "fire",
+      "status": "referenceOnly",
+      "sourcePath": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/fireplace/fireplace.gif",
+      "sourceFramePaths": [
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/fireplace/fireplace_1.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/fireplace/fireplace_2.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/fireplace/fireplace_3.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/fireplace/fireplace_4.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/fireplace/fireplace_5.png"
+      ],
+      "frameCount": 5,
+      "frameSizePx": [
+        48,
+        48
+      ],
+      "logicalSizePx": [
+        48,
+        48
+      ],
+      "fps": {
+        "value": 9.0909,
+        "certainty": "confirmedFromGifMetadata",
+        "durationsMs": [
+          110,
+          110,
+          110,
+          110,
+          110
+        ]
+      },
+      "loop": {
+        "value": true,
+        "certainty": "confirmedFromGifMetadata"
+      },
+      "anchor": {
+        "normalized": [
+          0.5,
+          1.0
+        ],
+        "certainty": "proposedForIntegration"
+      },
+      "blendModesAllowed": [
+        "normal"
+      ],
+      "tintAllowed": false,
+      "reducedMotionBehavior": "Use one isolated flame frame and a static warm glow.",
+      "estimatedCost": {
+        "tier": "low",
+        "frameTexturePixels": 11520,
+        "estimatedRgbaBytes": 46080,
+        "note": "CPU/GPU runtime cost still depends on instance count, batching and emitter limits."
+      },
+      "recommendation": {
+        "method": "spriteFrames",
+        "rationale": "The masonry surround conflicts with the approved fireplace; use only the isolated flame derivative."
+      },
+      "visualCompatibility": {
+        "approvedIsland": "mismatch",
+        "reason": "Lower-detail source fixture/palette does not match the approved island render; do not integrate directly."
+      },
+      "processing": {
+        "kind": "losslessRgbaFrameCopy",
+        "resampling": "none",
+        "alphaHandling": "preserved"
+      },
+      "alpha": {
+        "transparentPixels": 84,
+        "semiTransparentPixels": 0,
+        "opaquePixels": 2220,
+        "hasTransparency": true,
+        "binaryAlpha": true,
+        "alphaBounds": [
+          0,
+          0,
+          48,
+          48
+        ]
+      },
+      "outputs": {
+        "frames": [
+          "prepared-assets/phase1/ambient-runtime/reference/fire/fireplace-full-reference/frame-01.png",
+          "prepared-assets/phase1/ambient-runtime/reference/fire/fireplace-full-reference/frame-02.png",
+          "prepared-assets/phase1/ambient-runtime/reference/fire/fireplace-full-reference/frame-03.png",
+          "prepared-assets/phase1/ambient-runtime/reference/fire/fireplace-full-reference/frame-04.png",
+          "prepared-assets/phase1/ambient-runtime/reference/fire/fireplace-full-reference/frame-05.png"
+        ],
+        "sheet": "prepared-assets/phase1/ambient-runtime/reference/fire/fireplace-full-reference/sheet.png",
+        "hashes": {
+          "prepared-assets/phase1/ambient-runtime/reference/fire/fireplace-full-reference/frame-01.png": "a81e190a5e8875755368e497bf25a330edd545cdf6c370b34aa225d8a3550444",
+          "prepared-assets/phase1/ambient-runtime/reference/fire/fireplace-full-reference/frame-02.png": "a0f8acae74d272904fb518082e09092f003cfdd066542844e94d0d48e9db982e",
+          "prepared-assets/phase1/ambient-runtime/reference/fire/fireplace-full-reference/frame-03.png": "673bb3d0a112d6fe161293c7d98b9f0f2efe8836fcac450c422ec72b97e662f1",
+          "prepared-assets/phase1/ambient-runtime/reference/fire/fireplace-full-reference/frame-04.png": "74b7651748aff4f805fb5e37575db0b527fdb9027a29892f2cff697e8e46336e",
+          "prepared-assets/phase1/ambient-runtime/reference/fire/fireplace-full-reference/frame-05.png": "d55fa385163da0dc8b6245df685b67bc16b79291c169a093aef188afcb971cfb",
+          "prepared-assets/phase1/ambient-runtime/reference/fire/fireplace-full-reference/sheet.png": "121a2456870286047257d25e513266d24c30073efdf11ec6a99936cad1cf0d01"
+        }
+      }
+    },
+    {
+      "id": "chimney-smoke-full-reference",
+      "category": "smoke",
+      "status": "referenceOnly",
+      "sourcePath": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/chimney_smoke/chimney_smoke.gif",
+      "sourceFramePaths": [
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/chimney_smoke/chimney_smoke_1.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/chimney_smoke/chimney_smoke_2.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/chimney_smoke/chimney_smoke_3.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/chimney_smoke/chimney_smoke_4.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/chimney_smoke/chimney_smoke_5.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/chimney_smoke/chimney_smoke_6.png"
+      ],
+      "frameCount": 6,
+      "frameSizePx": [
+        32,
+        96
+      ],
+      "logicalSizePx": [
+        32,
+        96
+      ],
+      "fps": {
+        "value": 7.1429,
+        "certainty": "confirmedFromGifMetadata",
+        "durationsMs": [
+          140,
+          140,
+          140,
+          140,
+          140,
+          140
+        ]
+      },
+      "loop": {
+        "value": true,
+        "certainty": "confirmedFromGifMetadata"
+      },
+      "anchor": {
+        "normalized": [
+          0.5,
+          1.0
+        ],
+        "certainty": "proposedForIntegration"
+      },
+      "blendModesAllowed": [
+        "normal"
+      ],
+      "tintAllowed": true,
+      "reducedMotionBehavior": "Hide the smoke while retaining the chimney artwork.",
+      "estimatedCost": {
+        "tier": "low",
+        "frameTexturePixels": 18432,
+        "estimatedRgbaBytes": 73728,
+        "note": "CPU/GPU runtime cost still depends on instance count, batching and emitter limits."
+      },
+      "recommendation": {
+        "method": "spriteFrames",
+        "rationale": "The brick chimney is source-specific; use the smoke-only derivative above the approved chimney."
+      },
+      "visualCompatibility": {
+        "approvedIsland": "mismatch",
+        "reason": "Lower-detail source fixture/palette does not match the approved island render; do not integrate directly."
+      },
+      "processing": {
+        "kind": "losslessRgbaFrameCopy",
+        "resampling": "none",
+        "alphaHandling": "preserved"
+      },
+      "alpha": {
+        "transparentPixels": 1696,
+        "semiTransparentPixels": 0,
+        "opaquePixels": 1376,
+        "hasTransparency": true,
+        "binaryAlpha": true,
+        "alphaBounds": [
+          0,
+          41,
+          32,
+          96
+        ]
+      },
+      "outputs": {
+        "frames": [
+          "prepared-assets/phase1/ambient-runtime/reference/smoke/chimney-smoke-full-reference/frame-01.png",
+          "prepared-assets/phase1/ambient-runtime/reference/smoke/chimney-smoke-full-reference/frame-02.png",
+          "prepared-assets/phase1/ambient-runtime/reference/smoke/chimney-smoke-full-reference/frame-03.png",
+          "prepared-assets/phase1/ambient-runtime/reference/smoke/chimney-smoke-full-reference/frame-04.png",
+          "prepared-assets/phase1/ambient-runtime/reference/smoke/chimney-smoke-full-reference/frame-05.png",
+          "prepared-assets/phase1/ambient-runtime/reference/smoke/chimney-smoke-full-reference/frame-06.png"
+        ],
+        "sheet": "prepared-assets/phase1/ambient-runtime/reference/smoke/chimney-smoke-full-reference/sheet.png",
+        "hashes": {
+          "prepared-assets/phase1/ambient-runtime/reference/smoke/chimney-smoke-full-reference/frame-01.png": "4e3090c695dea964de2d5202369afe4f3eb89b740c75bc16cfa912e8b004d364",
+          "prepared-assets/phase1/ambient-runtime/reference/smoke/chimney-smoke-full-reference/frame-02.png": "93a324de2b999a2ce66825e56c4ab60ee82552bbad600d30401904a25fb80130",
+          "prepared-assets/phase1/ambient-runtime/reference/smoke/chimney-smoke-full-reference/frame-03.png": "79ce51919c385d6ef873876cc20881c919717e0271cb0ad2f026faaedcb8635a",
+          "prepared-assets/phase1/ambient-runtime/reference/smoke/chimney-smoke-full-reference/frame-04.png": "b731718e0bab3791886e72fd4bef903e448e9af086364d87b1661ec830b722b3",
+          "prepared-assets/phase1/ambient-runtime/reference/smoke/chimney-smoke-full-reference/frame-05.png": "71243064b49ed9a7abdc1bbfe65dd680dba9fec9d073603b05df643e84090072",
+          "prepared-assets/phase1/ambient-runtime/reference/smoke/chimney-smoke-full-reference/frame-06.png": "96be525d894417bdcaa7aff02c692f7ff1c00cae30af456f2b89d5ebd31fad32",
+          "prepared-assets/phase1/ambient-runtime/reference/smoke/chimney-smoke-full-reference/sheet.png": "d2c1cd63f6c88caa0950be17cdc464a7709dffb8f3a4d0dd771253cc68bfc785"
+        }
+      }
+    },
+    {
+      "id": "window-light-reference",
+      "category": "light",
+      "status": "referenceOnly",
+      "sourcePath": "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/window_light/window_light.gif",
+      "sourceFramePaths": [
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/window_light/window_light_1.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/window_light/window_light_2.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/window_light/window_light_3.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/window_light/window_light_4.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/window_light/window_light_5.png",
+        "assetss-definitivo/assets_fase1/png_complementarios/about_house_animated_elements_set/window_light/window_light_6.png"
+      ],
+      "frameCount": 6,
+      "frameSizePx": [
+        32,
+        32
+      ],
+      "logicalSizePx": [
+        32,
+        32
+      ],
+      "fps": {
+        "value": 8.3333,
+        "certainty": "confirmedFromGifMetadata",
+        "durationsMs": [
+          120,
+          120,
+          120,
+          120,
+          120,
+          120
+        ]
+      },
+      "loop": {
+        "value": true,
+        "certainty": "confirmedFromGifMetadata"
+      },
+      "anchor": {
+        "normalized": [
+          0.5,
+          0.5
+        ],
+        "certainty": "proposedForIntegration"
+      },
+      "blendModesAllowed": [
+        "add",
+        "screen"
+      ],
+      "tintAllowed": true,
+      "reducedMotionBehavior": "Keep a constant low-intensity warm light.",
+      "estimatedCost": {
+        "tier": "low",
+        "frameTexturePixels": 6144,
+        "estimatedRgbaBytes": 24576,
+        "note": "CPU/GPU runtime cost still depends on instance count, batching and emitter limits."
+      },
+      "recommendation": {
+        "method": "lightPulse",
+        "rationale": "Drive alpha/tint on the separated approved window-light layer; the source frame includes a mismatching window surround."
+      },
+      "visualCompatibility": {
+        "approvedIsland": "mismatch",
+        "reason": "Lower-detail source fixture/palette does not match the approved island render; do not integrate directly."
+      },
+      "processing": {
+        "kind": "losslessRgbaFrameCopy",
+        "resampling": "none",
+        "alphaHandling": "preserved"
+      },
+      "alpha": {
+        "transparentPixels": 124,
+        "semiTransparentPixels": 0,
+        "opaquePixels": 900,
+        "hasTransparency": true,
+        "binaryAlpha": true,
+        "alphaBounds": [
+          1,
+          1,
+          31,
+          31
+        ]
+      },
+      "outputs": {
+        "frames": [
+          "prepared-assets/phase1/ambient-runtime/reference/light/window-light-reference/frame-01.png",
+          "prepared-assets/phase1/ambient-runtime/reference/light/window-light-reference/frame-02.png",
+          "prepared-assets/phase1/ambient-runtime/reference/light/window-light-reference/frame-03.png",
+          "prepared-assets/phase1/ambient-runtime/reference/light/window-light-reference/frame-04.png",
+          "prepared-assets/phase1/ambient-runtime/reference/light/window-light-reference/frame-05.png",
+          "prepared-assets/phase1/ambient-runtime/reference/light/window-light-reference/frame-06.png"
+        ],
+        "sheet": "prepared-assets/phase1/ambient-runtime/reference/light/window-light-reference/sheet.png",
+        "hashes": {
+          "prepared-assets/phase1/ambient-runtime/reference/light/window-light-reference/frame-01.png": "40af985d6c6674de7aa6b0b67fe00b0035bbde9f306980a05e31ceddd4d20d5d",
+          "prepared-assets/phase1/ambient-runtime/reference/light/window-light-reference/frame-02.png": "66b9c6adbf0f5d3e1d3b53c946570739cfdf52af8c276c7f46031af76ff3193e",
+          "prepared-assets/phase1/ambient-runtime/reference/light/window-light-reference/frame-03.png": "75e51bdc5b30b8b47077d5e69656c96a59da2f29031f238c64cae3470d200ba4",
+          "prepared-assets/phase1/ambient-runtime/reference/light/window-light-reference/frame-04.png": "ec75dd8792d0f977f0ae92c13bdf815ec7605199f8846c4149a7c923fe2b21b2",
+          "prepared-assets/phase1/ambient-runtime/reference/light/window-light-reference/frame-05.png": "567ddb1633eb906ac81d37f920e1e14f3e18e320bacc3086177e7c37dcc239f7",
+          "prepared-assets/phase1/ambient-runtime/reference/light/window-light-reference/frame-06.png": "75e51bdc5b30b8b47077d5e69656c96a59da2f29031f238c64cae3470d200ba4",
+          "prepared-assets/phase1/ambient-runtime/reference/light/window-light-reference/sheet.png": "c65a54e57f08cf6f781cd9fe48d58aa326381007636744c857d51a869cea8bb0"
+        }
+      }
+    },
+    {
+      "id": "leaf-palette-sheet-reference",
+      "category": "particles",
+      "status": "referenceOnly",
+      "sourcePath": "assetss-definitivo/assets_fase1/png_complementarios/hojas_set.png",
+      "sourceFramePaths": [
+        "assetss-definitivo/assets_fase1/png_complementarios/hojas_set.png"
+      ],
+      "frameCount": null,
+      "frameSizePx": null,
+      "logicalSizePx": null,
+      "fps": {
+        "value": null,
+        "certainty": "notAvailable"
+      },
+      "loop": {
+        "value": null,
+        "certainty": "notAvailable"
+      },
+      "anchor": {
+        "normalized": [
+          0.5,
+          0.5
+        ],
+        "certainty": "proposedForFutureIsolatedFrames"
+      },
+      "blendModesAllowed": [
+        "normal"
+      ],
+      "tintAllowed": true,
+      "reducedMotionBehavior": "Disable free-falling leaf particles.",
+      "estimatedCost": {
+        "tier": "notEstimated",
+        "note": "No runtime frames emitted."
+      },
+      "recommendation": {
+        "method": "particles",
+        "rationale": "The presentation sheet contains labels, glow fields and multiple leaf sets without a clean runtime grid; use it only to author isolated leaf textures."
+      },
+      "visualCompatibility": {
+        "approvedIsland": "unresolved",
+        "reason": "No clean isolated runtime frames exist in this presentation sheet."
+      },
+      "processing": {
+        "kind": "none",
+        "reason": "Unsafe or ambiguous slicing; original remains immutable."
+      },
+      "alpha": {
+        "transparentPixels": 1245937,
+        "semiTransparentPixels": 326927,
+        "opaquePixels": 0,
+        "hasTransparency": true,
+        "binaryAlpha": false,
+        "alphaBounds": [
+          23,
+          9,
+          1516,
+          1024
+        ]
+      },
+      "outputs": null
+    },
+    {
+      "id": "pollen-sheet-reference",
+      "category": "particles",
+      "status": "referenceOnly",
+      "sourcePath": "assetss-definitivo/assets_fase1/png_complementarios/particulas.png",
+      "sourceFramePaths": [
+        "assetss-definitivo/assets_fase1/png_complementarios/particulas.png"
+      ],
+      "frameCount": null,
+      "frameSizePx": null,
+      "logicalSizePx": null,
+      "fps": {
+        "value": null,
+        "certainty": "notAvailable"
+      },
+      "loop": {
+        "value": null,
+        "certainty": "notAvailable"
+      },
+      "anchor": {
+        "normalized": [
+          0.5,
+          0.5
+        ],
+        "certainty": "proposedForFutureIsolatedFrames"
+      },
+      "blendModesAllowed": [
+        "normal"
+      ],
+      "tintAllowed": true,
+      "reducedMotionBehavior": "Disable pollen emitters.",
+      "estimatedCost": {
+        "tier": "notEstimated",
+        "note": "No runtime frames emitted."
+      },
+      "recommendation": {
+        "method": "particles",
+        "rationale": "The presentation sheet has a non-zero alpha matte across the entire 1536x1024 canvas, so safe frame extraction would require destructive matte removal."
+      },
+      "visualCompatibility": {
+        "approvedIsland": "unresolved",
+        "reason": "No clean isolated runtime frames exist in this presentation sheet."
+      },
+      "processing": {
+        "kind": "none",
+        "reason": "Unsafe or ambiguous slicing; original remains immutable."
+      },
+      "alpha": {
+        "transparentPixels": 0,
+        "semiTransparentPixels": 1572864,
+        "opaquePixels": 0,
+        "hasTransparency": true,
+        "binaryAlpha": false,
+        "alphaBounds": [
+          0,
+          0,
+          1536,
+          1024
+        ]
+      },
+      "outputs": null
+    },
+    {
+      "id": "liana-variants-reference",
+      "category": "vegetation",
+      "status": "referenceOnly",
+      "sourcePath": "assetss-definitivo/assets_fase1/png_complementarios/lianas.png",
+      "sourceFramePaths": [
+        "assetss-definitivo/assets_fase1/png_complementarios/lianas.png"
+      ],
+      "frameCount": null,
+      "frameSizePx": null,
+      "logicalSizePx": null,
+      "fps": {
+        "value": null,
+        "certainty": "notAvailable"
+      },
+      "loop": {
+        "value": null,
+        "certainty": "notAvailable"
+      },
+      "anchor": {
+        "normalized": [
+          0.5,
+          0.5
+        ],
+        "certainty": "proposedForFutureIsolatedFrames"
+      },
+      "blendModesAllowed": [
+        "normal"
+      ],
+      "tintAllowed": true,
+      "reducedMotionBehavior": "Keep the approved vine layer static.",
+      "estimatedCost": {
+        "tier": "notEstimated",
+        "note": "No runtime frames emitted."
+      },
+      "recommendation": {
+        "method": "spriteFrames",
+        "rationale": "The seven silhouettes are different vine variants, not temporal frames. Do not fake a loop by cycling them; animate an approved separated vine with a subtle authored sway sequence instead."
+      },
+      "visualCompatibility": {
+        "approvedIsland": "unresolved",
+        "reason": "No clean isolated runtime frames exist in this presentation sheet."
+      },
+      "processing": {
+        "kind": "none",
+        "reason": "Unsafe or ambiguous slicing; original remains immutable."
+      },
+      "alpha": {
+        "transparentPixels": 1162040,
+        "semiTransparentPixels": 408124,
+        "opaquePixels": 2352,
+        "hasTransparency": true,
+        "binaryAlpha": false,
+        "alphaBounds": [
+          24,
+          0,
+          1240,
+          1254
+        ]
+      },
+      "outputs": null
+    }
+  ]
+}

@@ -1,0 +1,245 @@
+{
+  "version": 1,
+  "source": "../phase1-floating-island-workshop-v1.png",
+  "sourceSha256": "ab0ea6dbde1a124c69097441c61374e4ef8995552d902e56a3fbef929d3770cd",
+  "canvas": {
+    "width": 1774,
+    "height": 887,
+    "coordinateOrigin": "top-left",
+    "units": "source pixels"
+  },
+  "restRecomposition": {
+    "path": "qa/recomposed-rest.png",
+    "comparisonBackdrop": "#5da9d5",
+    "absoluteErrorNormalized": 0.0000102579,
+    "rmseNormalized": 0.00186736,
+    "assessment": "visually equivalent at native resolution; residual error is limited to semi-transparent edge compositing"
+  },
+  "layers": [
+    {
+      "id": "clean-plate",
+      "path": "base/clean-plate.png",
+      "kind": "base",
+      "sourceRect": { "x": 0, "y": 0, "width": 1774, "height": 887 },
+      "position": { "x": 0, "y": 0 },
+      "pivot": { "x": 0, "y": 0 },
+      "anchor": { "x": 0, "y": 0 },
+      "zOrder": 0,
+      "animation": "none",
+      "maxSafeAmplitudePx": 0
+    },
+    {
+      "id": "tree-green-crown",
+      "path": "canopies/tree-green-crown.png",
+      "kind": "sprite",
+      "sourceRect": { "x": 215, "y": 8, "width": 330, "height": 295 },
+      "position": { "x": 215, "y": 8 },
+      "pivot": { "x": 174, "y": 270 },
+      "anchor": { "x": 0.5273, "y": 0.9153 },
+      "zOrder": 40,
+      "animation": "slow mesh sway or subpixel rotation around the lower crown",
+      "maxSafeAmplitudePx": 1.5,
+      "maxSafeRotationDeg": 0.35
+    },
+    {
+      "id": "tree-pink-crown",
+      "path": "canopies/tree-pink-crown.png",
+      "kind": "sprite",
+      "sourceRect": { "x": 1490, "y": 238, "width": 250, "height": 205 },
+      "position": { "x": 1490, "y": 238 },
+      "pivot": { "x": 124, "y": 180 },
+      "anchor": { "x": 0.496, "y": 0.878 },
+      "zOrder": 40,
+      "animation": "slow mesh sway or subpixel rotation around the lower crown",
+      "maxSafeAmplitudePx": 1.25,
+      "maxSafeRotationDeg": 0.45
+    },
+    {
+      "id": "vines-left-edge",
+      "path": "vines/vines-left-edge.png",
+      "kind": "sprite-group",
+      "sourceRect": { "x": 25, "y": 450, "width": 190, "height": 250 },
+      "position": { "x": 25, "y": 450 },
+      "pivot": { "x": 95, "y": 0 },
+      "anchor": { "x": 0.5, "y": 0 },
+      "zOrder": 20,
+      "animation": "top-anchored vertex bend; never translate the whole crop",
+      "maxSafeAmplitudePx": 1.5
+    },
+    {
+      "id": "vines-center",
+      "path": "vines/vines-center.png",
+      "kind": "sprite-group",
+      "sourceRect": { "x": 315, "y": 560, "width": 430, "height": 320 },
+      "position": { "x": 315, "y": 560 },
+      "pivot": { "x": 215, "y": 0 },
+      "anchor": { "x": 0.5, "y": 0 },
+      "zOrder": 20,
+      "animation": "top-anchored vertex bend with slightly different phase per strand",
+      "maxSafeAmplitudePx": 1.5
+    },
+    {
+      "id": "vines-right-center",
+      "path": "vines/vines-right-center.png",
+      "kind": "sprite-group",
+      "sourceRect": { "x": 885, "y": 540, "width": 255, "height": 300 },
+      "position": { "x": 885, "y": 540 },
+      "pivot": { "x": 128, "y": 0 },
+      "anchor": { "x": 0.502, "y": 0 },
+      "zOrder": 20,
+      "animation": "top-anchored vertex bend with slightly different phase per strand",
+      "maxSafeAmplitudePx": 1.5
+    },
+    {
+      "id": "vines-bridge-right",
+      "path": "vines/vines-bridge-right.png",
+      "kind": "sprite-group",
+      "sourceRect": { "x": 1270, "y": 500, "width": 285, "height": 230 },
+      "position": { "x": 1270, "y": 500 },
+      "pivot": { "x": 143, "y": 0 },
+      "anchor": { "x": 0.502, "y": 0 },
+      "zOrder": 20,
+      "animation": "top-anchored vertex bend; exposed brown root may lag the green strands",
+      "maxSafeAmplitudePx": 1.25
+    },
+    {
+      "id": "water-surface",
+      "path": "water/water-surface.png",
+      "maskPath": "masks/water-surface-mask.png",
+      "kind": "sprite-with-mask",
+      "sourceRect": { "x": 1023, "y": 442, "width": 225, "height": 75 },
+      "position": { "x": 1023, "y": 442 },
+      "pivot": { "x": 112, "y": 38 },
+      "anchor": { "x": 0.4978, "y": 0.5067 },
+      "zOrder": 30,
+      "animation": "masked frame cycle or horizontal highlight drift; keep banks fixed",
+      "maxSafeAmplitudePx": 1
+    },
+    {
+      "id": "waterfall-body",
+      "path": "water/waterfall-body.png",
+      "maskPath": "masks/waterfall-body-mask.png",
+      "kind": "sprite-with-mask",
+      "sourceRect": { "x": 1135, "y": 503, "width": 100, "height": 270 },
+      "position": { "x": 1135, "y": 503 },
+      "pivot": { "x": 45, "y": 0 },
+      "anchor": { "x": 0.45, "y": 0 },
+      "zOrder": 31,
+      "animation": "vertical UV flow or masked frame cycle; do not translate the sprite",
+      "maxSafeAmplitudePx": 1
+    },
+    {
+      "id": "waterfall-splash",
+      "path": "water/waterfall-splash.png",
+      "maskPath": "masks/waterfall-splash-mask.png",
+      "kind": "sprite-with-mask",
+      "sourceRect": { "x": 1132, "y": 758, "width": 105, "height": 75 },
+      "position": { "x": 1132, "y": 758 },
+      "pivot": { "x": 52, "y": 8 },
+      "anchor": { "x": 0.4952, "y": 0.1067 },
+      "zOrder": 32,
+      "animation": "short frame loop with restrained opacity variation",
+      "maxSafeAmplitudePx": 1.5
+    },
+    {
+      "id": "fireplace-flame",
+      "path": "lights/fireplace-flame.png",
+      "maskPath": "masks/fireplace-flame-mask.png",
+      "kind": "sprite-with-mask",
+      "sourceRect": { "x": 728, "y": 399, "width": 75, "height": 50 },
+      "position": { "x": 728, "y": 399 },
+      "pivot": { "x": 38, "y": 40 },
+      "anchor": { "x": 0.5067, "y": 0.8 },
+      "zOrder": 50,
+      "animation": "frame swap plus tiny brightness pulse; keep masonry static",
+      "maxSafeAmplitudePx": 1
+    }
+  ],
+  "overlayMasks": [
+    {
+      "id": "fireplace-glow",
+      "path": "masks/fireplace-glow-mask.png",
+      "sourceRect": { "x": 710, "y": 382, "width": 110, "height": 85 },
+      "position": { "x": 710, "y": 382 },
+      "zOrder": 49,
+      "animation": "additive warm-light opacity pulse",
+      "maxSafeAmplitudePx": 0,
+      "maxSafeOpacityDelta": 0.08
+    },
+    {
+      "id": "warm-lights",
+      "path": "masks/warm-lights-mask.png",
+      "sourceRect": { "x": 255, "y": 225, "width": 1270, "height": 210 },
+      "position": { "x": 255, "y": 225 },
+      "zOrder": 49,
+      "animation": "low-amplitude asynchronous light pulse; mask only",
+      "maxSafeAmplitudePx": 0,
+      "maxSafeOpacityDelta": 0.05
+    },
+    {
+      "id": "water-highlights",
+      "path": "masks/water-highlight-mask.png",
+      "sourceRect": { "x": 1023, "y": 442, "width": 220, "height": 400 },
+      "position": { "x": 1023, "y": 442 },
+      "zOrder": 33,
+      "animation": "masked additive glint moving downstream",
+      "maxSafeAmplitudePx": 2,
+      "maxSafeOpacityDelta": 0.12
+    }
+  ],
+  "vegetationMasks": [
+    {
+      "id": "garden-left-sway",
+      "path": "vegetation/garden-left-sway-mask.png",
+      "sourceRect": { "x": 20, "y": 265, "width": 285, "height": 165 },
+      "position": { "x": 20, "y": 265 },
+      "pivot": { "x": 143, "y": 165 },
+      "animation": "masked vertex sway",
+      "maxSafeAmplitudePx": 1
+    },
+    {
+      "id": "garden-house-sway",
+      "path": "vegetation/garden-house-sway-mask.png",
+      "sourceRect": { "x": 380, "y": 340, "width": 270, "height": 135 },
+      "position": { "x": 380, "y": 340 },
+      "pivot": { "x": 135, "y": 135 },
+      "animation": "masked vertex sway",
+      "maxSafeAmplitudePx": 1
+    },
+    {
+      "id": "garden-water-sway",
+      "path": "vegetation/garden-water-sway-mask.png",
+      "sourceRect": { "x": 965, "y": 325, "width": 320, "height": 160 },
+      "position": { "x": 965, "y": 325 },
+      "pivot": { "x": 160, "y": 160 },
+      "animation": "masked vertex sway; exclude water with the dedicated water masks",
+      "maxSafeAmplitudePx": 1
+    },
+    {
+      "id": "garden-right-sway",
+      "path": "vegetation/garden-right-sway-mask.png",
+      "sourceRect": { "x": 1415, "y": 320, "width": 359, "height": 190 },
+      "position": { "x": 1415, "y": 320 },
+      "pivot": { "x": 180, "y": 190 },
+      "animation": "masked vertex sway",
+      "maxSafeAmplitudePx": 1
+    }
+  ],
+  "emitters": [
+    {
+      "id": "chimney-smoke",
+      "position": { "x": 958, "y": 80 },
+      "zOrder": 45,
+      "animation": "spawn small smoke puffs upward with slow horizontal drift",
+      "maxSafeAmplitudePx": 24,
+      "notes": "No smoke is baked into the source. Keep particles behind the canopy and in front of the sky."
+    }
+  ],
+  "particleSprites": [
+    { "id": "leaf-green-01", "path": "particles/leaf-green-01.png", "width": 14, "height": 12, "pivot": { "x": 7, "y": 6 }, "zOrder": 60 },
+    { "id": "leaf-green-02", "path": "particles/leaf-green-02.png", "width": 16, "height": 14, "pivot": { "x": 8, "y": 7 }, "zOrder": 60 },
+    { "id": "leaf-green-03", "path": "particles/leaf-green-03.png", "width": 14, "height": 16, "pivot": { "x": 7, "y": 8 }, "zOrder": 60 },
+    { "id": "petal-pink-01", "path": "particles/petal-pink-01.png", "width": 14, "height": 12, "pivot": { "x": 7, "y": 6 }, "zOrder": 60 },
+    { "id": "petal-pink-02", "path": "particles/petal-pink-02.png", "width": 16, "height": 14, "pivot": { "x": 8, "y": 7 }, "zOrder": 60 }
+  ]
+}

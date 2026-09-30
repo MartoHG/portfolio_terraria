@@ -2,6 +2,7 @@ import { Graphics, Text } from 'pixi.js';
 import { WORLD } from './config';
 import { yOnSurface } from './surfaces';
 import type { PlayerState } from './physics';
+import type { AmbientDiagnostics } from './ambient/system';
 
 export class DebugOverlay {
   readonly graphics = new Graphics();
@@ -21,7 +22,7 @@ export class DebugOverlay {
     this.graphics.zIndex = 90;
   }
 
-  draw(player: PlayerState, fps: number): void {
+  draw(player: PlayerState, fps: number, ambient?: AmbientDiagnostics): void {
     this.graphics.clear();
     for (const surface of WORLD.surfaces) {
       this.graphics.moveTo(surface.x1, surface.y1).lineTo(surface.x2, surface.y2).stroke({ color: 0x5cff70, width: 3, alpha: 0.9 });
@@ -30,6 +31,9 @@ export class DebugOverlay {
     const targetY = yOnSurface(targetSurface, player.targetX);
     this.graphics.circle(player.targetX, targetY, 7).stroke({ color: 0xffe44d, width: 2 });
     this.graphics.rect(player.x - 9, player.y - 42, 18, 42).stroke({ color: 0xff4de1, width: 2 });
-    this.label.text = `state ${player.motion}\nx ${player.x.toFixed(1)} y ${player.y.toFixed(1)}\nvx ${player.vx.toFixed(1)} vy ${player.vy.toFixed(1)}\nFPS ${fps.toFixed(0)}`;
+    const ambientLine = ambient
+      ? `\nwind ${ambient.wind.toFixed(2)} · particles ${ambient.activeParticles} · reduced ${ambient.reducedMotion ? 'yes' : 'no'} · paused ${ambient.paused ? 'yes' : 'no'}`
+      : '';
+    this.label.text = `state ${player.motion}\nx ${player.x.toFixed(1)} y ${player.y.toFixed(1)}\nvx ${player.vx.toFixed(1)} vy ${player.vy.toFixed(1)}\nFPS ${fps.toFixed(0)}${ambientLine}`;
   }
 }

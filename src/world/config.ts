@@ -41,7 +41,7 @@ export const MOTION = {
 } as const;
 
 export const ASSETS = {
-  island: '/assets/art/phase1-floating-island-workshop-v1.png',
+  cleanPlate: '/assets/ambient/base/clean-plate.png',
   sky: '/assets/backgrounds/sky-base.png',
   mountainsFar: '/assets/backgrounds/mountains-far.png',
   mountainsMid: '/assets/backgrounds/mountains-mid.png',
