@@ -1,5 +1,4 @@
 import type { Application, Container } from 'pixi.js';
-import { projectToWalkable } from './surfaces';
 
 export interface DestinationInput {
   destroy(): void;
@@ -16,9 +15,10 @@ export function bindDestinationInput(
     if (event.button !== 0) return;
     const rect = canvas.getBoundingClientRect();
     const screenX = ((event.clientX - rect.left) / rect.width) * app.screen.width;
+    const screenY = ((event.clientY - rect.top) / rect.height) * app.screen.height;
     const worldX = (screenX - world.x) / world.scale.x;
-    const point = projectToWalkable(worldX);
-    onDestination(point.x, point.y, event.pointerType);
+    const worldY = (screenY - world.y) / world.scale.y;
+    onDestination(worldX, worldY, event.pointerType);
   };
 
   canvas.addEventListener('pointerdown', handlePointer, { passive: true });

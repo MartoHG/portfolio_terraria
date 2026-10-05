@@ -1,0 +1,16 @@
+{
+  "tool": "built-in image_gen",
+  "kind": "independent foreground tree sprite, not a scene backdrop",
+  "output": "public/assets/scene-v2/tree-green-v2.png",
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "alphaBounds": [
+    41,
+    18,
+    1216,
+    1240
+  ],
+  "prompt": "Use case: background-extraction / game environment asset. Edit target: supplied island reference. Extract and recreate ONLY the large mature green tree on the LEFT as a standalone independent game sprite on genuinely transparent RGBA background. Preserve the reference tree's precise dense Terraria-like pixel art, mossy rugged bark, forked trunk, highly detailed dense layered bright/dark green leaves, miniature pixel clusters, natural asymmetrical silhouette. Entire tree from uppermost leaves to its root foot, front orthographic side view with zero perspective. No ground, no soil, no island, no house, no sky, no lamps, no flowers or extra objects. Trunk joins canopy naturally with visible interlocking branches. Rich fine pixel texture, no cartoon outlines or simplification, no blur. Tight silhouette filling most of a square canvas, 10% transparent margin. This will be a foreground OBJECT in a playable world, not a background scene. Only one tree. Save the generated asset locally."
+}

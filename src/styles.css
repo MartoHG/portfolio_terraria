@@ -7,12 +7,41 @@
 }
 
 * { box-sizing: border-box; }
-html, body, #root { width: 100%; height: 100%; margin: 0; overflow: hidden; }
-body { min-width: 280px; min-height: 480px; }
+html, body, #root { width: 100%; min-height: 100%; margin: 0; }
+html { background: #101018; scroll-behavior: auto; }
+body { min-width: 280px; overflow-x: hidden; }
+html.world-not-entered { overflow: hidden; }
 button, canvas { -webkit-tap-highlight-color: transparent; }
 
-.app-shell, .world-shell { width: 100%; height: 100%; position: relative; }
-.world-shell { overflow: hidden; background: #3a8cf2; isolation: isolate; }
+.app-shell { width: 100%; position: relative; }
+.world-shell { position: fixed; inset: 0; overflow: hidden; background: #101018; isolation: isolate; }
+.content-document { position: absolute; inset: 0; pointer-events: none; }
+.app-shell:not(.is-entered) .content-document { visibility: hidden; }
+.app-shell.is-exploring .content-document { visibility: hidden; }
+.reading-toggle { position: fixed; right: 20px; top: 20px; z-index: 22; min-height: 44px; padding: 9px 14px; border: 2px solid #ead5a3; border-radius: 0; background: #17345a; color: #fff1cf; font: 13px/1.3 ui-monospace, monospace; cursor: pointer; }
+.reading-toggle:focus-visible { outline: 3px solid #fff1cf; outline-offset: 3px; }
+.pixi-mount canvas:focus-visible { outline: 3px solid #fff1cf; outline-offset: -5px; }
+.world-navigation { position: fixed !important; }
+.world-menu { position: fixed !important; background: linear-gradient(180deg, rgb(10 27 56 / 10%), rgb(10 27 56 / 35%)); }
+.world-menu.world-menu--entered { background: none; }
+.world-name { position: absolute; top: 100px; left: 50%; transform: translateX(-50%); margin: 0; font-size: clamp(28px, 3vw, 44px); color: #fff0c9; text-shadow: 3px 3px #1b3425; pointer-events: none; }
+.explore-hint { position: fixed; left: 22px; bottom: 22px; z-index: 7; margin: 0; padding: 8px 12px; font: 12px/1.3 ui-monospace, monospace; background: rgb(17 25 30 / 85%); border: 1px solid #d2b97c; color: #f8f1d3; pointer-events: none; }
+.portfolio-content .portfolio-section { left: auto; right: 28px; width: min(540px, 43vw); transform: none; font-size: 15px; }
+.portfolio-content .project-buildings, .portfolio-content .skill-inventory, .portfolio-content .service-stations { grid-template-columns: 1fr; }
+.portfolio-content .portfolio-section h2 { font-size: 32px; }
+.mirror-transition { position: fixed; inset: 0; z-index: 90; display: grid; place-items: center; pointer-events: none; opacity: 0; color: #c2faff; }
+.mirror-transition span { font-size: 120px; text-shadow: 0 0 24px #7af1ff, 0 0 70px #c9efff; }
+.mirror-transition.is-active { animation: magic-mirror 560ms steps(12) both; background: radial-gradient(circle, rgb(136 228 255 / 70%), rgb(35 102 154 / 18%) 45%, transparent 75%); }
+@keyframes magic-mirror { 0%,100% { opacity: 0; } 30%,60% { opacity: 1; } }
+@media (max-width: 900px) {
+  .portfolio-content .portfolio-section { right: 16px; width: min(500px, 53vw); }
+}
+@media (max-width: 600px) {
+  .portfolio-content .portfolio-section { right: 12px; width: calc(100vw - 24px); font-size: 15px; }
+  .explore-hint { left: 50%; transform: translateX(-50%); bottom: 87px; font-size: 10px; white-space: nowrap; }
+  .world-name { top: 38px; }
+  .reading-toggle { top: 12px; right: 12px; font-size: 12px; }
+}
 .pixi-mount { position: absolute; inset: 0; touch-action: none; cursor: crosshair; }
 .pixi-mount canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; image-rendering: crisp-edges; }
 .pixi-error { position: absolute; inset: 0; display: grid; place-items: center; padding: 2rem; background: #17345a; text-align: center; }
@@ -31,3 +60,13 @@ button, canvas { -webkit-tap-highlight-color: transparent; }
 @media (prefers-reduced-motion: reduce) {
   .instructions { backdrop-filter: none; }
 }
+
+.island-controls { position: fixed; bottom: 78px; right: 20px; display: flex; gap: 8px; z-index: 22; }
+.island-controls button { min-height: 44px; border: 2px solid #d2b97c; color: #fff1cf; background: #17345a; padding: 8px 12px; font: 12px ui-monospace, monospace; cursor: pointer; }
+.island-controls button:focus-visible { outline: 3px solid #fff1cf; }
+@media(max-width:600px) { .island-controls { bottom: 142px; right: 12px; } }
+
+.island-controls { bottom: 24px; gap: 5px; }
+.island-controls button { min-height: 40px; padding: 6px 10px; font-size: 11px; border-color: #8298a3; background: rgb(23 45 69 / 90%); }
+.explore-hint { border: 0; padding: 6px 9px; background: rgb(20 46 65 / 65%); font-size: 11px; }
+@media(max-width:600px) { .island-controls { bottom: 86px; right: 10px; } .explore-hint { bottom: 137px; max-width: calc(100vw - 20px); white-space: normal; text-align: center; } }

@@ -5,7 +5,8 @@ Dirección general del portfolio.
 ## Decisiones confirmadas
 
 - La segunda versión de `references/visual-reference-vertical.png`, aprobada explícitamente durante la conversación, queda establecida como master visual del proyecto para la estética, densidad y composición general del mundo.
-- La dirección visual deberá parecer literalmente una captura vertical de un mundo de Terraria: pixel-art detallado, terreno construido con tiles, construcciones habitables, vegetación abundante, fondos por capas y biomas integrados.
+- La dirección visual deberá parecer literalmente una captura vertical de un mundo de Terraria: pixel-art detallado, construcciones habitables, vegetación abundante, fondos por capas y biomas integrados.
+- Aclaración del propietario (2026-09-29): no es necesario construir todo con tiles; el criterio es que parezca un mundo real. Se permiten piezas ilustradas coherentes junto a entidades independientes y geometría habitable. La referencia completa no se colocará detrás del personaje como escenario final.
 - No se aceptarán sustitutos geométricos, fondos esquemáticos ni reinterpretaciones minimalistas de esta estética.
 - La referencia define la estética, pero no reemplaza el recorrido ya acordado: las futuras composiciones deberán reincorporar explícitamente el menú, el nombre en el cielo, la isla de "Sobre mí", los edificios identificables de proyectos, las zonas de skills y servicios y el refugio de contacto.
 - La imagen principal podrá utilizarse como master de composición, pero los elementos que deban animarse se reconstruirán o separarán en capas y sprites; no se resolverá la experiencia como un único fondo plano.
