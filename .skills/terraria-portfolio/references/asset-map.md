@@ -31,6 +31,8 @@ Inventario de fondos, spritesheets, props, partículas, UI y otros assets.
 - Antorchas y recursos visuales para iluminación ambiental subterránea.
 - Recursos de luz y oscuridad adaptables a diferentes niveles de profundidad.
 
+- Aprobados (2026-10-06): edificios de proyectos, lote en obra, suelo de superficie, pozo de mina, cámaras de inventario, taller, hongos y refugio, fondos y rellenos de roca por bioma, utilería de superficie y de cueva, puertas, cielo nocturno e íconos de inventario. Fuentes y prompts en `prepared-assets/scene-v3/`; versiones de runtime en `public/assets/scene-v3/`.
+
 El resto del inventario de assets sigue pendiente de decisión.
 
 ## Material disponible en el proyecto

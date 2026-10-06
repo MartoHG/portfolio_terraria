@@ -2,6 +2,7 @@ import { expect, test, type Page } from '@playwright/test';
 
 type PortfolioDebug = {
   section: 'about' | 'projects' | 'skills' | 'services' | 'contact';
+  scroll: number;
   worldY: number;
   entered: boolean;
   teleporting: boolean;
@@ -18,8 +19,6 @@ async function enterWorld(page: Page) {
   await expect(page.getByRole('button', { name: 'Entrar al mundo' })).toBeVisible();
   await page.getByRole('button', { name: 'Entrar al mundo' }).click();
   await page.waitForFunction(() => window.__PORTFOLIO_DEBUG__?.entered === true);
-  await expect(page.getByRole('button', { name: 'Leer el portfolio' })).toBeVisible();
-  await page.getByRole('button', { name: 'Leer el portfolio' }).click();
   await expect(page.getByRole('button', { name: 'Ver el mundo' })).toBeVisible();
   await expect(page.locator('[data-section="about"]')).toHaveAttribute('aria-current', 'location');
 }
@@ -42,9 +41,7 @@ test('starts at the menu and navigates between zones with a return to the sky', 
 
   await page.getByRole('button', { name: 'Entrar al mundo' }).click();
   await page.waitForFunction(() => window.__PORTFOLIO_DEBUG__?.entered === true);
-  await expect(page.getByRole('button', { name: 'Leer el portfolio' })).toBeVisible();
   await expect(page.getByRole('navigation', { name: 'Navegación del mundo' })).toBeVisible();
-  await page.getByRole('button', { name: 'Leer el portfolio' }).click();
   await expect(page.getByRole('button', { name: 'Ver el mundo' })).toBeVisible();
   await expect(page.locator('[data-section="about"]')).toHaveAttribute('aria-current', 'location');
 
@@ -119,4 +116,68 @@ test('scroll drives the vertical journey on desktop and mobile', async ({ page }
   await page.waitForFunction(() => window.__PORTFOLIO_DEBUG__?.section === 'about');
   await expect(page.locator('[data-section="about"]')).toHaveAttribute('aria-current', 'location');
 
+});
+
+type TravelerDebug = { mode: 'physics' | 'path'; segment: string; x: number; y: number; animation: string; visible: boolean };
+type SceneCamera = { x: number; y: number; scale: number };
+
+async function traveler(page: Page) {
+  return page.evaluate(() => (window as unknown as { __TERRARIA_DEBUG__: { traveler: () => TravelerDebug } }).__TERRARIA_DEBUG__.traveler());
+}
+
+async function camera(page: Page) {
+  return page.evaluate(() => (window as unknown as { __TERRARIA_DEBUG__: { camera: () => SceneCamera } }).__TERRARIA_DEBUG__.camera());
+}
+
+test('descends from the island through the village into the caves', async ({ page }) => {
+  await enterWorld(page);
+  await page.waitForFunction(() => (window as unknown as { __TERRARIA_DEBUG__?: { ready: boolean } }).__TERRARIA_DEBUG__?.ready === true);
+  expect((await traveler(page)).mode).toBe('physics');
+
+  // Into the village: the camera pans sideways while the scroll keeps going down.
+  await navigateTo(page, 'projects', 'Proyectos');
+  const panStart = await camera(page);
+  await expect.poll(async () => (await traveler(page)).mode).toBe('path');
+  await page.evaluate(() => window.scrollBy({ top: 600, behavior: 'instant' }));
+  await expect.poll(async () => (await camera(page)).x).toBeGreaterThan(panStart.x + 200);
+  expect((await camera(page)).y).toBeCloseTo(panStart.y, 0);
+  await expect(page.getByRole('button', { name: 'Abrir detalles de Plataforma de labor legislativa' })).toBeInViewport();
+
+  // Down the shaft: the adventurer climbs the rope and stays on screen.
+  await navigateTo(page, 'skills', 'Skills');
+  await expect(page.locator('[data-section="skills"]')).toBeInViewport();
+  await expect.poll(async () => (await traveler(page)).segment, { timeout: 15_000 }).toBe('walk');
+  const view = page.viewportSize()!;
+  const state = await traveler(page);
+  const cam = await camera(page);
+  const screenY = (state.y - cam.y) * cam.scale;
+  expect(state.visible).toBe(true);
+  expect(screenY).toBeGreaterThan(0);
+  expect(screenY).toBeLessThan(view.height);
+
+  // The magic mirror brings everyone back to the island, where physics resume.
+  await navigateTo(page, 'contact', 'Contacto');
+  await page.locator('[data-section="contact"]').getByRole('button', { name: /Volver al cielo/ }).click();
+  await page.waitForFunction(() => window.__PORTFOLIO_DEBUG__?.section === 'about' && !window.__PORTFOLIO_DEBUG__.teleporting);
+  await expect.poll(async () => (await traveler(page)).mode, { timeout: 15_000 }).toBe('physics');
+});
+
+test('the adventurer sits on a hovered card and visits the building of an opened project', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name.includes('mobile'), 'Hover needs a mouse.');
+  await enterWorld(page);
+  await page.waitForFunction(() => (window as unknown as { __TERRARIA_DEBUG__?: { ready: boolean } }).__TERRARIA_DEBUG__?.ready === true);
+  await navigateTo(page, 'projects', 'Proyectos');
+  const card = page.locator('.project-card').first();
+  const box = (await card.boundingBox())!;
+  await page.mouse.move(box.x + 20, box.y + box.height - 20);
+  await page.mouse.move(box.x + 40, box.y + box.height - 30, { steps: 4 });
+  await expect.poll(async () => (await traveler(page)).animation).toBe('sit');
+
+  await card.getByRole('button', { name: 'Abrir detalles de Senda' }).click();
+  await expect(page.getByRole('dialog', { name: 'Senda' })).toBeVisible();
+  // While the panel is open the adventurer is inside the building.
+  await expect.poll(async () => (await traveler(page)).visible).toBe(false);
+  await page.keyboard.press('Escape');
+  await expect(page.getByRole('dialog', { name: 'Senda' })).toBeHidden();
+  await expect.poll(async () => (await traveler(page)).visible).toBe(true);
 });

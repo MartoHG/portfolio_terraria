@@ -33,6 +33,8 @@ declare global {
 async function enterWorld(page: import('@playwright/test').Page) {
   await page.getByRole('button', { name: 'Entrar al mundo' }).click();
   await page.waitForFunction(() => window.__PORTFOLIO_DEBUG__?.entered === true);
+  // Island tests play with the content hidden.
+  await page.getByRole('button', { name: 'Ver el mundo' }).click();
   await expect(page.getByRole('button', { name: 'Leer el portfolio' })).toBeVisible();
   await page.waitForFunction(() => window.__TERRARIA_DEBUG__?.ready === true);
 }

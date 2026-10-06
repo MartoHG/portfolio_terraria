@@ -1,0 +1,4 @@
+Use your image generation tool to create ONE image, then copy the generated PNG to ./raw/sky-night.png . Do not write or modify any other file. Do not write code. Reply only with the saved path.
+
+Image to generate:
+A Terraria night sky background, 1536x1024, fully opaque: deep navy gradient becoming slightly lighter near the bottom horizon, a large pixel-art crescent moon in the upper left area, many small twinkling pixel stars of 1-3 pixels and a few cross-shaped bright stars, faint thin night clouds. Must tile seamlessly left-right. No mountains, no ground. Crisp chunky 16-bit Terraria pixel-art, restrained pixel clusters and sharp edges, same pixel scale and palette family as the attached references. No text, no logo, no character, no UI.

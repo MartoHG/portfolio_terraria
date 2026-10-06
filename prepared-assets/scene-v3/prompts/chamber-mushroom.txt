@@ -1,0 +1,4 @@
+Use your image generation tool to create ONE image, then copy the generated PNG to ./raw/chamber-mushroom.png . Do not write or modify any other file. Do not write code. Reply only with the saved path.
+
+Image to generate:
+A Terraria glowing mushroom and crystal cave biome passage in side cutaway, 1536x1024. Irregular dark blue-violet stone rim, everything beyond the rocky rim fully transparent. Inside: giant glowing blue mushrooms of different sizes, clusters of purple and cyan crystals, mossy blue grass on stone ledges, a calm underground lake with a short wooden plank bridge, a natural flat stone ledge floor perfectly level at about 80 percent height across most of the width. Luminous but dark mood. Crisp chunky 16-bit Terraria pixel-art, restrained pixel clusters and sharp edges, same pixel scale and palette family as the attached references (warm brown timber, gray stone, moss green, golden interior light). No text, no logo, no character, no creatures, no UI.

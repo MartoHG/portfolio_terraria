@@ -91,3 +91,4 @@ Dirección general del portfolio.
 - La sección de contacto estará dentro de ese refugio y utilizará un artefacto de comunicación para presentar email, LinkedIn y GitHub.
 - Junto al refugio habrá un Espejo Mágico interactivo con la acción opcional "Volver al cielo".
 - Este retorno cerrará el recorrido como un ciclo y devolverá al visitante a la isla inicial mediante teletransporte.
+- Aprobado por el propietario (2026-10-06): los assets de superficie y cuevas de `prepared-assets/scene-v3/` y la asignación de edificios: escuela con campanario para Senda, ayuntamiento/archivo para la Plataforma de labor legislativa, taller del horno de cal con cadena de arrastre para la Estación de visión, torre de escriba para "De Senda a una skill" y un lote en obra para proyectos futuros.

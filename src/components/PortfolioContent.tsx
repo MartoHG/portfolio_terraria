@@ -1,5 +1,6 @@
 import type { CSSProperties } from 'react';
 import { CONTACT, EDUCATION, PROFILE, SERVICES, SKILL_GROUPS, SKILL_STORY } from '../content/portfolio';
+import { serviceIcon, skillIcon } from '../content/icons';
 import { PROJECTS, SKILL_PROJECT } from '../content/projects';
 import type { ContentProps, SectionId } from '../content/types';
 import '../portfolio.css';
@@ -9,7 +10,13 @@ function sectionStyle(id: SectionId, positions?: ContentProps['sectionPositions'
   return top === undefined ? {} : { top };
 }
 
-export function PortfolioContent({ activeSection, onNavigate, onProjectOpen, onReturnToSky, sectionPositions }: ContentProps) {
+type AnchorStyle = CSSProperties & { '--card-x'?: string; '--card-y'?: string };
+
+function stageAnchor(anchor?: { x: number; y: number }): AnchorStyle | undefined {
+  return anchor ? { '--card-x': `${anchor.x}px`, '--card-y': `${anchor.y}px` } : undefined;
+}
+
+export function PortfolioContent({ activeSection, onNavigate, onProjectOpen, onReturnToSky, sectionPositions, projectStage, projectStageRef, onProjectFocus }: ContentProps) {
   const markActive = (id: SectionId) => ({
     className: `portfolio-section${activeSection === id ? ' is-active' : ''}`,
     id,
@@ -38,12 +45,14 @@ export function PortfolioContent({ activeSection, onNavigate, onProjectOpen, onR
         </div>
       </section>
 
-      <section {...markActive('projects')} aria-labelledby="portfolio-projects-title">
-        <p className="portfolio-kicker">Zona N.º 02 · Aldea de la superficie</p>
-        <h2 id="portfolio-projects-title">Proyectos</h2>
-        <div className="project-buildings">
+      <section {...markActive('projects')} className={`portfolio-section project-zone${activeSection === 'projects' ? ' is-active' : ''}`} style={projectStage ? { top: projectStage.top, height: projectStage.height } : undefined} aria-labelledby="portfolio-projects-title">
+        <div className="project-stage" ref={projectStageRef}>
+          <header className="content-card stage-card project-stage-heading" style={stageAnchor(projectStage?.heading)}>
+            <p className="portfolio-kicker">Zona N.º 02 · Aldea de la superficie</p>
+            <h2 id="portfolio-projects-title">Proyectos</h2>
+          </header>
           {PROJECTS.map((project, index) => (
-            <article className="content-card project-card" key={project.id}>
+            <article className="content-card project-card stage-card" key={project.id} style={stageAnchor(projectStage?.cards[project.id])} onFocus={() => onProjectFocus?.(project.id)}>
               <p className="card-index">Ficha {String(index + 1).padStart(2, '0')}</p>
               <h3>{project.title}</h3>
               <p className="card-meta">{project.kind}</p>
@@ -54,7 +63,7 @@ export function PortfolioContent({ activeSection, onNavigate, onProjectOpen, onR
               </button>
             </article>
           ))}
-          <article className="content-card skill-story-card">
+          <article className="content-card skill-story-card stage-card" style={stageAnchor(projectStage?.cards[SKILL_PROJECT.id])} onFocus={() => onProjectFocus?.(SKILL_PROJECT.id)}>
             <p className="card-index">Edificio especial</p>
             <h3>{SKILL_PROJECT.title}</h3>
             <p>{SKILL_PROJECT.summary}</p>
@@ -75,7 +84,14 @@ export function PortfolioContent({ activeSection, onNavigate, onProjectOpen, onR
             <article className="content-card skill-group" key={group.id}>
               <h3>{group.title}</h3>
               {group.note && <p className="card-meta">{group.note}</p>}
-              <ul>{group.items.map((item) => <li key={item}>{item}</li>)}</ul>
+              <ul className="inventory-slots">
+                {group.items.map((item) => (
+                  <li className="inventory-slot" key={item}>
+                    <span className="inventory-slot__frame" aria-hidden="true">{skillIcon(item) ? <img src={skillIcon(item)} alt="" /> : null}</span>
+                    <span className="inventory-slot__label">{item}</span>
+                  </li>
+                ))}
+              </ul>
             </article>
           ))}
         </div>
@@ -88,8 +104,13 @@ export function PortfolioContent({ activeSection, onNavigate, onProjectOpen, onR
         <div className="service-stations">
           {SERVICES.map((service) => (
             <article className="content-card service-card" key={service.id}>
-              <p className="card-meta">{service.station}</p>
-              <h3>{service.title}</h3>
+              <div className="service-heading">
+                {serviceIcon(service.id) ? <span className="inventory-slot__frame" aria-hidden="true"><img src={serviceIcon(service.id)} alt="" /></span> : null}
+                <div>
+                  <p className="card-meta">{service.station}</p>
+                  <h3>{service.title}</h3>
+                </div>
+              </div>
               <p>{service.description}</p>
             </article>
           ))}

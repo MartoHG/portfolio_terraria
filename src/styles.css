@@ -70,3 +70,50 @@ button, canvas { -webkit-tap-highlight-color: transparent; }
 .island-controls button { min-height: 40px; padding: 6px 10px; font-size: 11px; border-color: #8298a3; background: rgb(23 45 69 / 90%); }
 .explore-hint { border: 0; padding: 6px 9px; background: rgb(20 46 65 / 65%); font-size: 11px; }
 @media(max-width:600px) { .island-controls { bottom: 86px; right: 10px; } .explore-hint { bottom: 137px; max-width: calc(100vw - 20px); white-space: normal; text-align: center; } }
+
+/* The title belongs to the sky: once entered it scrolls away with the world. */
+.world-menu.world-menu--entered { position: absolute !important; height: 100vh; height: 100lvh; }
+
+/* Surface village: the stage pins while the camera pans and cards hang over their buildings. */
+.portfolio-content .portfolio-section.project-zone {
+  left: 0; right: 0; width: 100%; padding: 0; transform: none;
+  border: 0; outline: 0; background: none; box-shadow: none; pointer-events: none;
+}
+.portfolio-content .portfolio-section.project-zone::before { display: none; }
+.project-stage { position: sticky; top: 0; height: 100vh; height: 100lvh; overflow: hidden; pointer-events: none; --stage-safe-top: 76px; }
+.stage-card {
+  position: absolute;
+  left: calc(var(--card-x, 50vw) - var(--pan-x, 0px));
+  top: var(--card-y, 50vh);
+  width: min(340px, calc(100vw - 32px));
+  max-height: calc(var(--card-y, 50vh) - var(--stage-safe-top));
+  overflow-y: auto;
+  transform: translate(-50%, -100%);
+  pointer-events: auto;
+  font-size: 15px;
+}
+.stage-card p { margin: 6px 0; line-height: 1.45; }
+.stage-card h3 { font-size: 21px; margin-bottom: 6px; }
+.project-stage-heading { width: max-content; max-width: calc(100vw - 32px); padding: 14px 20px; background: var(--portfolio-paper, #f7f0d7); border-width: 3px; }
+.project-stage-heading h2 { margin: 0; font-size: 32px; }
+.project-stage-heading .portfolio-kicker { margin-bottom: 4px; }
+@media (pointer: coarse), (max-width: 600px) {
+  .project-stage { --stage-safe-top: 16px; }
+  .stage-card { width: min(320px, calc(100vw - 28px)); font-size: 14px; }
+}
+@media (pointer: coarse), (max-width: 600px) {
+  /* Keyboard hints mean nothing on touch; the island buttons sit under the toggle, clear of the content. */
+  .explore-hint { display: none; }
+  .island-controls { top: 64px; bottom: auto; right: 12px; }
+}
+
+.sound-dock { position: fixed; right: 20px; bottom: 20px; z-index: 22; }
+@media (pointer: fine) and (min-width: 601px) {
+  /* Above the sound control. */
+  .app-shell .island-controls { bottom: 76px; }
+}
+@media (pointer: coarse), (max-width: 600px) {
+  /* Above the thumb hotbar. */
+  .sound-dock { right: 10px; bottom: calc(max(12px, env(safe-area-inset-bottom)) + 74px); }
+  .sound-dock .sound-control-state { display: none; }
+}

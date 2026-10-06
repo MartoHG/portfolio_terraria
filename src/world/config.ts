@@ -41,7 +41,6 @@ export const MOTION = {
 } as const;
 
 export const ASSETS = {
-  cleanPlate: '/assets/ambient/base/clean-plate.png',
   sky: '/assets/backgrounds/sky-base.png',
   mountainsFar: '/assets/backgrounds/mountains-far.png',
   mountainsMid: '/assets/backgrounds/mountains-mid.png',

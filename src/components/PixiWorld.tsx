@@ -1,10 +1,12 @@
 import { forwardRef, useEffect, useImperativeHandle, useRef, useState } from 'react';
 import { FloatingIslandScene, type JourneyView } from '../world/scene';
+import type { WorldLayout } from '../world/vertical/layout';
 
 interface PixiWorldProps {
   onStatus: (message: string) => void;
   onProject?: (id: string) => void;
   journey: JourneyView;
+  layout: WorldLayout;
 }
 
 export interface PixiWorldHandle {
@@ -14,13 +16,18 @@ export interface PixiWorldHandle {
   toggleDoor(): void;
   drop(): void;
   projectOrigin(id: string): { x: number; y: number } | undefined;
+  sitOn(element: HTMLElement | null): void;
 }
 
-export const PixiWorld = forwardRef<PixiWorldHandle, PixiWorldProps>(function PixiWorld({ onStatus, onProject, journey }, ref) {
+export const PixiWorld = forwardRef<PixiWorldHandle, PixiWorldProps>(function PixiWorld({ onStatus, onProject, journey, layout }, ref) {
   const mountRef = useRef<HTMLDivElement>(null);
   const sceneRef = useRef<FloatingIslandScene | null>(null);
   const projectRef = useRef(onProject);
   projectRef.current = onProject;
+  const layoutRef = useRef(layout);
+  layoutRef.current = layout;
+  const journeyRef = useRef(journey);
+  journeyRef.current = journey;
   const [error, setError] = useState<string | null>(null);
 
   useImperativeHandle(ref, () => ({
@@ -30,12 +37,15 @@ export const PixiWorld = forwardRef<PixiWorldHandle, PixiWorldProps>(function Pi
     toggleDoor: () => sceneRef.current?.toggleDoor(),
     drop: () => sceneRef.current?.drop(),
     projectOrigin: (id) => sceneRef.current?.projectOrigin(id),
+    sitOn: (element) => sceneRef.current?.sitOn(element),
   }), []);
 
   useEffect(() => {
     if (!mountRef.current) return;
     const scene = new FloatingIslandScene({ mount: mountRef.current, onStatus, onProject: (id) => projectRef.current?.(id) });
     sceneRef.current = scene;
+    scene.setLayout(layoutRef.current);
+    scene.setJourney(journeyRef.current);
     let cancelled = false;
     scene.init().catch((reason: unknown) => {
       if (cancelled) return;
@@ -51,6 +61,7 @@ export const PixiWorld = forwardRef<PixiWorldHandle, PixiWorldProps>(function Pi
   }, [onStatus]);
 
   useEffect(() => { sceneRef.current?.setJourney(journey); }, [journey]);
+  useEffect(() => { sceneRef.current?.setLayout(layout); }, [layout]);
 
   return (
     <div ref={mountRef} className="pixi-mount" data-testid="pixi-mount">

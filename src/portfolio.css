@@ -192,3 +192,24 @@
   .pixel-button:hover, .pixel-link:hover, .pixel-button:active, .pixel-link:active { transform: none; }
   .project-panel, .project-panel.is-closing { animation-duration: 1ms; }
 }
+
+/* Skills as a Terraria inventory: translucent blue slots holding item icons. */
+.skill-group ul.inventory-slots { display: grid; grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); gap: 10px 8px; }
+.skill-group li.inventory-slot { display: grid; justify-items: center; gap: 5px; padding: 0; border: 0; background: none; font: 12px/1.25 ui-monospace, SFMono-Regular, Menlo, monospace; text-align: center; }
+.inventory-slot__frame {
+  display: grid; place-items: center; width: 56px; height: 56px; flex: 0 0 auto;
+  background: linear-gradient(180deg, rgb(63 82 151 / 88%), rgb(42 56 118 / 92%));
+  border: 2px solid #1b2350; border-radius: 6px;
+  box-shadow: inset 0 0 0 2px rgb(140 164 230 / 45%), 0 2px 0 rgb(23 27 23 / 35%);
+}
+.inventory-slot__frame img { width: 40px; height: 40px; object-fit: contain; image-rendering: pixelated; }
+.inventory-slot:hover .inventory-slot__frame { border-color: #f2d16b; box-shadow: inset 0 0 0 2px rgb(242 209 107 / 55%), 0 2px 0 rgb(23 27 23 / 35%); }
+.inventory-slot__label { max-width: 14ch; color: #3a2c17; overflow-wrap: anywhere; }
+.service-heading { display: flex; align-items: center; gap: 12px; }
+.service-heading .card-meta { margin-bottom: 2px; }
+.service-heading h3 { margin: 0; }
+@media (max-width: 600px) {
+  .skill-group ul.inventory-slots { grid-template-columns: repeat(auto-fill, minmax(72px, 1fr)); }
+  .inventory-slot__frame { width: 50px; height: 50px; }
+  .inventory-slot__frame img { width: 34px; height: 34px; }
+}

@@ -1,0 +1,4 @@
+Use your image generation tool to create ONE image, then copy the generated PNG to ./raw/rock-fill-lava.png . Do not write or modify any other file. Do not write code. Reply only with the saved path.
+
+Image to generate:
+A seamless tileable texture, 1024x1024, fully opaque: Terraria underworld ash and obsidian stone mass as solid foreground blocks, near-black and dark gray with thin glowing orange lava cracks. Must tile seamlessly on all four edges. No openings. Crisp chunky 16-bit Terraria pixel-art, restrained pixel clusters and sharp edges, same pixel scale and palette family as the attached references. No text, no logo, no character, no UI.

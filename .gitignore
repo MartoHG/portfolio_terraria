@@ -4,3 +4,4 @@ output/playwright/
 *.tsbuildinfo
 __pycache__/
 *.pyc
+prepared-assets/scene-v3/raw/

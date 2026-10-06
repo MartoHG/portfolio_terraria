@@ -1,0 +1,4 @@
+Use your image generation tool to create ONE image, then copy the generated PNG to ./raw/backwall-mushroom.png . Do not write or modify any other file. Do not write code. Reply only with the saved path.
+
+Image to generate:
+A seamless horizontally tileable Terraria glowing mushroom biome background wall layer, 1536x1024, fully opaque, dark navy with faint blue glow: distant silhouettes of giant mushrooms and crystal clusters, used as parallax background. Left and right edges tile seamlessly. Crisp chunky 16-bit Terraria pixel-art, restrained pixel clusters and sharp edges, same pixel scale and palette family as the attached references (warm brown timber, gray stone, moss green, golden interior light). No text, no logo, no character, no creatures, no UI.

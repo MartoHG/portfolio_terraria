@@ -1,0 +1,539 @@
+{
+  "unitsPerPx": 0.7322033898305085,
+  "objects": {
+    "building-senda": {
+      "path": "/assets/scene-v3/building-senda.png",
+      "width": 731,
+      "height": 475,
+      "floor": 443.0,
+      "door": [
+        118.5,
+        359.0,
+        163.5,
+        443.0
+      ]
+    },
+    "building-legislativa": {
+      "path": "/assets/scene-v3/building-legislativa.png",
+      "width": 729,
+      "height": 454,
+      "floor": 443.5,
+      "door": [
+        119.5,
+        358.5,
+        170.5,
+        443.5
+      ]
+    },
+    "building-lomaton": {
+      "path": "/assets/scene-v3/building-lomaton.png",
+      "width": 753,
+      "height": 436,
+      "floor": 409.5,
+      "door": [
+        64.5,
+        308.0,
+        122.0,
+        409.5
+      ]
+    },
+    "building-skill": {
+      "path": "/assets/scene-v3/building-skill.png",
+      "width": 229,
+      "height": 501,
+      "floor": 488.0,
+      "door": [
+        83.5,
+        413.0,
+        118.5,
+        488.0
+      ]
+    },
+    "building-construction": {
+      "path": "/assets/scene-v3/building-construction.png",
+      "width": 724,
+      "height": 409,
+      "floor": 375.5
+    },
+    "chamber-inventory": {
+      "path": "/assets/scene-v3/chamber-inventory.png",
+      "width": 759,
+      "height": 498,
+      "floor": 366.0,
+      "walk": [
+        46.0,
+        641.0
+      ]
+    },
+    "chamber-workshop": {
+      "path": "/assets/scene-v3/chamber-workshop.png",
+      "width": 768,
+      "height": 427,
+      "floor": 298.5,
+      "walk": [
+        177.5,
+        635.0
+      ]
+    },
+    "chamber-mushroom": {
+      "path": "/assets/scene-v3/chamber-mushroom.png",
+      "width": 751,
+      "height": 472,
+      "floor": 333.5,
+      "walk": [
+        22.0,
+        662.0
+      ]
+    },
+    "chamber-refuge": {
+      "path": "/assets/scene-v3/chamber-refuge.png",
+      "width": 767,
+      "height": 504,
+      "floor": 356.0,
+      "walk": [
+        197.5,
+        530.0
+      ]
+    },
+    "shaft-entrance": {
+      "path": "/assets/scene-v3/shaft-entrance.png",
+      "width": 132,
+      "height": 308,
+      "floor": 91.5,
+      "rope": 64.5
+    },
+    "umbrella-open": {
+      "path": "/assets/scene-v3/umbrella-open.png",
+      "width": 72,
+      "height": 69
+    },
+    "magic-mirror-item": {
+      "path": "/assets/scene-v3/magic-mirror-item.png",
+      "width": 48,
+      "height": 83
+    }
+  },
+  "tiles": {
+    "sky-night": {
+      "path": "/assets/scene-v3/sky-night.png",
+      "width": 768,
+      "height": 512
+    },
+    "rock-fill-upper": {
+      "path": "/assets/scene-v3/rock-fill-upper.png",
+      "width": 627,
+      "height": 627
+    },
+    "rock-fill-wet": {
+      "path": "/assets/scene-v3/rock-fill-wet.png",
+      "width": 627,
+      "height": 627
+    },
+    "rock-fill-mushroom": {
+      "path": "/assets/scene-v3/rock-fill-mushroom.png",
+      "width": 512,
+      "height": 512
+    },
+    "rock-fill-lava": {
+      "path": "/assets/scene-v3/rock-fill-lava.png",
+      "width": 627,
+      "height": 627
+    },
+    "backwall-dirt": {
+      "path": "/assets/scene-v3/backwall-dirt.png",
+      "width": 768,
+      "height": 512
+    },
+    "backwall-wet": {
+      "path": "/assets/scene-v3/backwall-wet.png",
+      "width": 768,
+      "height": 512
+    },
+    "backwall-mushroom": {
+      "path": "/assets/scene-v3/backwall-mushroom.png",
+      "width": 768,
+      "height": 512
+    },
+    "backwall-lava": {
+      "path": "/assets/scene-v3/backwall-lava.png",
+      "width": 768,
+      "height": 512
+    },
+    "surface-ground": {
+      "path": "/assets/scene-v3/surface-ground.png",
+      "width": 768,
+      "height": 416,
+      "floor": 35.0
+    },
+    "shaft-tunnel": {
+      "path": "/assets/scene-v3/shaft-tunnel.png",
+      "width": 98,
+      "height": 418,
+      "rope": 48.5
+    },
+    "rope": {
+      "path": "/assets/scene-v3/rope.png",
+      "width": 9,
+      "height": 418
+    }
+  },
+  "sheets": {
+    "props-surface": [
+      {
+        "path": "/assets/scene-v3/props-surface/props-surface-01.png",
+        "width": 66,
+        "height": 105
+      },
+      {
+        "path": "/assets/scene-v3/props-surface/props-surface-02.png",
+        "width": 37,
+        "height": 117
+      },
+      {
+        "path": "/assets/scene-v3/props-surface/props-surface-03.png",
+        "width": 67,
+        "height": 110
+      },
+      {
+        "path": "/assets/scene-v3/props-surface/props-surface-04.png",
+        "width": 82,
+        "height": 76
+      },
+      {
+        "path": "/assets/scene-v3/props-surface/props-surface-05.png",
+        "width": 94,
+        "height": 68
+      },
+      {
+        "path": "/assets/scene-v3/props-surface/props-surface-06.png",
+        "width": 101,
+        "height": 110
+      },
+      {
+        "path": "/assets/scene-v3/props-surface/props-surface-07.png",
+        "width": 73,
+        "height": 105
+      },
+      {
+        "path": "/assets/scene-v3/props-surface/props-surface-08.png",
+        "width": 59,
+        "height": 102
+      },
+      {
+        "path": "/assets/scene-v3/props-surface/props-surface-09.png",
+        "width": 67,
+        "height": 100
+      },
+      {
+        "path": "/assets/scene-v3/props-surface/props-surface-10.png",
+        "width": 55,
+        "height": 98
+      },
+      {
+        "path": "/assets/scene-v3/props-surface/props-surface-11.png",
+        "width": 88,
+        "height": 76
+      },
+      {
+        "path": "/assets/scene-v3/props-surface/props-surface-12.png",
+        "width": 84,
+        "height": 71
+      },
+      {
+        "path": "/assets/scene-v3/props-surface/props-surface-13.png",
+        "width": 128,
+        "height": 67
+      },
+      {
+        "path": "/assets/scene-v3/props-surface/props-surface-14.png",
+        "width": 95,
+        "height": 100
+      },
+      {
+        "path": "/assets/scene-v3/props-surface/props-surface-15.png",
+        "width": 46,
+        "height": 96
+      },
+      {
+        "path": "/assets/scene-v3/props-surface/props-surface-16.png",
+        "width": 67,
+        "height": 105
+      },
+      {
+        "path": "/assets/scene-v3/props-surface/props-surface-17.png",
+        "width": 81,
+        "height": 129
+      },
+      {
+        "path": "/assets/scene-v3/props-surface/props-surface-18.png",
+        "width": 109,
+        "height": 121
+      },
+      {
+        "path": "/assets/scene-v3/props-surface/props-surface-19.png",
+        "width": 109,
+        "height": 72
+      },
+      {
+        "path": "/assets/scene-v3/props-surface/props-surface-20.png",
+        "width": 119,
+        "height": 77
+      }
+    ],
+    "props-cave": [
+      {
+        "path": "/assets/scene-v3/props-cave/props-cave-01.png",
+        "width": 58,
+        "height": 81
+      },
+      {
+        "path": "/assets/scene-v3/props-cave/props-cave-02.png",
+        "width": 59,
+        "height": 75
+      },
+      {
+        "path": "/assets/scene-v3/props-cave/props-cave-03.png",
+        "width": 62,
+        "height": 98
+      },
+      {
+        "path": "/assets/scene-v3/props-cave/props-cave-04.png",
+        "width": 67,
+        "height": 126
+      },
+      {
+        "path": "/assets/scene-v3/props-cave/props-cave-05.png",
+        "width": 55,
+        "height": 58
+      },
+      {
+        "path": "/assets/scene-v3/props-cave/props-cave-06.png",
+        "width": 71,
+        "height": 82
+      },
+      {
+        "path": "/assets/scene-v3/props-cave/props-cave-07.png",
+        "width": 84,
+        "height": 118
+      },
+      {
+        "path": "/assets/scene-v3/props-cave/props-cave-08.png",
+        "width": 48,
+        "height": 116
+      },
+      {
+        "path": "/assets/scene-v3/props-cave/props-cave-09.png",
+        "width": 49,
+        "height": 151
+      },
+      {
+        "path": "/assets/scene-v3/props-cave/props-cave-10.png",
+        "width": 86,
+        "height": 115
+      },
+      {
+        "path": "/assets/scene-v3/props-cave/props-cave-11.png",
+        "width": 91,
+        "height": 111
+      },
+      {
+        "path": "/assets/scene-v3/props-cave/props-cave-12.png",
+        "width": 27,
+        "height": 37
+      },
+      {
+        "path": "/assets/scene-v3/props-cave/props-cave-13.png",
+        "width": 66,
+        "height": 57
+      },
+      {
+        "path": "/assets/scene-v3/props-cave/props-cave-14.png",
+        "width": 49,
+        "height": 59
+      },
+      {
+        "path": "/assets/scene-v3/props-cave/props-cave-15.png",
+        "width": 95,
+        "height": 96
+      },
+      {
+        "path": "/assets/scene-v3/props-cave/props-cave-16.png",
+        "width": 102,
+        "height": 86
+      },
+      {
+        "path": "/assets/scene-v3/props-cave/props-cave-17.png",
+        "width": 167,
+        "height": 75
+      },
+      {
+        "path": "/assets/scene-v3/props-cave/props-cave-18.png",
+        "width": 83,
+        "height": 73
+      },
+      {
+        "path": "/assets/scene-v3/props-cave/props-cave-19.png",
+        "width": 56,
+        "height": 120
+      },
+      {
+        "path": "/assets/scene-v3/props-cave/props-cave-20.png",
+        "width": 162,
+        "height": 105
+      },
+      {
+        "path": "/assets/scene-v3/props-cave/props-cave-21.png",
+        "width": 23,
+        "height": 67
+      },
+      {
+        "path": "/assets/scene-v3/props-cave/props-cave-22.png",
+        "width": 21,
+        "height": 73
+      },
+      {
+        "path": "/assets/scene-v3/props-cave/props-cave-23.png",
+        "width": 102,
+        "height": 64
+      },
+      {
+        "path": "/assets/scene-v3/props-cave/props-cave-24.png",
+        "width": 27,
+        "height": 20
+      },
+      {
+        "path": "/assets/scene-v3/props-cave/props-cave-25.png",
+        "width": 99,
+        "height": 83
+      },
+      {
+        "path": "/assets/scene-v3/props-cave/props-cave-26.png",
+        "width": 32,
+        "height": 29
+      },
+      {
+        "path": "/assets/scene-v3/props-cave/props-cave-27.png",
+        "width": 14,
+        "height": 11
+      }
+    ],
+    "doors": [
+      {
+        "path": "/assets/scene-v3/doors/doors-01.png",
+        "width": 101,
+        "height": 190
+      },
+      {
+        "path": "/assets/scene-v3/doors/doors-02.png",
+        "width": 104,
+        "height": 190
+      },
+      {
+        "path": "/assets/scene-v3/doors/doors-03.png",
+        "width": 124,
+        "height": 200
+      },
+      {
+        "path": "/assets/scene-v3/doors/doors-04.png",
+        "width": 90,
+        "height": 223
+      },
+      {
+        "path": "/assets/scene-v3/doors/doors-05.png",
+        "width": 110,
+        "height": 209
+      },
+      {
+        "path": "/assets/scene-v3/doors/doors-06.png",
+        "width": 119,
+        "height": 230
+      }
+    ],
+    "skill-icons": [
+      {
+        "path": "/assets/scene-v3/skill-icons/skill-icons-01.png",
+        "width": 114,
+        "height": 82
+      },
+      {
+        "path": "/assets/scene-v3/skill-icons/skill-icons-02.png",
+        "width": 88,
+        "height": 98
+      },
+      {
+        "path": "/assets/scene-v3/skill-icons/skill-icons-03.png",
+        "width": 104,
+        "height": 98
+      },
+      {
+        "path": "/assets/scene-v3/skill-icons/skill-icons-04.png",
+        "width": 105,
+        "height": 91
+      },
+      {
+        "path": "/assets/scene-v3/skill-icons/skill-icons-05.png",
+        "width": 101,
+        "height": 104
+      },
+      {
+        "path": "/assets/scene-v3/skill-icons/skill-icons-06.png",
+        "width": 83,
+        "height": 108
+      },
+      {
+        "path": "/assets/scene-v3/skill-icons/skill-icons-07.png",
+        "width": 81,
+        "height": 110
+      },
+      {
+        "path": "/assets/scene-v3/skill-icons/skill-icons-08.png",
+        "width": 108,
+        "height": 98
+      },
+      {
+        "path": "/assets/scene-v3/skill-icons/skill-icons-09.png",
+        "width": 106,
+        "height": 108
+      },
+      {
+        "path": "/assets/scene-v3/skill-icons/skill-icons-10.png",
+        "width": 93,
+        "height": 106
+      },
+      {
+        "path": "/assets/scene-v3/skill-icons/skill-icons-11.png",
+        "width": 105,
+        "height": 102
+      },
+      {
+        "path": "/assets/scene-v3/skill-icons/skill-icons-12.png",
+        "width": 106,
+        "height": 103
+      },
+      {
+        "path": "/assets/scene-v3/skill-icons/skill-icons-13.png",
+        "width": 90,
+        "height": 107
+      },
+      {
+        "path": "/assets/scene-v3/skill-icons/skill-icons-14.png",
+        "width": 98,
+        "height": 99
+      },
+      {
+        "path": "/assets/scene-v3/skill-icons/skill-icons-15.png",
+        "width": 109,
+        "height": 107
+      },
+      {
+        "path": "/assets/scene-v3/skill-icons/skill-icons-16.png",
+        "width": 103,
+        "height": 88
+      }
+    ]
+  },
+  "character": {
+    "climb": 6,
+    "sit": 4
+  }
+}

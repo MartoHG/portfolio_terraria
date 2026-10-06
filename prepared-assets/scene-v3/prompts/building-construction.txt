@@ -1,0 +1,4 @@
+Use your image generation tool to create ONE image, then copy the generated PNG to ./raw/building-construction.png . Do not write or modify any other file. Do not write code. Reply only with the saved path.
+
+Image to generate:
+A Terraria building plot under construction. Standalone asset on a truly transparent canvas, 1536x1024, side view: a stone foundation with a partial timber frame of a future house, wooden scaffolding with planks and ladders, a pulley crane with a hanging crate, stacks of lumber and bricks, a blank wooden sign on a post. Floor baseline perfectly level along the bottom. Every pixel outside the object silhouette is fully transparent; no ground, no grass, no sky, no plants. Crisp chunky 16-bit Terraria pixel-art, restrained pixel clusters and sharp edges, same pixel scale and palette family as the attached references. No text, no logo, no character, no UI.

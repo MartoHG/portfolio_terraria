@@ -1,0 +1,4 @@
+Use your image generation tool to create ONE image, then copy the generated PNG to ./raw/rock-fill-upper.png . Do not write or modify any other file. Do not write code. Reply only with the saved path.
+
+Image to generate:
+A seamless tileable texture, 1024x1024, fully opaque: Terraria underground dirt and stone mass as solid foreground blocks, chunky pixel clusters of brown dirt and gray stone with occasional copper and iron ore specks. Must tile seamlessly on all four edges. No caves, no openings, no light sources. Crisp chunky 16-bit Terraria pixel-art, restrained pixel clusters and sharp edges, same pixel scale and palette family as the attached references (warm brown timber, gray stone, moss green, golden interior light). No text, no logo, no character, no creatures, no UI.

@@ -1,0 +1,4 @@
+Use your image generation tool to create ONE image, then copy the generated PNG to ./raw/surface-shaft.png . Do not write or modify any other file. Do not write code. Reply only with the saved path.
+
+Image to generate:
+A vertical Terraria hellevator-style mine shaft entrance in side cutaway, 1024x1536 portrait, on a transparent canvas. At the top a short strip of grass and a small wooden mine-entrance frame with a hanging sign post (blank, no text); below it a narrow vertical tunnel descending through dirt, then stone, then damp mossy stone toward the bottom, with a rope hanging down the middle, wooden support beams every so often and small unlit wall torches. The rock mass on both sides fills to the left and right canvas edges; only the sky area above the grass is transparent. Crisp chunky 16-bit Terraria pixel-art, restrained pixel clusters and sharp edges, same pixel scale and palette family as the attached references. No text, no logo, no character, no UI.
