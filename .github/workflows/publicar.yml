@@ -1,0 +1,76 @@
+# Compila el sitio (portada clásica en / y el mundo en /mundo/) y publica
+# dist/ en MartoHG/MartoHG.github.io, que GitHub Pages sirve en
+# https://martohg.github.io. Necesita el secret PAGES_DEPLOY_KEY: la clave
+# privada de una deploy key con escritura en ese repo (README, "Publicar").
+name: Publicar en martohg.github.io
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Una publicación por vez; si se juntan varios pushes, queda el último.
+concurrency:
+  group: publicar
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verificar la deploy key
+        env:
+          PAGES_DEPLOY_KEY: ${{ secrets.PAGES_DEPLOY_KEY }}
+        run: |
+          if [ -z "$PAGES_DEPLOY_KEY" ]; then
+            echo "::error::Falta el secret PAGES_DEPLOY_KEY. Ver la sección Publicar del README."
+            exit 1
+          fi
+
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Tests unitarios
+        run: npm test
+
+      - name: Compilar (incluye el typecheck)
+        run: npm run build
+
+      - name: Traer MartoHG.github.io
+        uses: actions/checkout@v7
+        with:
+          repository: MartoHG/MartoHG.github.io
+          ref: main
+          ssh-key: ${{ secrets.PAGES_DEPLOY_KEY }}
+          path: publicado
+
+      - name: Reemplazar su contenido por dist/ y publicar
+        working-directory: publicado
+        run: |
+          # Se borra todo menos .git: el repo queda igual a dist/ y conserva su historial.
+          find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          cp -r ../dist/. .
+          # Sin Jekyll, Pages sirve los archivos tal cual.
+          touch .nojekyll
+          git add -A
+          if git diff --cached --quiet; then
+            echo "dist/ no cambió: no hay nada que publicar."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -q -m "Publica portfolio_terraria@${GITHUB_SHA::7}" \
+            -m "https://github.com/${GITHUB_REPOSITORY}/commit/${GITHUB_SHA}"
+          git push origin HEAD:main

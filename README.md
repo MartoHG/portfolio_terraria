@@ -23,6 +23,21 @@ npm test            # unitarias (Vitest)
 npm run test:e2e    # Playwright, desktop y mobile
 ```
 
+## Publicar
+
+`.github/workflows/publicar.yml` corre en cada push a `main`, o a mano desde Actions → "Publicar en martohg.github.io" → Run workflow. Instala, pasa los tests unitarios, compila y reemplaza el contenido de [MartoHG/MartoHG.github.io](https://github.com/MartoHG/MartoHG.github.io) por `dist/` en un commit nuevo, sin perder su historial. GitHub Pages sirve ese repo tal cual (Settings → Pages: "Deploy from a branch", `main`, `/ (root)`). Los E2E no corren en el workflow: conviene pasarlos local antes de pushear.
+
+Ese repo queda como salida de la compilación: el portfolio clásico se edita acá (`index.html`, `src/classic/`), no allá.
+
+Configuración inicial, una sola vez, con una deploy key:
+
+1. Generar el par de claves: `ssh-keygen -t ed25519 -N "" -C "publicar portfolio_terraria" -f ~/publicar-pages`.
+2. En MartoHG.github.io → Settings → Deploy keys → Add deploy key: pegar el contenido de `~/publicar-pages.pub` y tildar **Allow write access**.
+3. En portfolio_terraria → Settings → Secrets and variables → Actions → New repository secret: nombre `PAGES_DEPLOY_KEY`, valor el contenido de `~/publicar-pages` (la clave privada completa, con las líneas `BEGIN` y `END`).
+4. Borrar las copias locales: `rm ~/publicar-pages ~/publicar-pages.pub`.
+
+Sin el secret, el workflow se detiene en el primer paso con un aviso y no toca nada.
+
 ## El recorrido (`/mundo/`)
 
 1. **Isla del cielo — Sobre mí.** Menú de inicio y cielo son la misma escena. En la isla el aventurero usa la física de la Fase 1: clic o toque para caminar, Espacio para saltar, E para la puerta, ↓ para bajar del piso superior. "Ver el mundo" oculta el panel para explorar.
