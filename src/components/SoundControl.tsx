@@ -23,7 +23,7 @@ export function SoundControl({ muted, onToggle, disabled = false, unavailable = 
         <path d="M3 9v6h4l5 4V5L7 9H3Z" />
         {muted || unavailable ? <path d="m16 9 5 6m0-6-5 6" /> : <><path d="M15 9a4 4 0 0 1 0 6" /><path d="M17 6a8 8 0 0 1 0 12" /></>}
       </svg>
-      <span>Sonido</span>
+      <span className="sound-control-label">Sonido</span>
       <span className="sound-control-state">{unavailable ? 'No disponible' : muted ? 'Silenciado' : 'Activo'}</span>
     </button>
   );

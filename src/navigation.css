@@ -1,6 +1,7 @@
+/* Hotbar (top-left on desktop, bottom-center on touch) and the start title. */
 .world-navigation,
 .world-menu {
-  position: absolute;
+  position: fixed;
   z-index: 20;
   font-family: Georgia, 'Times New Roman', serif;
 }
@@ -20,8 +21,8 @@
   list-style: none;
   overflow-x: auto;
   overscroll-behavior-inline: contain;
-  background: rgb(23 52 90 / 90%);
-  border: 2px solid #f8f2d5;
+  background: rgb(22 45 76 / 88%);
+  border: 2px solid #bdc6d0;
   box-shadow: 0 0 0 2px #17345a, 0 3px 0 rgb(14 27 30 / 55%);
   scrollbar-color: #f8f2d5 #17345a;
 }
@@ -29,62 +30,80 @@
 .world-hotbar__slot {
   position: relative;
   display: flex;
-  min-width: 84px;
-  min-height: 48px;
+  min-width: 68px;
+  min-height: 66px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 5px 8px;
+  gap: 3px;
+  padding: 6px 4px 5px;
   color: #f8f2d5;
   background: #17345a;
-  border: 2px solid rgb(248 242 213 / 62%);
+  border: 2px solid #718ead;
   border-radius: 0;
   font: inherit;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1.15;
   cursor: pointer;
 }
 
-.world-hotbar__slot:hover,
-.world-hotbar__slot[aria-current='location'] {
+.world-hotbar__slot:hover {
   color: #fff5cc;
   background: #285b87;
-  border-color: #fff5cc;
+  border-color: #c9d8ea;
 }
 
-.world-hotbar__slot:focus-visible,
-.world-menu__enter:focus-visible {
+/* Selected zone: golden frame and a slight lift, like the active Terraria slot. */
+.world-hotbar__slot[aria-current='location'] {
+  z-index: 1;
+  color: #fff5cc;
+  background: #285b87;
+  border-color: #ffd85c;
+  box-shadow: inset 0 0 0 1px #ffd85c;
+  transform: scale(1.1);
+}
+
+.world-hotbar__slot:focus-visible {
   outline: 3px solid #fff5cc;
-  outline-offset: 3px;
+  outline-offset: 0;
 }
 
 .world-hotbar__index {
   position: absolute;
-  top: 2px;
+  top: 3px;
   left: 5px;
-  color: rgb(248 242 213 / 75%);
+  color: rgb(248 242 213 / 80%);
   font-size: 10px;
+  line-height: 1;
 }
 
-.world-hotbar__label {
-  white-space: nowrap;
+.world-hotbar__slot[aria-current='location'] .world-hotbar__index { color: #ffd85c; }
+
+.world-hotbar__icon {
+  display: block;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  image-rendering: pixelated;
+  pointer-events: none;
 }
+
+.world-hotbar__label { white-space: nowrap; }
+.world-hotbar__label--short { display: none; }
 
 .world-hotbar__return {
   padding-left: 4px;
   border-left: 1px solid rgb(248 242 213 / 55%);
 }
 
-.world-hotbar__slot--return {
-  min-width: 116px;
-}
+.world-hotbar__slot--return { min-width: 104px; }
 
 .world-menu {
   inset: 0;
   display: block;
   padding: max(24px, env(safe-area-inset-top)) 20px max(24px, env(safe-area-inset-bottom));
   color: #fff5cc;
-  background: transparent !important;
+  background: transparent;
   text-align: center;
 }
 
@@ -115,42 +134,38 @@
   filter: drop-shadow(3px 3px 0 rgb(23 52 90 / 80%));
 }
 
+/* Start button: large Terraria menu text, golden on hover and focus, hard text shadow. */
+.world-menu__enter {
+  min-width: min(280px, 80vw);
+  min-height: 56px;
+  padding: 10px 26px;
+  font: inherit;
+  font-size: clamp(20px, 2.4vw, 26px);
+  --hud-text-shadow: 3px 3px 0 rgb(14 27 30 / 80%);
+}
+
+/* The title belongs to the sky: once entered it scrolls away with the world. */
 .world-menu--entered {
+  position: absolute;
   display: block;
+  height: 100vh;
+  height: 100lvh;
   padding: 0;
   pointer-events: none;
 }
 
+/* Keep the sky title clear of the workshop silhouette. */
 .world-menu--entered .world-menu__content {
   position: absolute;
-  top: 100px;
+  top: 16px;
   left: 50%;
-  width: min(400px, 38vw);
+  width: min(250px, 25vw);
   gap: 0;
   transform: translateX(-50%);
   transition: top 240ms ease-out;
 }
 
-.world-menu--entered .world-menu__title img {
-  width: 100%;
-}
-
-.world-menu__enter {
-  min-height: 52px;
-  padding: 10px 22px;
-  color: #fff5cc;
-  background: #17345a;
-  border: 3px solid #f8f2d5;
-  border-radius: 0;
-  box-shadow: 0 0 0 2px #17345a, 0 4px 0 rgb(14 27 30 / 55%);
-  font: inherit;
-  font-size: 17px;
-  cursor: pointer;
-}
-
-.world-menu__enter:hover {
-  background: #285b87;
-}
+.world-menu--entered .world-menu__title img { width: 100%; }
 
 @media (pointer: coarse), (max-width: 600px) {
   .world-navigation {
@@ -158,48 +173,44 @@
     right: auto;
     bottom: max(12px, env(safe-area-inset-bottom));
     left: 50%;
+    width: max-content;
     max-width: calc(100vw - 16px);
     transform: translateX(-50%);
   }
 
+  .world-hotbar { gap: 3px; padding: 4px; }
+
   .world-hotbar__slot {
-    min-width: 72px;
-    min-height: 48px;
-    padding-right: 6px;
-    padding-left: 6px;
-    font-size: 12px;
+    min-width: 58px;
+    min-height: 56px;
+    padding: 4px 2px 3px;
+    font-size: 11px;
   }
 
-  .world-hotbar__slot--return {
-    min-width: 112px;
-  }
+  .world-hotbar__index { top: 2px; left: 3px; }
+  .world-hotbar__icon { width: 24px; height: 24px; }
+  .world-hotbar__return { padding-left: 3px; }
+  .world-hotbar__slot--return { min-width: 58px; }
+  .world-hotbar__label--long { display: none; }
+  .world-hotbar__label--short { display: inline; }
 
-  .world-menu--entered .world-menu__content {
-    top: 32px;
-    width: min(300px, 80vw);
-  }
+  .world-menu__title img { width: min(600px, 90vw); }
+}
 
-  .world-menu__title img {
-    width: min(600px, 90vw);
-  }
+/* Too narrow for labels: icons and numbers only; the names stay on the buttons. */
+@media (max-width: 380px) {
+  .world-hotbar__label { display: none; }
+  .world-hotbar__slot { min-width: 50px; }
+}
+
+@media (max-height: 700px) and (min-width: 701px) {
+  .world-menu--entered .world-menu__content { top: 12px; width: 230px; }
+}
+
+@media (max-width: 700px) {
+  .world-menu--entered .world-menu__content { top: 12px; left: 16px; width: 158px; transform: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .world-hotbar,
-  .world-hotbar__slot,
-  .world-menu__enter,
-  .world-menu__content {
-    scroll-behavior: auto;
-    transition: none;
-    animation: none;
-  }
+  .world-menu--entered .world-menu__content { transition: none; }
 }
-
-/* Keep the sky title clear of the workshop silhouette. */
-.world-menu--entered .world-menu__content { top: 16px; width: min(250px, 25vw); }
-.world-hotbar { padding: 4px; gap: 3px; border-color: #bdc6d0; background: rgb(22 45 76 / 88%); }
-.world-hotbar__slot { min-width: 68px; min-height: 43px; font-size: 12px; border-color: #718ead; }
-@media (max-height: 700px) and (min-width: 701px) { .world-menu--entered .world-menu__content { top: 12px; width: 230px; } }
-@media (max-width: 700px) { .world-menu--entered .world-menu__content { top: 62px; width: 210px; } .world-menu--entered .world-menu__title img { width: 100%; } }
-
-@media (max-width: 700px) { .world-menu--entered .world-menu__content { top: 12px; left: 16px; width: 158px; transform: none; } }

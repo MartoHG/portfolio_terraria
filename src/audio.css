@@ -1,19 +1,27 @@
+/* Sound toggle: the panel look is shared with the HUD (styles.css); this sets its size and layout. */
 .sound-control {
   display: inline-flex;
-  min-height: 42px;
+  min-height: 44px;
   align-items: center;
   gap: 8px;
-  padding: 7px 10px;
-  border: 2px solid #3c321f;
-  border-radius: 0;
-  color: #fff5d5;
-  background: #455d38;
-  box-shadow: 0 3px 0 #26321f;
-  font: 700 12px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
-  cursor: pointer;
+  padding: 7px 12px;
+  font: 12px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
 }
-.sound-control:hover:not(:disabled) { background: #5d7447; }
-.sound-control:focus-visible { outline: 3px solid #e8bb60; outline-offset: 3px; }
-.sound-control:disabled { cursor: not-allowed; opacity: .7; }
-.sound-control svg { width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-linecap: square; stroke-linejoin: miter; stroke-width: 2; }
-.sound-control-state { padding-left: 7px; border-left: 1px solid rgb(255 245 213 / 48%); font-weight: 500; }
+.sound-control svg {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+  stroke-width: 2;
+}
+.sound-control-state { padding-left: 8px; border-left: 1px solid rgb(255 241 207 / 40%); }
+
+@media (pointer: coarse), (max-width: 600px) {
+  /* Touch: a 44px icon-only button; the name stays for screen readers. */
+  .sound-control { position: relative; width: 44px; height: 44px; min-height: 44px; padding: 0; justify-content: center; gap: 0; }
+  .sound-control-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .sound-control-state { display: none; }
+}

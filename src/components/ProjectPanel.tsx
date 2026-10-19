@@ -2,6 +2,7 @@ import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import type { CSSProperties, KeyboardEvent } from 'react';
 import type { PortfolioProject } from '../content/types';
 import '../portfolio.css';
+import '../project-panel.css';
 
 export interface ProjectPanelProps {
   project: PortfolioProject;
@@ -16,14 +17,26 @@ type PanelStyle = CSSProperties & { '--panel-origin-x'?: string; '--panel-origin
 function ProjectGallery({ project }: { project: PortfolioProject }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [failedImages, setFailedImages] = useState<Set<number>>(() => new Set());
+  const [loadedImages, setLoadedImages] = useState<Set<number>>(() => new Set());
   const galleryRef = useRef<HTMLDivElement>(null);
+  const thumbnailRefs = useRef<Array<HTMLButtonElement | null>>([]);
+  const scrolledIndex = useRef(0);
   const image = project.images[activeIndex];
   const total = project.images.length;
 
   useEffect(() => {
     setActiveIndex(0);
     setFailedImages(new Set());
+    setLoadedImages(new Set());
   }, [project.id]);
+
+  // Keep the active thumbnail visible, but not on the first render.
+  useEffect(() => {
+    if (scrolledIndex.current === activeIndex) return;
+    scrolledIndex.current = activeIndex;
+    const reduceMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches ?? false;
+    thumbnailRefs.current[activeIndex]?.scrollIntoView?.({ block: 'nearest', inline: 'nearest', behavior: reduceMotion ? 'auto' : 'smooth' });
+  }, [activeIndex]);
 
   const move = (delta: number) => setActiveIndex((index) => (index + delta + total) % total);
   const handleGalleryKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
@@ -42,20 +55,28 @@ function ProjectGallery({ project }: { project: PortfolioProject }) {
   return (
     <div className="project-gallery" ref={galleryRef} tabIndex={0} role="group" aria-label={`Galería de ${project.title}`} onKeyDown={handleGalleryKeyDown}>
       <div className="gallery-main">
-        {failedImages.has(activeIndex) ? (
-          <div className="gallery-image-fallback">
-            <p>No se pudo cargar esta captura.</p>
-            <a href={image.src} target="_blank" rel="noreferrer">Abrir captura original ↗</a>
-          </div>
-        ) : (
-          <img
-            key={`${project.id}-${activeIndex}`}
-            src={image.src}
-            alt={image.alt}
-            loading="eager"
-            onError={() => setFailedImages((failed) => new Set(failed).add(activeIndex))}
-          />
-        )}
+        <div className="gallery-stage">
+          {failedImages.has(activeIndex) ? (
+            <div className="gallery-image-fallback">
+              <p>No se pudo cargar esta captura.</p>
+              <a href={image.src} target="_blank" rel="noreferrer">Abrir captura original ↗</a>
+            </div>
+          ) : (
+            <>
+              {!loadedImages.has(activeIndex) && (
+                <div className="gallery-loading" aria-hidden="true"><p>Cargando captura…</p></div>
+              )}
+              <img
+                key={`${project.id}-${activeIndex}`}
+                src={image.src}
+                alt={image.alt}
+                loading="eager"
+                onLoad={() => setLoadedImages((loaded) => new Set(loaded).add(activeIndex))}
+                onError={() => setFailedImages((failed) => new Set(failed).add(activeIndex))}
+              />
+            </>
+          )}
+        </div>
         <p className="gallery-caption">{image.alt}</p>
       </div>
       <div className="gallery-controls" aria-label="Controles de galería">
@@ -69,6 +90,7 @@ function ProjectGallery({ project }: { project: PortfolioProject }) {
             className="gallery-thumbnail"
             type="button"
             key={thumbnail.src}
+            ref={(element) => { thumbnailRefs.current[index] = element; }}
             onClick={() => setActiveIndex(index)}
             aria-label={`Ver captura ${index + 1} de ${total}: ${thumbnail.alt}`}
             aria-current={index === activeIndex ? 'true' : undefined}
@@ -170,12 +192,12 @@ export function ProjectPanel({ project, onClose, origin, closing = false }: Proj
           {project.images.length > 0 && <ProjectGallery project={project} />}
           <div className="project-editorial">
             <p className="project-summary">{project.summary}</p>
+            <section className="project-stack"><h3>Stack</h3><ul>{project.stack.map((item) => <li key={item}>{item}</li>)}</ul></section>
             <section><h3>El problema</h3><p>{project.problem}</p></section>
             <section><h3>La solución</h3><p>{project.solution}</p></section>
             <section><h3>Mi rol</h3><p>{project.role}</p></section>
             {project.details?.map((detail) => <section key={detail.heading}><h3>{detail.heading}</h3><p>{detail.body}</p></section>)}
-            <section className="project-stack"><h3>Stack</h3><ul>{project.stack.map((item) => <li key={item}>{item}</li>)}</ul></section>
-            {project.repository && <p><a className="pixel-link" href={project.repository.href} target="_blank" rel="noreferrer">{project.repository.label} <span aria-hidden="true">↗</span></a></p>}
+            {project.repository && <p className="project-repository"><a className="pixel-link" href={project.repository.href} target="_blank" rel="noreferrer">{project.repository.label} <span aria-hidden="true">↗</span></a></p>}
           </div>
         </div>
       </section>

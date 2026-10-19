@@ -16,6 +16,25 @@ function stageAnchor(anchor?: { x: number; y: number }): AnchorStyle | undefined
   return anchor ? { '--card-x': `${anchor.x}px`, '--card-y': `${anchor.y}px` } : undefined;
 }
 
+// Pixel-grid icons for the contact list (16x16).
+const MAIL_ICON = 'M2 4h12v1H2zM2 11h12v1H2zM2 4h1v8H2zM13 4h1v8h-1zM3 5h1v1H3zM4 6h1v1H4zM5 7h1v1H5zM6 8h1v1H6zM7 9h1v1H7zM8 9h1v1H8zM9 8h1v1H9zM10 7h1v1h-1zM11 6h1v1h-1zM12 5h1v1h-1z';
+
+function ContactIcon({ kind }: { kind: 'mail' | 'linkedin' | 'github' }) {
+  return (
+    <span className="contact-link__icon" aria-hidden="true">
+      <svg viewBox="0 0 16 16" focusable="false">
+        {kind === 'mail' && <path fill="currentColor" d={MAIL_ICON} />}
+        {kind === 'linkedin' && <><path fill="currentColor" d="M1 1h14v14H1z" /><path fill="#2c3f7f" d="M4 3h2v2H4zM4 6h2v7H4zM7 6h2v7H7zM9 6h3v2H9zM11 8h2v5h-2z" /></>}
+        {kind === 'github' && <><path fill="currentColor" d="M2 2h3v3H2zM11 2h3v3h-3zM2 5h12v8H2z" /><path fill="#2c3f7f" d="M5 7h2v3H5zM9 7h2v3H9z" /></>}
+      </svg>
+    </span>
+  );
+}
+
+function displayUrl(url: string) {
+  return url.replace(/^https?:\/\/(www\.)?/, '');
+}
+
 export function PortfolioContent({ activeSection, onNavigate, onProjectOpen, onReturnToSky, sectionPositions, projectStage, projectStageRef, onProjectFocus }: ContentProps) {
   const markActive = (id: SectionId) => ({
     className: `portfolio-section${activeSection === id ? ' is-active' : ''}`,
@@ -29,13 +48,13 @@ export function PortfolioContent({ activeSection, onNavigate, onProjectOpen, onR
     <div className="portfolio-content" aria-label="Portfolio de Martiniano Gavotti">
       <section {...markActive('about')} aria-labelledby="portfolio-about-title">
         <p className="portfolio-kicker">Zona N.º 01 · Isla del cielo</p>
-        <div className="about-layout">
-          <div>
-            <h2 id="portfolio-about-title">Sobre mí</h2>
+        <div className="about-intro">
+          <h2 id="portfolio-about-title">Sobre mí</h2>
+          <div className="profile-frame">
+            <img className="profile-photo" src={PROFILE.photo} alt={PROFILE.photoAlt} loading="lazy" />
           </div>
-          <img className="profile-photo" src={PROFILE.photo} alt={PROFILE.photoAlt} loading="lazy" />
+          <p className="about-lead">{PROFILE.introduction}</p>
         </div>
-        <p className="about-lead">{PROFILE.introduction}</p>
         <p className="about-copy">{PROFILE.about}</p>
         <div className="education-block">
           <h3>Formación y recorrido</h3>
@@ -86,7 +105,7 @@ export function PortfolioContent({ activeSection, onNavigate, onProjectOpen, onR
               {group.note && <p className="card-meta">{group.note}</p>}
               <ul className="inventory-slots">
                 {group.items.map((item) => (
-                  <li className="inventory-slot" key={item}>
+                  <li className={`inventory-slot${item.length > 16 ? ' inventory-slot--row' : ''}`} key={item}>
                     <span className="inventory-slot__frame" aria-hidden="true">{skillIcon(item) ? <img src={skillIcon(item)} alt="" /> : null}</span>
                     <span className="inventory-slot__label">{item}</span>
                   </li>
@@ -122,11 +141,25 @@ export function PortfolioContent({ activeSection, onNavigate, onProjectOpen, onR
         <h2 id="portfolio-contact-title">{CONTACT.title}</h2>
         <p>{CONTACT.description}</p>
         <div className="contact-links" aria-label="Canales de contacto">
-          <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>
-          <a href={CONTACT.linkedin} target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
-          <a href={CONTACT.github} target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          <a className="contact-link" href={`mailto:${CONTACT.email}`}>
+            <ContactIcon kind="mail" />
+            <span className="contact-link__text"><span className="contact-link__label" aria-hidden="true">Email</span>{CONTACT.email}</span>
+          </a>
+          <a className="contact-link" href={CONTACT.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn (se abre en una pestaña nueva)">
+            <ContactIcon kind="linkedin" />
+            <span className="contact-link__text"><span className="contact-link__label" aria-hidden="true">LinkedIn</span>{displayUrl(CONTACT.linkedin)}</span>
+            <span className="contact-link__arrow" aria-hidden="true">↗</span>
+          </a>
+          <a className="contact-link" href={CONTACT.github} target="_blank" rel="noreferrer" aria-label="GitHub (se abre en una pestaña nueva)">
+            <ContactIcon kind="github" />
+            <span className="contact-link__text"><span className="contact-link__label" aria-hidden="true">GitHub</span>{displayUrl(CONTACT.github)}</span>
+            <span className="contact-link__arrow" aria-hidden="true">↗</span>
+          </a>
         </div>
-        <button className="pixel-button" type="button" onClick={() => onReturnToSky ? onReturnToSky() : onNavigate('about')}>Volver al cielo <span aria-hidden="true">↑</span></button>
+        <button className="pixel-button return-sky-button" type="button" onClick={() => onReturnToSky ? onReturnToSky() : onNavigate('about')}>
+          <img src="/assets/scene-v3/magic-mirror-item.png" alt="" aria-hidden="true" />
+          Volver al cielo <span aria-hidden="true">↑</span>
+        </button>
       </section>
     </div>
   );

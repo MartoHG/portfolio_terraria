@@ -255,10 +255,10 @@ export function App() {
           onToggle={() => { const next = !muted; setMuted(next); audioRef.current?.setMuted(next); }} /></div> : null}
         {entered && inSky ? <p className="explore-hint">Clic: caminar · Espacio: saltar · E: puerta · ↓: bajar</p> : null}
         {entered && inSky ? <button type="button" className="reading-toggle" onClick={() => { setReading((value) => !value); if (reading) window.scrollTo({top: 0, behavior: 'instant'}); }} aria-pressed={!reading}>{reading ? 'Ver el mundo' : 'Leer el portfolio'}</button> : null}
-        {entered && inSky ? <div className="island-controls" aria-label="Controles de la isla">
+        {entered && inSky ? <div className="island-controls" role="group" aria-label="Controles de la isla">
           <button onClick={() => sceneRef.current?.jump()}>Saltar</button>
-          <button onClick={() => sceneRef.current?.toggleDoor()}>Abrir / cerrar puerta</button>
           <button onClick={() => sceneRef.current?.drop()}>Bajar</button>
+          <button onClick={() => sceneRef.current?.toggleDoor()}>Abrir / cerrar puerta</button>
         </div> : null}
       </div>
       <div className={`mirror-transition${teleporting ? ' is-active' : ''}`} aria-hidden="true"><span>✦</span></div>
