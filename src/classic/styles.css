@@ -1,0 +1,808 @@
+/* ============================================================
+   Portfolio — Martiniano Gavotti
+   Concepto: "Del papel al sistema" — libro de registro
+   institucional reinterpretado en clave oscura.
+   ============================================================ */
+
+/* ---------- Tokens ---------- */
+:root {
+  /* Paleta: tinta, papel, ámbar, sello */
+  --tinta: #101623;        /* fondo: azul tinta profundo */
+  --tinta-2: #161e2e;      /* superficies elevadas */
+  --tinta-3: #1e2839;      /* bordes / líneas de la libreta */
+  --papel: #f2eadd;        /* texto principal: crema papel */
+  --papel-dim: #a7a89e;    /* texto secundario */
+  --ambar: #edae49;        /* acento principal: lámpara sobre papel */
+  --ambar-oscuro: #c98f2e;
+  --sello: #8ea8ff;        /* acento secundario: tinta de sello */
+  --margen-rojo: #b3543f;  /* línea de margen del cuaderno */
+
+  /* Tipografía */
+  --f-display: "Archivo", sans-serif;
+  --f-cuerpo: "Chivo", sans-serif;
+  --f-mono: "Chivo Mono", monospace;
+
+  /* Ritmo */
+  --ancho-max: 68rem;
+  --margen-col: clamp(2.2rem, 6vw, 5.5rem); /* dónde cae la línea de margen */
+  --esp-seccion: clamp(5rem, 12vh, 9rem);
+}
+
+/* ---------- Base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  /* Las anclas no quedan tapadas por la nav fija (ruta sin JS/Lenis) */
+  scroll-padding-top: 5rem;
+}
+
+body {
+  margin: 0;
+  background-color: var(--tinta);
+  /* Cuadrícula sutil de libro contable */
+  background-image:
+    linear-gradient(var(--tinta-3) 1px, transparent 1px),
+    linear-gradient(90deg, var(--tinta-3) 1px, transparent 1px);
+  background-size: 3.5rem 3.5rem;
+  background-attachment: fixed;
+  color: var(--papel);
+  font-family: var(--f-cuerpo);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: var(--f-display);
+  line-height: 1.1;
+  margin: 0;
+}
+
+p { margin: 0 0 1rem; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+a { color: inherit; }
+
+.mono {
+  font-family: var(--f-mono);
+  font-size: 0.8125rem; /* 13px: mínimo legible para etiquetas */
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Salto directo al contenido para usuarios de teclado */
+.saltar {
+  position: absolute;
+  top: -100%;
+  left: var(--margen-col);
+  z-index: 20;
+  background: var(--ambar);
+  color: var(--tinta);
+  padding: 0.7rem 1.2rem;
+  font-family: var(--f-mono);
+  text-decoration: none;
+}
+
+.saltar:focus-visible { top: 0.6rem; }
+
+::selection { background: var(--ambar); color: var(--tinta); }
+
+/* Foco visible en todo el sitio */
+:focus-visible {
+  outline: 2px solid var(--sello);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ---------- Línea de margen (firma visual) ---------- */
+.margen {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: var(--margen-col);
+  width: 1px;
+  background: var(--margen-rojo);
+  opacity: 0.55;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ---------- Navegación ---------- */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.9rem var(--margen-col);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav.nav--compacta {
+  background: color-mix(in srgb, var(--tinta) 88%, transparent);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 1px 0 var(--tinta-3);
+}
+
+.nav__logo {
+  font-family: var(--f-display);
+  font-weight: 900;
+  font-size: 1.35rem;
+  text-decoration: none;
+  letter-spacing: -0.02em;
+}
+
+.nav__logo-punto { color: var(--ambar); }
+
+.nav__links {
+  display: flex;
+  gap: 1.4rem;
+  margin-left: auto;
+}
+
+.nav__links a {
+  font-family: var(--f-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--papel-dim);
+  padding: 0.75rem 0; /* área táctil cómoda */
+  border-bottom: 1px solid transparent;
+  touch-action: manipulation;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.nav__links a:hover,
+.nav__links a.activo {
+  color: var(--papel);
+  border-bottom-color: var(--ambar);
+}
+
+/* ---------- Botones ---------- */
+.boton {
+  display: inline-block;
+  font-family: var(--f-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--tinta);
+  background: var(--ambar);
+  border: 1px solid var(--ambar);
+  padding: 0.85rem 1.6rem;
+  touch-action: manipulation;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.boton:hover {
+  background: var(--ambar-oscuro);
+  border-color: var(--ambar-oscuro);
+  transform: translateY(-2px);
+}
+
+.boton--fantasma {
+  background: transparent;
+  color: var(--papel);
+  border-color: var(--tinta-3);
+}
+
+.boton--fantasma:hover {
+  background: transparent;
+  color: var(--ambar);
+  border-color: var(--ambar);
+}
+
+.boton--chico {
+  padding: 0.75rem 1.1rem; /* alto ≥44px: objetivo táctil mínimo */
+  font-size: 0.75rem;
+}
+
+.boton--grande {
+  font-size: clamp(0.95rem, 2.5vw, 1.15rem);
+  padding: 1.1rem 2rem;
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 7rem var(--margen-col) 4rem calc(var(--margen-col) + 1.8rem);
+  max-width: calc(var(--ancho-max) + 2 * var(--margen-col));
+}
+
+.hero__eyebrow {
+  color: var(--sello);
+  margin-bottom: 1.4rem;
+}
+
+.hero__titulo {
+  font-size: clamp(2.4rem, 7vw, 5.2rem);
+  font-weight: 900;
+  font-stretch: 110%;
+  letter-spacing: -0.02em;
+  max-width: 16ch;
+  margin-bottom: 1.6rem;
+}
+
+.hero__titulo em {
+  font-style: normal;
+  color: var(--ambar);
+}
+
+.hero__bajada {
+  max-width: 46ch;
+  color: var(--papel-dim);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  margin-bottom: 2.2rem;
+}
+
+.hero__acciones {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; /* el portal es más alto que los botones */
+  gap: 1rem;
+}
+
+.hero__scroll {
+  margin-top: auto;
+  padding-top: 3rem;
+  color: var(--papel-dim);
+}
+
+/* ---------- Portal al mundo (la única pieza pixel-art del sitio) ----------
+   Lleva a /mundo/, el portfolio estilo Terraria. Borde de píxeles con
+   esquinas recortadas y el aventurero adentro, que salta al pasar. */
+.portal {
+  --px: 4px;
+  --portal-borde: var(--sello);
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  column-gap: 0.8rem;
+  align-items: center;
+  margin: 0 var(--px); /* el borde de píxeles se dibuja por fuera de la caja */
+  padding: 0.45rem 1.3rem 0.45rem 0.8rem;
+  line-height: 1.3;
+  background: #1d2b55;
+  color: var(--papel);
+  text-decoration: none;
+  box-shadow:
+    inset 0 var(--px) 0 rgb(255 255 255 / 10%),
+    0 calc(var(--px) * -1) 0 var(--portal-borde),
+    0 var(--px) 0 var(--portal-borde),
+    calc(var(--px) * -1) 0 0 var(--portal-borde),
+    var(--px) 0 0 var(--portal-borde),
+    var(--px) calc(var(--px) * 3) 0 rgb(5 8 16 / 70%);
+  touch-action: manipulation;
+  transition: transform 0.15s steps(2), background-color 0.15s steps(2);
+}
+
+.portal__aventurero {
+  grid-row: 1 / 3;
+  width: 32px;
+  height: 48px;
+  image-rendering: pixelated;
+}
+
+.portal__pregunta { color: var(--papel-dim); align-self: end; }
+
+.portal__accion {
+  align-self: start;
+  font-family: var(--f-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+  font-stretch: 105%;
+}
+
+.portal:hover {
+  --portal-borde: var(--ambar);
+  background: #263a6e;
+  transform: translateY(calc(var(--px) * -1));
+}
+
+.portal:hover .portal__accion { color: var(--ambar); }
+.portal:hover .portal__aventurero { animation: portal-salto 0.5s steps(5) infinite; }
+
+.portal:focus-visible { outline-offset: calc(var(--px) + 4px); }
+
+@keyframes portal-salto {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+/* ---------- Secciones "registro" ---------- */
+.registro {
+  padding: var(--esp-seccion) var(--margen-col) 0 calc(var(--margen-col) + 1.8rem);
+  max-width: calc(var(--ancho-max) + 2 * var(--margen-col));
+}
+
+.registro__cabecera {
+  display: flex;
+  align-items: baseline;
+  gap: 1.2rem;
+  margin-bottom: 2.4rem;
+}
+
+.registro__num { color: var(--sello); white-space: nowrap; }
+
+.registro__titulo {
+  font-size: clamp(1.7rem, 4vw, 2.6rem);
+  font-weight: 800;
+  font-stretch: 105%;
+  letter-spacing: -0.01em;
+}
+
+/* Doble regla contable que se "traza" al entrar en viewport */
+.registro__regla {
+  flex: 1;
+  height: 7px;
+  border-top: 1px solid var(--tinta-3);
+  border-bottom: 1px solid var(--tinta-3);
+  transform-origin: left center;
+}
+
+.registro__intro {
+  color: var(--papel-dim);
+  max-width: 52ch;
+  margin-bottom: 2rem;
+}
+
+/* ---------- Placeholders visibles (contenido a reemplazar) ---------- */
+.placeholder,
+.placeholder-inline {
+  color: var(--papel-dim);
+  font-style: italic;
+}
+
+.placeholder {
+  border: 1px dashed var(--ambar-oscuro);
+  padding: 0.8rem 1rem;
+  border-radius: 2px;
+}
+
+/* ---------- Sobre mí ---------- */
+.sobremi {
+  display: grid;
+  grid-template-columns: minmax(12rem, 16rem) 1fr;
+  gap: 2.8rem;
+  align-items: start;
+}
+
+.sobremi__retrato {
+  margin: 0;
+  aspect-ratio: 3 / 4;
+  border: 1px solid var(--tinta-3);
+  background: var(--tinta-2);
+  position: relative;
+  overflow: hidden;
+}
+
+.sobremi__retrato img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* esquina doblada, como una foto abrochada al legajo */
+.sobremi__retrato::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-style: solid;
+  border-width: 0 1.4rem 1.4rem 0;
+  border-color: transparent var(--tinta) transparent transparent;
+}
+
+.sobremi__iniciales {
+  font-family: var(--f-display);
+  font-weight: 900;
+  font-size: 3rem;
+  color: var(--tinta-3);
+}
+
+.sobremi__retrato figcaption { color: var(--papel-dim); }
+
+.sobremi__subtitulo {
+  color: var(--sello);
+  margin: 2rem 0 1rem;
+}
+
+.timeline__item {
+  display: flex;
+  gap: 1.2rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--tinta-3);
+}
+
+.timeline__item:first-child { border-top: 1px solid var(--tinta-3); }
+
+.timeline__fecha {
+  color: var(--ambar);
+  min-width: 4.5rem;
+}
+
+/* ---------- Skills ---------- */
+.skills {
+  display: grid;
+  gap: 2rem;
+}
+
+.skills__etiqueta {
+  color: var(--sello);
+  margin: 0 0 0.9rem;
+}
+
+.skills__lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.chip {
+  font-family: var(--f-mono);
+  font-size: 0.85rem;
+  padding: 0.55rem 1rem;
+  border: 1px solid var(--tinta-3);
+  background: var(--tinta-2);
+  transition: border-color 0.2s ease, transform 0.2s ease, color 0.2s ease;
+  cursor: default;
+}
+
+.chip:hover {
+  border-color: var(--ambar);
+  transform: translateY(-2px);
+}
+
+.chip--principal {
+  border-color: var(--ambar-oscuro);
+  color: var(--ambar);
+}
+
+.chip--aprendiendo {
+  border-style: dashed;
+  color: var(--papel-dim);
+}
+
+.chip--aprendiendo:hover { color: var(--papel); }
+
+/* ---------- Proyectos: fichas ---------- */
+.ficha {
+  border: 1px solid var(--tinta-3);
+  background: var(--tinta-2);
+  padding: clamp(1.4rem, 3.5vw, 2.4rem);
+  margin-bottom: 2.4rem;
+  transition: border-color 0.25s ease;
+}
+
+.ficha:hover { border-color: var(--sello); }
+
+.ficha__cabecera {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: start;
+  gap: 1rem;
+  border-bottom: 1px solid var(--tinta-3);
+  padding-bottom: 1.2rem;
+  margin-bottom: 1.6rem;
+}
+
+.ficha__num { color: var(--sello); margin: 0 0 0.4rem; }
+
+.ficha__nombre {
+  font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+  font-weight: 800;
+  font-stretch: 108%;
+}
+
+.ficha__tipo { color: var(--papel-dim); margin: 0.5rem 0 0; }
+
+.ficha__estado {
+  color: var(--ambar);
+  border: 1px solid var(--ambar-oscuro);
+  padding: 0.45rem 0.8rem;
+  white-space: nowrap;
+}
+
+.ficha__detalle {
+  display: grid;
+  gap: 1.3rem;
+  margin: 0 0 1.8rem;
+}
+
+.ficha__campo dt {
+  color: var(--sello);
+  margin-bottom: 0.35rem;
+}
+
+.ficha__campo dd {
+  margin: 0;
+  max-width: 62ch;
+}
+
+.ficha__campo dd p { margin: 0 0 0.9rem; }
+.ficha__campo dd p:last-child { margin-bottom: 0; }
+
+.ficha__lista {
+  display: grid;
+  gap: 0.6rem;
+  margin: 0 0 0.9rem;
+}
+
+.ficha__lista li {
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.ficha__lista li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--sello);
+}
+
+.ficha__lista strong {
+  color: var(--papel);
+}
+
+/* ---------- Galería de capturas ---------- */
+.ficha__galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1.1rem;
+}
+
+.ficha__captura {
+  margin: 0;
+}
+
+.ficha__captura a {
+  display: block;
+  border: 1px solid var(--tinta-3);
+  background: var(--tinta);
+  overflow: hidden;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.ficha__captura a:hover,
+.ficha__captura a:focus-visible {
+  border-color: var(--sello);
+  transform: translateY(-3px);
+}
+
+.ficha__captura img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.ficha__captura figcaption {
+  color: var(--papel-dim);
+  font-size: 0.8rem;
+  margin-top: 0.55rem;
+}
+
+/* Variante densa: muchas capturas chicas (ej. recorrido completo de un sistema) */
+.ficha__galeria--miniaturas {
+  grid-template-columns: repeat(auto-fill, minmax(8.5rem, 1fr));
+  gap: 0.7rem;
+}
+
+.ficha__galeria--miniaturas .ficha__captura figcaption {
+  font-size: 0.7rem;
+  line-height: 1.3;
+}
+
+/* Botón para desplegar el resto de la galería (lo agrega el JS) */
+.ficha__galeria-toggle {
+  display: block;
+  margin: 1rem 0 0;
+  width: fit-content;
+}
+
+/* ---------- Lightbox: recorrido de capturas ---------- */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: clamp(1.2rem, 5vw, 3rem);
+  background: var(--tinta);
+}
+
+.lightbox[hidden] { display: none; }
+
+.lightbox__figura {
+  margin: 0;
+  max-width: min(90vw, 62rem);
+  max-height: 78vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.lightbox__img {
+  max-width: 100%;
+  max-height: 70vh;
+  border: 1px solid var(--tinta-3);
+  display: block;
+}
+
+.lightbox__caption {
+  color: var(--papel-dim);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.lightbox__cerrar,
+.lightbox__nav {
+  position: fixed;
+  background: var(--tinta-2);
+  border: 1px solid var(--tinta-3);
+  color: var(--papel);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.lightbox__cerrar:hover,
+.lightbox__nav:hover,
+.lightbox__cerrar:focus-visible,
+.lightbox__nav:focus-visible {
+  border-color: var(--sello);
+  color: var(--sello);
+}
+
+.lightbox__cerrar {
+  top: clamp(1rem, 3vw, 2rem);
+  right: clamp(1rem, 3vw, 2rem);
+  width: 2.6rem;
+  height: 2.6rem;
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.lightbox__nav {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.lightbox__nav--prev { left: clamp(0.6rem, 3vw, 2rem); }
+.lightbox__nav--next { right: clamp(0.6rem, 3vw, 2rem); }
+
+@media (max-width: 640px) {
+  .lightbox__nav { width: 2.4rem; height: 2.4rem; font-size: 1.3rem; }
+}
+
+/* ---------- Servicios ---------- */
+.servicios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1.4rem;
+}
+
+.servicio {
+  border: 1px solid var(--tinta-3);
+  background: var(--tinta-2);
+  padding: 1.8rem 1.6rem;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.servicio:hover {
+  border-color: var(--ambar);
+  transform: translateY(-4px);
+}
+
+.servicio__titulo {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+.servicio p { color: var(--papel-dim); margin: 0; }
+
+/* ---------- Contacto ---------- */
+.registro--final { padding-bottom: var(--esp-seccion); }
+
+.contacto {
+  text-align: left;
+  max-width: 40rem;
+}
+
+.contacto__titulo {
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  font-weight: 900;
+  font-stretch: 110%;
+  margin-bottom: 1.2rem;
+}
+
+.contacto__texto {
+  color: var(--papel-dim);
+  max-width: 48ch;
+  margin-bottom: 2rem;
+}
+
+.contacto__redes {
+  display: flex;
+  gap: 1.6rem;
+  margin-top: 1.8rem;
+}
+
+.contacto__red {
+  display: inline-block;
+  color: var(--papel-dim);
+  text-decoration: none;
+  border-bottom: 1px solid var(--tinta-3);
+  padding: 0.7rem 0.2rem; /* área táctil ≥44px de alto */
+  touch-action: manipulation;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.contacto__red:hover {
+  color: var(--sello);
+  border-bottom-color: var(--sello);
+}
+
+/* ---------- Pie ---------- */
+.pie {
+  border-top: 1px solid var(--tinta-3);
+  padding: 2rem var(--margen-col) 2.4rem calc(var(--margen-col) + 1.8rem);
+  color: var(--papel-dim);
+}
+
+.pie p { margin: 0 0 0.4rem; }
+.pie__nota { opacity: 0.7; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 48rem) {
+  :root { --margen-col: 1.2rem; }
+
+  .margen { left: 0.7rem; }
+
+  .nav { padding-top: 0.7rem; padding-bottom: 0.7rem; }
+  .nav__links { display: none; } /* en móvil: logo + botón contacto */
+
+  .hero,
+  .registro,
+  .pie { padding-left: calc(var(--margen-col) + 1rem); }
+
+  .registro__cabecera { flex-wrap: wrap; gap: 0.6rem; }
+  .registro__regla { flex-basis: 100%; }
+
+  .sobremi { grid-template-columns: 1fr; }
+  .sobremi__retrato { max-width: 14rem; }
+
+  .ficha__estado { white-space: normal; }
+
+  .contacto__redes { flex-direction: column; gap: 0.9rem; }
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

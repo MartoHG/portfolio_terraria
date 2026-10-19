@@ -4,7 +4,7 @@ export const PROFILE = {
   tagline: 'Convierto procesos de papel en sistemas que funcionan.',
   introduction: 'Desarrollador full stack (PHP · Laravel) y analista de sistemas en el último año de la carrera. Diseño, modelo y construyo software de gestión de punta a punta: del relevamiento a la entrega.',
   about: 'Soy Martiniano, desarrollador de Argentina. Me estoy formando como Analista en Sistemas —cursando último año de la carrera— y me especializo en sistemas de gestión: software que ordena el trabajo diario de organizaciones reales. Programo para ordenar el caos: me gusta convertir procesos manuales en sistemas que funcionan solos. Vengo del análisis de sistemas, así que pienso el software antes de escribirlo. Con muchas ganas de sumarme a un equipo y aprender de gente con más recorrido.',
-  photo: 'https://martohg.github.io/assets/foto.jpg',
+  photo: '/assets/foto.jpg',
   photoAlt: 'Martiniano Gavotti, de traje',
 };
 

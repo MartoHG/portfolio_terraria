@@ -1,7 +1,7 @@
 import { SKILL_STORY } from './portfolio';
 import type { PortfolioProject } from './types';
 
-const asset = (path: string) => `https://martohg.github.io/assets/${path}`;
+const asset = (path: string) => `/assets/${path}`;
 
 export const PROJECTS: PortfolioProject[] = [
   {

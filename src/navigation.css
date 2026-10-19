@@ -144,6 +144,19 @@
   --hud-text-shadow: 3px 3px 0 rgb(14 27 30 / 80%);
 }
 
+/* Way back to the classic portfolio at /: quiet text under the start button. */
+.world-menu__classic {
+  margin-top: calc(-1 * clamp(8px, 3vh, 26px));
+  padding: 8px 12px;
+  background: rgb(23 52 90 / 70%);
+  color: var(--hud-text);
+  font: 15px/1.3 ui-monospace, monospace;
+  text-decoration: none;
+  text-shadow: 2px 2px 0 rgb(14 27 30 / 80%);
+}
+.world-menu__classic:hover { color: var(--hud-gold); text-decoration: underline; }
+.world-menu__classic:focus-visible { outline: 3px solid var(--hud-gold); outline-offset: 2px; }
+
 /* The title belongs to the sky: once entered it scrolls away with the world. */
 .world-menu--entered {
   position: absolute;

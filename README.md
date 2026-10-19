@@ -1,6 +1,9 @@
 # Portfolio Terraria
 
-Portfolio de Martiniano Gavotti organizado como un descenso vertical inspirado en Terraria. El contenido vive en HTML accesible; PixiJS dibuja el mundo que lo rodea.
+Portfolio de Martiniano Gavotti en dos versiones dentro del mismo sitio:
+
+- **`/` — portfolio clásico.** La portada: HTML, CSS y JS sin frameworks (GSAP y Lenis por CDN). Pesa poco y es lo primero que se ve.
+- **`/mundo/` — portfolio jugable.** Un descenso vertical inspirado en Terraria: el contenido vive en HTML accesible y PixiJS dibuja el mundo que lo rodea. Se entra con el botón "¿Portfolio aburrido? Entrá al mundo" del hero, así React, PixiJS y los sprites solo se descargan si alguien quiere jugar. Desde el menú del mundo y desde el refugio de contacto se vuelve a la versión clásica.
 
 ## Ejecutar
 
@@ -20,7 +23,7 @@ npm test            # unitarias (Vitest)
 npm run test:e2e    # Playwright, desktop y mobile
 ```
 
-## El recorrido
+## El recorrido (`/mundo/`)
 
 1. **Isla del cielo — Sobre mí.** Menú de inicio y cielo son la misma escena. En la isla el aventurero usa la física de la Fase 1: clic o toque para caminar, Espacio para saltar, E para la puerta, ↓ para bajar del piso superior. "Ver el mundo" oculta el panel para explorar.
 2. **Caída con paraguas** hasta la superficie.
@@ -31,6 +34,14 @@ La hotbar salta entre zonas con el efecto del Espejo Mágico. Pasar el mouse sob
 
 ## Arquitectura
 
+Vite compila dos páginas (`build.rollupOptions.input` en `vite.config.ts`), cada una con su propio bundle:
+
+- `index.html` + `src/classic/` — el portfolio clásico (`styles.css` y `main.js`, que Vite empaqueta con hash, así no hace falta cache-busting a mano).
+- `mundo/index.html` + `src/main.tsx` — el mundo Terraria.
+- `public/assets/` — imágenes de las dos versiones; la foto y las capturas de los proyectos son las mismas para ambas.
+
+Dentro del mundo:
+
 - `src/world/vertical/layout.ts` — layout puro del mundo vertical. A partir del viewport y de la altura medida del contenido HTML ubica superficie, edificios, bandas de roca, cavernas y cámaras; define la trayectoria de la cámara según el scroll (vertical, paneo horizontal en la aldea, vertical otra vez) y el camino del aventurero. Mientras la trayectoria es vertical, un píxel de scroll mueve el mundo un píxel, así el HTML queda fijo en su lugar del mundo sin animaciones de aparición.
 - `src/world/vertical/traveler.ts` — el aventurero sigue el destino que marca el scroll con velocidad y aceleración propias, en ambos sentidos, y solo se apura si va a salir de la franja visible.
 - `src/world/vertical/world-view.ts` — dibuja superficie y subsuelo (bordes de roca escalonados, fondos con parallax, puertas animadas).
@@ -39,7 +50,7 @@ La hotbar salta entre zonas con el efecto del Espejo Mágico. Pasar el mouse sob
 - `src/world/scene.ts` — orquesta la escena: física en la isla, camino en el resto, cámara, visitas a edificios y fichas.
 - `src/audio/world-audio.ts` — paisaje sonoro sintetizado con Web Audio; arranca bajo al tocar "Entrar al mundo", mezcla exterior o cueva según la zona y tiene control para silenciarlo.
 
-Todo lo animado respeta `prefers-reduced-motion`. `?debug=1` muestra las colisiones de la isla; `?time=0.5` fija la hora (0 mediodía, 0,5 medianoche) y `?rain=1`/`?rain=0` fija la lluvia.
+Todo lo animado respeta `prefers-reduced-motion`. `/mundo/?debug=1` muestra las colisiones de la isla; `?time=0.5` fija la hora (0 mediodía, 0,5 medianoche) y `?rain=1`/`?rain=0` fija la lluvia.
 
 ## Assets
 

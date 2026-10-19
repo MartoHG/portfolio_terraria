@@ -15,7 +15,7 @@ declare global {
 const sectionIds = ['about', 'projects', 'skills', 'services', 'contact'] as const;
 
 async function enterWorld(page: Page) {
-  await page.goto('/');
+  await page.goto('/mundo/');
   await expect(page.getByRole('button', { name: 'Entrar al mundo' })).toBeVisible();
   await page.getByRole('button', { name: 'Entrar al mundo' }).click();
   await page.waitForFunction(() => window.__PORTFOLIO_DEBUG__?.entered === true);
@@ -34,7 +34,7 @@ async function navigateTo(page: Page, id: (typeof sectionIds)[number], label: st
 }
 
 test('starts at the menu and navigates between zones with a return to the sky', async ({ page }) => {
-  await page.goto('/');
+  await page.goto('/mundo/');
   await expect(page.getByRole('heading', { name: 'Marto Gavotti' })).toBeVisible();
   await expect(page.getByRole('button', { name: 'Entrar al mundo' })).toBeVisible();
   await expect(page.getByRole('navigation', { name: 'Navegación del mundo' })).toHaveCount(0);

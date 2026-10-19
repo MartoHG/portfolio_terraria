@@ -44,7 +44,7 @@ test('renders modular terrain and accepts pointer movement in the new world', as
   page.on('console', (message) => { if (message.type() === 'error') errors.push(message.text()); });
   page.on('pageerror', (error) => errors.push(error.message));
 
-  await page.goto('/');
+  await page.goto('/mundo/');
   await enterWorld(page);
   await expect(page.getByRole('button', { name: 'Ver el mundo' })).toHaveCount(0);
   const canvas = page.getByTestId('world-canvas');
@@ -70,7 +70,7 @@ test('renders modular terrain and accepts pointer movement in the new world', as
 });
 
 test('closed door blocks the player and opening it clears the doorway collision', async ({ page }) => {
-  await page.goto('/');
+  await page.goto('/mundo/');
   await enterWorld(page);
 
   await page.evaluate(() => window.__TERRARIA_DEBUG__!.setDestination(800));
@@ -91,7 +91,7 @@ test('closed door blocks the player and opening it clears the doorway collision'
 });
 
 test('jumps from inside the house to its upper floor', async ({ page }, testInfo) => {
-  await page.goto('/');
+  await page.goto('/mundo/');
   await enterWorld(page);
 
   const interiorTarget = await page.evaluate(() => {
@@ -123,7 +123,7 @@ test('jumps from inside the house to its upper floor', async ({ page }, testInfo
 });
 
 test('crosses the bridge to the garden and returns toward the house', async ({ page }, testInfo) => {
-  await page.goto('/');
+  await page.goto('/mundo/');
   await enterWorld(page);
   await page.getByRole('button', { name: 'Abrir / cerrar puerta' }).click();
   await expect.poll(() => page.evaluate(() => window.__TERRARIA_DEBUG__!.geometry().doorOpen)).toBe(true);
@@ -178,7 +178,7 @@ test('crosses the bridge to the garden and returns toward the house', async ({ p
 
 test('reduced motion freezes the player frames and resize preserves the scene', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
-  await page.goto('/');
+  await page.goto('/mundo/');
   await enterWorld(page);
 
   const frame = await page.evaluate(() => window.__TERRARIA_DEBUG__!.animationFrame());

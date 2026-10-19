@@ -160,6 +160,7 @@ export function PortfolioContent({ activeSection, onNavigate, onProjectOpen, onR
           <img src="/assets/scene-v3/magic-mirror-item.png" alt="" aria-hidden="true" />
           Volver al cielo <span aria-hidden="true">↑</span>
         </button>
+        <p className="classic-version">¿Preferís leerlo sin juego? <a href="/">Ver el portfolio clásico</a></p>
       </section>
     </div>
   );

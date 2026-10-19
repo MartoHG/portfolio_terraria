@@ -22,9 +22,14 @@ export function WorldMenu({ onEnter, entered = false, skyOffset = 0 }: WorldMenu
           />
         </h1>
         {!entered ? (
-          <button className="world-menu__enter" type="button" onClick={onEnter}>
-            Entrar al mundo
-          </button>
+          <>
+            <button className="world-menu__enter" type="button" onClick={onEnter}>
+              Entrar al mundo
+            </button>
+            <a className="world-menu__classic" href="/">
+              <span aria-hidden="true">←</span> Volver al portfolio clásico
+            </a>
+          </>
         ) : null}
       </div>
     </section>
