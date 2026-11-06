@@ -562,6 +562,237 @@
           </figure>
         </div>
       </article>
+
+      <!-- ---- Ficha: El Refugio ---- -->
+      <article class="ficha">
+        <header class="ficha__cabecera">
+          <div>
+            <p class="ficha__num mono">Ficha 04</p>
+            <h3 class="ficha__nombre">El Refugio</h3>
+            <p class="ficha__tipo mono">Proyecto individual · Tienda online con panel de gestión</p>
+          </div>
+          <span class="ficha__estado mono">Sin publicar todavía — falta la puesta en producción</span>
+        </header>
+
+        <dl class="ficha__detalle">
+          <div class="ficha__campo">
+            <dt class="mono">Problema</dt>
+            <dd>
+              <p>
+                El Refugio es una forrajería de Olavarría que quería vender muebles de
+                jardín a todo el país. Una tienda estándar no le servía: los muebles viajan
+                por expreso y el costo de ese envío recién se conoce al cotizar cada pedido.
+                Cobrar en el checkout, como hace cualquier tienda, era cobrar sin saber el
+                total.
+              </p>
+              <p>
+                Además, muchos compradores tienen poca experiencia comprando online, y
+                quien opera la tienda todos los días no tiene un perfil técnico.
+              </p>
+            </dd>
+          </div>
+          <div class="ficha__campo">
+            <dt class="mono">La idea que ordena todo</dt>
+            <dd>
+              El pedido se crea antes que el pago. El cliente confirma su carrito sin pagar;
+              el negocio le escribe por WhatsApp, cotiza el expreso y carga el costo; y recién
+              cuando el cliente acepta el total se habilita un link de pago. Nadie paga sin
+              saber cuánto es, y la venta online conserva el trato directo del local.
+            </dd>
+          </div>
+          <div class="ficha__campo">
+            <dt class="mono">Solución</dt>
+            <dd>
+              <ul class="ficha__lista">
+                <li><strong>Tienda:</strong> catálogo con buscador y filtros por categoría, sección de ofertas, productos con variantes de color, agotados a la vista y carrito que funciona sin crear una cuenta.</li>
+                <li><strong>Pedidos del cliente:</strong> checkout con email verificado y seguimiento de cada pedido con estados en lenguaje simple.</li>
+                <li><strong>Link de pago:</strong> se abre sin iniciar sesión y cobra con Mercado Pago dentro de la tienda: crédito en cuotas, débito o dinero en cuenta.</li>
+                <li><strong>Retiro en el local:</strong> un botón del carrito abre WhatsApp con el pedido ya escrito.</li>
+                <li><strong>Panel de gestión:</strong> una bandeja de tareas que ordena los pedidos por lo que hay que hacer (contactar, cotizar, esperando pago, despachar), más productos, precios y el contenido de la home, todo editable sin tocar código.</li>
+                <li><strong>Identidad propia:</strong> la dirección visual «La etiqueta» lleva títulos y precios a etiquetas colgantes, para que no parezca una plantilla, con letra cómoda, alto contraste y áreas táctiles grandes.</li>
+              </ul>
+            </dd>
+          </div>
+          <div class="ficha__campo">
+            <dt class="mono">Lo difícil: que la plata cierre</dt>
+            <dd>
+              <ul class="ficha__lista">
+                <li><strong>Cuotas que no pierden plata:</strong> el porcentaje de cada modalidad se compensa, no se suma. Se cobra total ÷ (1 − porcentaje): con 20 %, un total de $100.000 se cobra $125.000 y no $120.000, y el redondeo va hacia arriba para que el negocio nunca reciba menos.</li>
+                <li><strong>Checkout Bricks en lugar de Checkout Pro:</strong> Pro sólo limita el máximo de cuotas, así que el cliente podría elegir menos y pagar un importe calculado para más. Con Bricks, el backend fija importe y cuotas en cada intento y rechaza lo que no coincida.</li>
+                <li><strong>El pago lo confirma el backend:</strong> nunca la redirección del navegador. El webhook se valida con firma y después se vuelve a consultar a Mercado Pago para verificar referencia, importe, moneda, medio y cuotas. La idempotencia evita cobros dobles y una conciliación cada 15 minutos recupera lo que se haya perdido en el camino.</li>
+                <li><strong>Un pago aprobado nunca se ignora:</strong> si llega para un pedido cancelado o reemplazado, queda en revisión y el panel avisa, para que lo resuelva una persona.</li>
+                <li><strong>Cuatro estados, no uno:</strong> pedido, contacto, pago y envío avanzan por separado, y cada pedido guarda una foto de sus precios y datos, para que un aumento no reescriba el historial.</li>
+                <li><strong>Aumentos masivos con vista previa:</strong> muestra valores anteriores y nuevos, aplica todo en una transacción, se rechaza si algo cambió desde la vista previa y queda en el historial.</li>
+              </ul>
+            </dd>
+          </div>
+          <div class="ficha__campo">
+            <dt class="mono">Mi rol</dt>
+            <dd>
+              Lo llevé de punta a punta, en solitario: definí con el negocio las reglas de
+              venta y escribí la especificación completa, del modelo de datos a la
+              arquitectura (Controller → Form Request → Service → Model) y la dirección
+              visual. La implementación la hice con Claude Code, módulo por módulo, con más
+              de 300 tests sobre MySQL como control: primero el backend entero y después las
+              pantallas. También resolví las colas para procesar imágenes a WebP y enviar
+              emails, y un registro de auditoría de las acciones sensibles del panel.
+            </dd>
+          </div>
+          <div class="ficha__campo">
+            <dt class="mono">Stack</dt>
+            <dd>PHP 8.4 · Laravel 13 · MySQL · Blade · Tailwind CSS 4 · HTMX · Mercado Pago (Checkout Bricks) · PHPUnit</dd>
+          </div>
+          <div class="ficha__campo">
+            <dt class="mono">Capturas</dt>
+            <dd>Tomadas del sistema corriendo en local, con datos y fotos de prueba.</dd>
+          </div>
+        </dl>
+
+        <div class="ficha__galeria">
+          <figure class="ficha__captura">
+            <a href="/assets/el-refugio/el-refugio-01-inicio.webp" target="_blank" rel="noopener" aria-label="Ver captura del inicio de la tienda en tamaño completo">
+              <img src="/assets/el-refugio/el-refugio-01-inicio.webp" alt="Inicio de la tienda: etiqueta naranja con el título Muebles de jardín para disfrutar el verano y franja de beneficios" loading="lazy" width="1920" height="956">
+            </a>
+            <figcaption class="mono">Inicio de la tienda</figcaption>
+          </figure>
+          <figure class="ficha__captura">
+            <a href="/assets/el-refugio/el-refugio-02-catalogo.webp" target="_blank" rel="noopener" aria-label="Ver captura del catálogo en tamaño completo">
+              <img src="/assets/el-refugio/el-refugio-02-catalogo.webp" alt="Catálogo de muebles con buscador, filtros por categoría y precios en etiquetas" loading="lazy" width="1920" height="956">
+            </a>
+            <figcaption class="mono">Catálogo y buscador</figcaption>
+          </figure>
+          <figure class="ficha__captura">
+            <a href="/assets/el-refugio/el-refugio-03-ofertas.webp" target="_blank" rel="noopener" aria-label="Ver captura de la sección de ofertas en tamaño completo">
+              <img src="/assets/el-refugio/el-refugio-03-ofertas.webp" alt="Sección de ofertas con productos marcados con el sello Oferta" loading="lazy" width="1920" height="956">
+            </a>
+            <figcaption class="mono">Ofertas</figcaption>
+          </figure>
+          <figure class="ficha__captura">
+            <a href="/assets/el-refugio/el-refugio-04-panel-pedidos.webp" target="_blank" rel="noopener" aria-label="Ver captura del panel de pedidos en tamaño completo">
+              <img src="/assets/el-refugio/el-refugio-04-panel-pedidos.webp" alt="Panel de pedidos: para contactar, para cotizar, esperando pago y para despachar, con aviso de un pago para revisar" loading="lazy" width="1920" height="956">
+            </a>
+            <figcaption class="mono">Panel: pedidos por etapa</figcaption>
+          </figure>
+          <figure class="ficha__captura">
+            <a href="/assets/el-refugio/el-refugio-05-panel-productos.webp" target="_blank" rel="noopener" aria-label="Ver captura del panel de productos en tamaño completo">
+              <img src="/assets/el-refugio/el-refugio-05-panel-productos.webp" alt="Panel de productos con buscador, filtros de agotados y ocultos, ofertas y colores" loading="lazy" width="1920" height="956">
+            </a>
+            <figcaption class="mono">Panel: productos</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <!-- ---- Ficha: Respawn Informática ---- -->
+      <article class="ficha">
+        <header class="ficha__cabecera">
+          <div>
+            <p class="ficha__num mono">Ficha 05</p>
+            <h3 class="ficha__nombre">Respawn Informática</h3>
+            <p class="ficha__tipo mono">Proyecto individual · Emprendimiento propio · Web a medida</p>
+          </div>
+          <span class="ficha__estado mono">Online — dominio propio pendiente</span>
+        </header>
+
+        <dl class="ficha__detalle">
+          <div class="ficha__campo">
+            <dt class="mono">Problema</dt>
+            <dd>
+              <p>
+                Respawn es mi emprendimiento en Olavarría: armado y mantenimiento de PC, y
+                desarrollo web para negocios. Necesitaba una web que consiguiera clientes y
+                que, al mismo tiempo, fuera la muestra de lo que puedo hacer en diseño web.
+                Una landing prolija no alcanzaba para lo segundo.
+              </p>
+              <p>
+                Además tenía que hablarles a dos públicos que no buscan lo mismo, alguien con
+                su PC y un comercio que necesita una web, y funcionar bien en el celular, que
+                es desde donde llega la mayoría, a través de Instagram.
+              </p>
+            </dd>
+          </div>
+          <div class="ficha__campo">
+            <dt class="mono">La idea que ordena todo</dt>
+            <dd>
+              El sitio es un arcade de 8 bits: el nombre ya lo pedía y el slogan lo cierra,
+              "le devolvemos la vida a tu PC". Pero debajo del juego hay HTML estático. El
+              contenido está en la página, Google lo lee, JavaScript aparece sólo donde hay
+              interacción y el efecto nunca le tapa la información a quien viene a consultar.
+            </dd>
+          </div>
+          <div class="ficha__campo">
+            <dt class="mono">Solución</dt>
+            <dd>
+              <ul class="ficha__lista">
+                <li><strong>Pantalla de inicio:</strong> la escena «Nivel 01 · Olavarría», con un corazón pixel que sale detrás de un paisaje de la ciudad, con sus sierras, la cementera y el tanque de agua.</li>
+                <li><strong>Elegí tu misión:</strong> un selector de jugador, 1P Tu PC contra 2P Tu negocio, donde cada carta lleva a su mundo.</li>
+                <li><strong>Mundo PC, el taller:</strong> menú de misiones estilo RPG, power-ups que se leen como una tienda de ítems y un chequeo rápido con forma de terminal, que imprime un informe con la misión recomendada.</li>
+                <li><strong>Mundo negocio, el local:</strong> seis misiones, de landing page a sistema a medida, con la misma mecánica en otra ambientación.</li>
+                <li><strong>Niveles desbloqueados:</strong> el portfolio del negocio, con un cartucho por trabajo y su ficha con capturas.</li>
+                <li><strong>Continue?:</strong> el cierre de cada recorrido. Toda la web desemboca en WhatsApp, con un mensaje ya escrito según la misión elegida.</li>
+              </ul>
+            </dd>
+          </div>
+          <div class="ficha__campo">
+            <dt class="mono">Decisiones técnicas</dt>
+            <dd>
+              <ul class="ficha__lista">
+                <li><strong>Una página por búsqueda:</strong> cada mundo tiene su URL, su título, su H1 y sus datos estructurados (LocalBusiness y Service), porque cada uno compite en Google por búsquedas distintas. Queda con noindex hasta conectar el dominio, para no perder SEO en la mudanza.</li>
+                <li><strong>Pixel art como texto:</strong> las ilustraciones son mapas de texto que se dibujan a SVG en el build, sobre una sola grilla. Sin imágenes pesadas y editables a mano.</li>
+                <li><strong>Animaciones con criterio:</strong> steps() para lo pixel y curvas de salida para la interfaz, sólo con transform y opacity, y todo apagable con prefers-reduced-motion.</li>
+                <li><strong>Entrar al mundo:</strong> con View Transitions, la PC de la carta vuela hasta su lugar en la página siguiente y se prende en cadena. Sin soporte del navegador, navega normal.</li>
+                <li><strong>Rediseño para celular:</strong> un cable de energía baja por la página, cada sección es un nodo y una barra fija deja WhatsApp siempre bajo el pulgar.</li>
+                <li><strong>Medido, no supuesto:</strong> Lighthouse marcaba un CLS de 0,156 en la página de servicios web porque la fuente del título llegaba tarde. Precargándola en celular bajó a 0,044, con rendimiento 99.</li>
+              </ul>
+            </dd>
+          </div>
+          <div class="ficha__campo">
+            <dt class="mono">Mi rol</dt>
+            <dd>
+              Fui cliente y desarrollador a la vez. Definí el concepto, la estructura y el
+              sistema visual, y cada pantalla pasó por dos etapas: primero un boceto estático
+              y, una vez aprobado, las animaciones. El desarrollo lo hice con Claude Code, y
+              cada decisión quedó registrada con su fecha y su motivo.
+            </dd>
+          </div>
+          <div class="ficha__campo">
+            <dt class="mono">Stack</dt>
+            <dd>Astro 7 · JavaScript (módulos ES) · CSS con custom properties · SVG · View Transitions · JSON-LD · Cloudflare Pages</dd>
+          </div>
+          <div class="ficha__campo">
+            <dt class="mono">Demo</dt>
+            <dd>
+              <a class="boton boton--fantasma boton--chico" href="https://respawn-informatica.pages.dev/" target="_blank" rel="noopener">Ver la web ↗</a>
+            </dd>
+          </div>
+        </dl>
+
+        <div class="ficha__galeria">
+          <figure class="ficha__captura">
+            <a href="/assets/respawn/respawn-01-home.webp" target="_blank" rel="noopener" aria-label="Ver captura de la pantalla de inicio en tamaño completo">
+              <img src="/assets/respawn/respawn-01-home.webp" alt="Pantalla de inicio de Respawn: el corazón de la marca sale detrás de un paisaje pixel de Olavarría" loading="lazy" width="1600" height="1000">
+            </a>
+            <figcaption class="mono">Pantalla de inicio</figcaption>
+          </figure>
+          <figure class="ficha__captura">
+            <a href="/assets/respawn/respawn-02-selector.webp" target="_blank" rel="noopener" aria-label="Ver captura del selector de mundos en tamaño completo">
+              <img src="/assets/respawn/respawn-02-selector.webp" alt="Selector de mundos: 1P Tu PC contra 2P Tu negocio" loading="lazy" width="1600" height="1000">
+            </a>
+            <figcaption class="mono">Selector de mundos</figcaption>
+          </figure>
+          <figure class="ficha__captura">
+            <a href="/assets/respawn/respawn-03-mundo-pc.webp" target="_blank" rel="noopener" aria-label="Ver captura del Mundo PC en tamaño completo">
+              <img src="/assets/respawn/respawn-03-mundo-pc.webp" alt="Mundo PC, con la estación de PC y el menú de misiones" loading="lazy" width="1600" height="1000">
+            </a>
+            <figcaption class="mono">Mundo PC</figcaption>
+          </figure>
+          <figure class="ficha__captura">
+            <a href="/assets/respawn/respawn-04-mundo-negocio.webp" target="_blank" rel="noopener" aria-label="Ver captura del Mundo negocio en tamaño completo">
+              <img src="/assets/respawn/respawn-04-mundo-negocio.webp" alt="Mundo negocio, con el local y el menú de misiones" loading="lazy" width="1600" height="1000">
+            </a>
+            <figcaption class="mono">Mundo negocio</figcaption>
+          </figure>
+        </div>
+      </article>
     </section>
 
     <!-- ============ SKILL: BLADE-HTMX ============ -->
